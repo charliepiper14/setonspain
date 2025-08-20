@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set on Spain - Strategic Google Ads Audit & Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2b5c 0%, #2c4590 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            page-break-after: always;
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #e67e22;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #e67e22, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #e67e22;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e67e22;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #e67e22;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .alert-box {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .analysis-box {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .highlight-box h3, .alert-box h3, .success-box h3, .analysis-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .data-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            background: #e67e22;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .bullet-points li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .bullet-points li:before {
+            content: "▶";
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .performance-bar {
+            background: #333;
+            height: 25px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            transition: width 0.8s ease;
+            position: relative;
+        }
+        
+        .bar-excellent { background: linear-gradient(90deg, #27ae60, #2ecc71); width: 90%; }
+        .bar-good { background: linear-gradient(90deg, #f39c12, #e67e22); width: 75%; }
+        .bar-fair { background: linear-gradient(90deg, #f39c12, #e67e22); width: 45%; }
+        .bar-poor { background: linear-gradient(90deg, #e74c3c, #c0392b); width: 25%; }
+        
+        .efficiency-comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .efficiency-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .vs-indicator {
+            background: #e67e22;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .waste-indicator {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title Slide -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">01</div>
+        </div>
+        <h1>Set on Spain Strategic Audit</h1>
+        <div class="subtitle">Complete Performance Analysis & Optimization Roadmap</div>
+        <div class="analysis-box">
+            <h3>🏢 Luxury Real Estate Google Ads Analysis</h3>
+            <p>Comprehensive 90-day performance review for Costa del Sol property marketing campaigns, focusing on bottom-of-funnel optimization, search impression maximization, and CPA reduction strategies for high-value real estate leads.</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">€349.82</span>
+                <div class="stat-label">Total Account Spend (90d)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">5</span>
+                <div class="stat-label">Total Conversions (90d)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">€69.96</span>
+                <div class="stat-label">Blended CPA (90d)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">€35,000</span>
+                <div class="stat-label">Revenue per Conversion</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <div style="font-size: 1.2em; margin-top: 40px;">Set on Spain - Costa del Sol</div>
+            <div style="opacity: 0.8; margin-top: 10px;">August 20, 2025 | Performance Period: May 22 - August 19, 2025</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Executive Summary -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">02</div>
+        </div>
+        <h2>Executive Performance Summary</h2>
+        <div class="analysis-box">
+            <h3>📊 Critical Performance Gap Identified</h3>
+            <p>Current CPA of €69.96 is 117% above target range (€32-33) and represents a 337% deterioration from historical performance (€16 three years ago). Despite high-value conversions (€35k revenue each), urgent optimization is required to restore profitability and scale impression share.</p>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Performance Highlights</h3>
+                <ul class="bullet-points">
+                    <li>Strong targeting evidenced by 15.74% average CTR</li>
+                    <li>High-value conversions generating €35,000 revenue each</li>
+                    <li>500x ROI potential per lead despite current inefficiencies</li>
+                    <li>Effective bottom-of-funnel approach with development-specific keywords</li>
+                    <li>Mobile performance showing promise (21% CTR in Casares)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Critical Issues Requiring Action</h3>
+                <ul class="bullet-points">
+                    <li>CPA 117% above target (€69.96 vs €32-33 target)</li>
+                    <li>337% performance degradation since 2022 (€16 → €69.96)</li>
+                    <li>Budget limitations preventing impression share growth</li>
+                    <li>Inconsistent campaign performance across locations</li>
+                    <li>Competitive pressure affecting top-of-page positioning</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">117%</span>
+                <div class="stat-label">CPA Above Target Range</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">337%</span>
+                <div class="stat-label">Performance Decline (3yr)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">15.74%</span>
+                <div class="stat-label">Average CTR (Strong)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">500x</span>
+                <div class="stat-label">ROI Potential per Lead</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Campaign Performance Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">03</div>
+        </div>
+        <h2>Campaign Performance Breakdown</h2>
+        <div class="subtitle">90-day location-based campaign analysis</div>
+        <div class="efficiency-comparison">
+            <div class="efficiency-card">
+                <h3>Best Performer</h3>
+                <div style="font-size: 2.5em; color: #27ae60; font-weight: bold;">€26.85</div>
+                <p>140 - Amaranta Living</p>
+                <div style="margin-top: 15px; font-size: 0.9em;">1 conversion | €26.85 spent | 8.94% CTR</div>
+            </div>
+            <div class="vs-indicator">VS</div>
+            <div class="efficiency-card">
+                <h3>Worst Performer</h3>
+                <div style="font-size: 2.5em; color: #e74c3c; font-weight: bold;">€82.82</div>
+                <p>HM - Estepona</p>
+                <div style="margin-top: 15px; font-size: 0.9em;">3 conversions | €248.47 spent | 17.34% CTR</div>
+            </div>
+        </div>
+        <div class="data-table">
+            <table>
+                <tr><th>Campaign</th><th>Budget</th><th>Spend</th><th>Conversions</th><th>CPA</th><th>CTR</th><th>Status</th></tr>
+                <tr><td>140 - Amaranta Living</td><td>€9.00</td><td>€26.85</td><td>1</td><td>€26.85</td><td>8.94%</td><td>On Target</td></tr>
+                <tr><td>HM - Casares</td><td>€6.00</td><td>€44.77</td><td>1</td><td>€44.77</td><td>16.18%</td><td>Above Target</td></tr>
+                <tr><td>HM - Estepona</td><td>€35.00</td><td>€248.47</td><td>3</td><td>€82.82</td><td>17.34%</td><td>Needs Optimization</td></tr>
+                <tr><td>HM - Sotogrande</td><td>€4.00</td><td>€29.73</td><td>0</td><td>-</td><td>19.61%</td><td>No Conversions</td></tr>
+            </table>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Key Performance Insights</h3>
+                <ul class="bullet-points">
+                    <li>3x CPA variation between best and worst performing campaigns</li>
+                    <li>Estepona drives 60% of conversions but at 3x higher CPA</li>
+                    <li>Strong CTR across all campaigns (8.94% - 19.61%)</li>
+                    <li>Budget limitations affecting high-performing campaigns</li>
+                    <li>Clear optimization opportunities in location targeting</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Immediate Action Items</h3>
+                <ul class="bullet-points">
+                    <li>Reallocate budget from Estepona to Amaranta Living</li>
+                    <li>Investigate Estepona's high CPA causes</li>
+                    <li>Scale successful campaigns within target CPA range</li>
+                    <li>Optimize Sotogrande for conversion improvement</li>
+                    <li>Test increased budgets on top performers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Competitive Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">04</div>
+        </div>
+        <h2>Competitive Landscape Analysis</h2>
+        <div class="subtitle">Auction insights and market positioning opportunities</div>
+        <div class="data-table">
+            <table>
+                <tr><th>Competitor</th><th>Impression Share</th><th>Top of Page Rate</th><th>Abs. Top Rate</th><th>Position Advantage</th></tr>
+                <tr><td>idiliqestates.com</td><td>11.98%</td><td>76.36%</td><td>31.68%</td><td>Strong</td></tr>
+                <tr><td>newestepona.com</td><td>14.63%</td><td>67.88%</td><td>8.92%</td><td>Moderate</td></tr>
+                <tr><td>jasoncallow.com</td><td>11.97%</td><td>63.33%</td><td>5.35%</td><td>Moderate</td></tr>
+                <tr><td>kingestates.es</td><td><10%</td><td>80.55%</td><td>19.21%</td><td>High Quality</td></tr>
+                <tr><td>cloudninespain.com</td><td><10%</td><td>61.49%</td><td>4.62%</td><td>Low</td></tr>
+            </table>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Competitive Threats</h3>
+                <ul class="bullet-points">
+                    <li>Multiple competitors with higher top-of-page rates</li>
+                    <li>idiliqestates.com achieving 31.68% absolute top rate</li>
+                    <li>kingestates.es showing 80.55% top-of-page despite low volume</li>
+                    <li>newestepona.com directly competing in Estepona market</li>
+                    <li>Overlap rates of 15-23% with major competitors</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Competitive Opportunities</h3>
+                <ul class="bullet-points">
+                    <li>Many competitors have <10% impression share</li>
+                    <li>Room to improve absolute top-of-page positioning</li>
+                    <li>Geographic specialization advantage in certain areas</li>
+                    <li>Quality score improvements can boost positioning</li>
+                    <li>Development-specific targeting reduces direct competition</li>
+                </ul>
+            </div>
+        </div>
+        <div class="alert-box">
+            <h3>🎯 Primary Focus: Maximize Search Impression Levels</h3>
+            <p>Based on business requirements, the primary objective is increasing impression share and top-of-page positioning. Current competitive analysis shows significant opportunities to capture market share through strategic bidding and quality improvements.</p>
+        </div>
+        <div class="analysis-box">
+            <h3>📈 Impression Share Growth Strategy</h3>
+            <ul class="bullet-points">
+                <li>Increase budgets on high-performing campaigns to capture lost impression share</li>
+                <li>Improve Quality Scores through ad relevance and landing page optimization</li>
+                <li>Target competitor keywords with development-specific advantages</li>
+                <li>Implement smart bidding strategies focused on top-of-page positioning</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 5: CRO Analysis Summary -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">05</div>
+        </div>
+        <h2>Conversion Rate Optimization Analysis</h2>
+        <div class="subtitle">Landing page performance and optimization opportunities</div>
+        <div class="analysis-box">
+            <h3>🔍 Current Conversion Assessment</h3>
+            <p>Landing page analysis reveals significant optimization potential. Current template structure is conversion-capable but underleveraged, with estimated 2% conversion rate that could improve to 5-8% with strategic enhancements.</p>
+        </div>
+        <div class="efficiency-comparison">
+            <div class="efficiency-card">
+                <h3>Current Performance</h3>
+                <div style="font-size: 2.5em; color: #e74c3c; font-weight: bold;">~2%</div>
+                <p>Estimated Conversion Rate</p>
+                <div style="margin-top: 15px; font-size: 0.9em;">Baseline landing page performance</div>
+            </div>
+            <div class="vs-indicator">→</div>
+            <div class="efficiency-card">
+                <h3>Optimization Potential</h3>
+                <div style="font-size: 2.5em; color: #27ae60; font-weight: bold;">5-8%</div>
+                <p>Target Conversion Rate</p>
+                <div style="margin-top: 15px; font-size: 0.9em;">With strategic improvements</div>
+            </div>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Current Issues Identified</h3>
+                <ul class="bullet-points">
+                    <li>Weak value proposition in headlines</li>
+                    <li>Poor CTA visibility and placement</li>
+                    <li>Lack of urgency triggers and social proof</li>
+                    <li>No delivery timelines or availability info</li>
+                    <li>Distracting navigation reducing focus</li>
+                </ul>
+                <div class="performance-bar">
+                    <div class="bar-fill bar-poor"></div>
+                </div>
+                <p style="text-align: center; margin: 10px 0;"><strong>Current: Requires Optimization</strong></p>
+            </div>
+            <div>
+                <h3>Top 5 Implementation Priorities</h3>
+                <ul class="bullet-points">
+                    <li>Add delivery/availability timeline box</li>
+                    <li>Improve CTA visibility and frequency</li>
+                    <li>Insert social proof section across all pages</li>
+                    <li>Replace full navigation with minimal header</li>
+                    <li>Bullet format key benefits for readability</li>
+                </ul>
+                <div class="performance-bar">
+                    <div class="bar-fill bar-excellent"></div>
+                </div>
+                <p style="text-align: center; margin: 10px 0;"><strong>Target: High Performance</strong></p>
+            </div>
+        </div>
+        <div class="success-box">
+            <h3>Expected CRO Impact</h3>
+            <div class="three-column">
+                <div>
+                    <strong>Conversion Rate:</strong><br>
+                    2% → 5-8% (+150-300%)
+                </div>
+                <div>
+                    <strong>Lead Quality:</strong><br>
+                    Improved pre-qualification
+                </div>
+                <div>
+                    <strong>CPA Impact:</strong><br>
+                    €69.96 → €23-28 (-67%)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Device & Location Performance -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">06</div>
+        </div>
+        <h2>Device & Geographic Performance</h2>
+        <div class="subtitle">Granular optimization opportunities</div>
+        <div class="two-column">
+            <div>
+                <h3>Device Performance Analysis</h3>
+                <div class="data-table">
+                    <table>
+                        <tr><th>Device</th><th>Campaign</th><th>CTR</th><th>CPC</th><th>Conversions</th><th>Performance</th></tr>
+                        <tr><td>Mobile</td><td>HM - Casares</td><td>21.05%</td><td>€1.13</td><td>1</td><td>Excellent</td></tr>
+                        <tr><td>Tablets</td><td>HM - Marbella</td><td>29.63%</td><td>€1.83</td><td>0</td><td>High CTR</td></tr>
+                        <tr><td>Computers</td><td>HM - Casares</td><td>8.51%</td><td>€1.45</td><td>0</td><td>Standard</td></tr>
+                        <tr><td>Computers</td><td>Amaranta</td><td>7.69%</td><td>€0.62</td><td>0</td><td>Low Cost</td></tr>
+                    </table>
+                </div>
+                <div class="success-box">
+                    <h3>Mobile Excellence</h3>
+                    <p>Mobile devices showing exceptional performance with 21% CTR and conversion generation, aligning with luxury property buyer behavior.</p>
+                </div>
+            </div>
+            <div>
+                <h3>Geographic Targeting Insights</h3>
+                <div class="data-table">
+                    <table>
+                        <tr><th>Location</th><th>Campaign</th><th>CTR</th><th>Performance</th></tr>
+                        <tr><td>Bergen, Netherlands</td><td>SOS Medium</td><td>100%</td><td>Perfect</td></tr>
+                        <tr><td>Torremolinos, Spain</td><td>SOS Medium</td><td>9.38%</td><td>Moderate</td></tr>
+                        <tr><td>Las Vegas, US</td><td>SOS Medium</td><td>0%</td><td>No Clicks</td></tr>
+                    </table>
+                </div>
+                <div class="highlight-box">
+                    <h3>Target Market Alignment</h3>
+                    <p>Northern European locations (Netherlands) showing perfect engagement, confirming target market strategy for Scandinavian/Dutch/German buyers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="analysis-box">
+            <h3>📱 Device & Location Optimization Strategy</h3>
+            <ul class="bullet-points">
+                <li><strong>Mobile Priority:</strong> Implement mobile-first bidding with +20% bid adjustments</li>
+                <li><strong>Geographic Focus:</strong> Increase targeting for Netherlands, Belgium, Germany, Scandinavia</li>
+                <li><strong>Device-Specific Landing Pages:</strong> Create mobile-optimized property viewing experiences</li>
+                <li><strong>Location Bid Adjustments:</strong> Reduce bids for low-performing regions like US</li>
+                <li><strong>Time Zone Optimization:</strong> Align ad scheduling with European business hours</li>
+            </ul>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">21.05%</span>
+                <div class="stat-label">Mobile CTR (Best)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <div class="stat-label">Netherlands CTR</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">+20%</span>
+                <div class="stat-label">Recommended Mobile Bid Adj</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">4 Countries</span>
+                <div class="stat-label">Primary Target Markets</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Strategic Recommendations -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">07</div>
+        </div>
+        <h2>Strategic Optimization Framework</h2>
+        <div class="subtitle">Data-driven roadmap for CPA reduction and impression growth</div>
+        <div class="analysis-box">
+            <h3>🎯 Strategic Objectives</h3>
+            <p>Reduce CPA from €69.96 to target range €32-33 (-53% improvement) while maximizing search impression levels and maintaining lead quality for high-value property conversions worth €35,000 each.</p>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Phase 1: Immediate Optimizations (Week 1-2)</h3>
+                <ul class="bullet-points">
+                    <li><strong>Campaign Reallocation:</strong> Shift 50% of Estepona budget to Amaranta Living</li>
+                    <li><strong>Mobile Optimization:</strong> +20% bid adjustments for mobile devices</li>
+                    <li><strong>CRO Implementation:</strong> Deploy top 3 landing page improvements</li>
+                    <li><strong>Geographic Refinement:</strong> Increase Northern European targeting</li>
+                    <li><strong>Quality Score Focus:</strong> Improve ad relevance and landing page alignment</li>
+                </ul>
+                <div class="performance-bar">
+                    <div class="bar-fill bar-good"></div>
+                </div>
+                <p style="text-align: center; margin: 10px 0;"><strong>Expected CPA: €45-50</strong></p>
+            </div>
+            <div>
+                <h3>Phase 2: Strategic Scaling (Week 3-8)</h3>
+                <ul class="bullet-points">
+                    <li><strong>PMAX Testing:</strong> Launch Performance Max for top-of-funnel reach</li>
+                    <li><strong>Budget Scaling:</strong> Increase budgets on sub-€30 CPA campaigns</li>
+                    <li><strong>Competitive Targeting:</strong> Target competitor development names</li>
+                    <li><strong>Smart Bidding:</strong> Implement target CPA bidding strategies</li>
+                    <li><strong>Impression Share:</strong> Focus on maximizing search impression levels</li>
+                </ul>
+                <div class="performance-bar">
+                    <div class="bar-fill bar-excellent"></div>
+                </div>
+                <p style="text-align: center; margin: 10px 0;"><strong>Target CPA: €32-33</strong></p>
+            </div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">-53%</span>
+                <div class="stat-label">Target CPA Reduction</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">+150%</span>
+                <div class="stat-label">Impression Share Goal</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">€32-33</span>
+                <div class="stat-label">Target CPA Range</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">8 Weeks</span>
+                <div class="stat-label">Full Implementation</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Implementation Roadmap -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">08</div>
+        </div>
+        <h2>90-Day Implementation Roadmap</h2>
+        <div class="subtitle">Tactical execution plan with measurable milestones</div>
+        <div class="data-table">
+            <table>
+                <tr><th>Phase</th><th>Duration</th><th>Key Actions</th><th>Target CPA</th><th>Expected Impact</th></tr>
+                <tr><td>Quick Wins</td><td>Week 1-2</td><td>Budget reallocation, mobile bids, CRO basics</td><td>€45-50</td><td>25% improvement</td></tr>
+                <tr><td>Optimization</td><td>Week 3-4</td><td>Full CRO implementation, quality improvements</td><td>€38-42</td><td>40% improvement</td></tr>
+                <tr><td>Strategic Scale</td><td>Week 5-8</td><td>PMAX launch, smart bidding, impression focus</td><td>€32-35</td><td>50% improvement</td></tr>
+                <tr><td>Performance</td><td>Week 9-12</td><td>Scale winning campaigns, competitive expansion</td><td>€28-32</td><td>60% improvement</td></tr>
+            </table>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Week 1-2: Foundation Building</h3>
+                <ul class="bullet-points">
+                    <li>Reallocate €15/day from Estepona to Amaranta Living</li>
+                    <li>Implement +20% mobile bid adjustments</li>
+                    <li>Add delivery timeline boxes to landing pages</li>
+                    <li>Improve CTA visibility and contrast</li>
+                    <li>Set up enhanced conversion tracking</li>
+                </ul>
+                <h3>Week 3-4: CRO & Quality Focus</h3>
+                <ul class="bullet-points">
+                    <li>Deploy full landing page optimization suite</li>
+                    <li>Add social proof and testimonials</li>
+                    <li>Optimize ad copy for quality score improvements</li>
+                    <li>Implement geographic bid adjustments</li>
+                    <li>A/B test mobile-specific landing experiences</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Week 5-8: Strategic Expansion</h3>
+                <ul class="bullet-points">
+                    <li>Launch Performance Max campaign for Estepona</li>
+                    <li>Implement Target CPA smart bidding</li>
+                    <li>Scale successful campaigns within CPA targets</li>
+                    <li>Test competitor development targeting</li>
+                    <li>Focus on maximizing impression share</li>
+                </ul>
+                <h3>Week 9-12: Performance Scaling</h3>
+                <ul class="bullet-points">
+                    <li>Scale campaigns achieving sub-€30 CPA</li>
+                    <li>Expand to additional development keywords</li>
+                    <li>Optimize for absolute top-of-page positioning</li>
+                    <li>Test expanded geographic targeting</li>
+                    <li>Prepare for seasonal Q4 property buying surge</li>
+                </ul>
+            </div>
+        </div>
+        <div class="success-box">
+            <h3>Expected 90-Day Outcomes</h3>
+            <div class="three-column">
+                <div>
+                    <strong>CPA Reduction:</strong><br>
+                    €69.96 → €32 (-54%)
+                </div>
+                <div>
+                    <strong>Conversion Volume:</strong><br>
+                    5 → 12+ conversions/month
+                </div>
+                <div>
+                    <strong>Impression Share:</strong><br>
+                    +150% increase in visibility
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Budget Optimization Strategy -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">09</div>
+        </div>
+        <h2>Budget Allocation Optimization</h2>
+        <div class="subtitle">Performance-based budget reallocation strategy</div>
+        <div class="efficiency-comparison">
+            <div class="efficiency-card">
+                <h3>Current Allocation</h3>
+                <div style="font-size: 1.8em; color: #e74c3c;">Estepona: €35/day</div>
+                <div style="font-size: 1.8em; color: #e74c3c;">Others: €19/day</div>
+                <p>65% budget to worst performer</p>
+            </div>
+            <div class="vs-indicator">→</div>
+            <div class="efficiency-card">
+                <h3>Optimized Allocation</h3>
+                <div style="font-size: 1.8em; color: #27ae60;">Estepona: €20/day</div>
+                <div style="font-size: 1.8em; color: #27ae60;">Others: €34/day</div>
+                <p>Balanced performance approach</p>
+            </div>
+        </div>
+        <div class="data-table">
+            <table>
+                <tr><th>Campaign</th><th>Current Budget</th><th>Current CPA</th><th>Recommended Budget</th><th>Rationale</th></tr>
+                <tr><td>140 - Amaranta Living</td><td>€9.00</td><td>€26.85</td><td>€18.00</td><td>Best performer - double budget</td></tr>
+                <tr><td>HM - Casares</td><td>€6.00</td><td>€44.77</td><td>€10.00</td><td>Moderate performer - scale carefully</td></tr>
+                <tr><td>HM - Estepona</td><td>€35.00</td><td>€82.82</td><td>€20.00</td><td>Reduce while optimizing</td></tr>
+                <tr><td>HM - Sotogrande</td><td>€4.00</td><td>No Conv</td><td>€6.00</td><td>Test with slight increase</td></tr>
+            </table>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Reallocation Benefits</h3>
+                <ul class="bullet-points">
+                    <li>Shift €15/day from worst to best performer</li>
+                    <li>Expected CPA improvement from €69.96 to €45-50</li>
+                    <li>Increased conversion volume from best campaigns</li>
+                    <li>Better impression share distribution</li>
+                    <li>Maintains budget for Estepona optimization</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Performance Monitoring</h3>
+                <ul class="bullet-points">
+                    <li>Daily CPA tracking for first 2 weeks</li>
+                    <li>Conversion volume impact assessment</li>
+                    <li>Impression share changes by campaign</li>
+                    <li>Quality score improvements</li>
+                    <li>Competitive position changes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="analysis-box">
+            <h3>📊 Budget Optimization Timeline</h3>
+            <p><strong>Week 1:</strong> Reduce Estepona to €25/day, increase Amaranta to €15/day. <strong>Week 2:</strong> If CPA maintains <€30, scale Amaranta to €18/day. <strong>Week 3:</strong> Final adjustment to €20/€18 split based on performance data.</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">€15</span>
+                <div class="stat-label">Daily Budget Shift</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <div class="stat-label">Amaranta Budget Increase</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">€45-50</span>
+                <div class="stat-label">Expected New CPA</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">+40%</span>
+                <div class="stat-label">Conversion Volume Goal</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Next Steps & KPIs -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">10</div>
+        </div>
+        <h1>Next Steps & Success Metrics</h1>
+        <div class="subtitle">Implementation priorities and performance tracking</div>
+        <div class="analysis-box">
+            <h3>🎯 Immediate Actions for Week 1</h3>
+            <p>Priority focus on quick wins that deliver immediate CPA improvements while building foundation for long-term impression share growth and campaign optimization.</p>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>This Week (August 21-27)</h3>
+                <ul class="bullet-points">
+                    <li>Implement budget reallocation (Estepona €25→€20, Amaranta €9→€15)</li>
+                    <li>Add +20% mobile bid adjustments across all campaigns</li>
+                    <li>Deploy delivery timeline boxes on all landing pages</li>
+                    <li>Improve CTA visibility with high-contrast colors</li>
+                    <li>Set up weekly performance monitoring dashboard</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Next Week (August 28 - September 3)</h3>
+                <ul class="bullet-points">
+                    <li>Analyze Week 1 performance data and adjust budgets</li>
+                    <li>Complete full CRO implementation (social proof, navigation)</li>
+                    <li>Implement geographic bid adjustments for Northern Europe</li>
+                    <li>Begin PMAX campaign setup for Estepona testing</li>
+                    <li>Optimize ad copy for quality score improvements</li>
+                </ul>
+            </div>
+        </div>
+        <div class="data-table">
+            <table>
+                <tr><th>KPI</th><th>Current</th><th>Week 2 Target</th><th>Month 1 Target</th><th>90-Day Goal</th></tr>
+                <tr><td>Blended CPA</td><td>€69.96</td><td>€50-55</td><td>€40-45</td><td>€32-33</td></tr>
+                <tr><td>Weekly Conversions</td><td>1.25</td><td>2.0</td><td>3.0</td><td>4.5</td></tr>
+                <tr><td>Impression Share</td><td>Baseline</td><td>+25%</td><td>+75%</td><td>+150%</td></tr>
+                <tr><td>Top of Page Rate</td><td>Current</td><td>+15%</td><td>+35%</td><td>+60%</td></tr>
+                <tr><td>Quality Score Avg</td><td>Current</td><td>+0.5</td><td>+1.0</td><td>+1.5</td></tr>
+            </table>
+        </div>
+        <div class="success-box">
+            <h3>Success Criteria & Review Schedule</h3>
+            <div class="three-column">
+                <div>
+                    <strong>Weekly Reviews:</strong><br>
+                    Every Wednesday 12PM Spain time<br>
+                    CPA, conversion volume, impression share tracking
+                </div>
+                <div>
+                    <strong>Monthly Deep Dive:</strong><br>
+                    Comprehensive performance analysis<br>
+                    Strategy adjustments & new opportunities
+                </div>
+                <div>
+                    <strong>Quarterly Strategy:</strong><br>
+                    Market expansion planning<br>
+                    Seasonal optimization & budget scaling
+                </div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>Expected Investment Return</h3>
+            <p>With CPA reduction to €32 and conversion volume increase to 12/month, monthly revenue should increase from €175K to €420K (140% increase) while maintaining the same advertising spend efficiency.</p>
+        </div>
+    </div>
+</body>
+</html>

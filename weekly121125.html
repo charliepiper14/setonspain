@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set on Spain - Performance Summary | November 12, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2b5c 0%, #2c4590 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .slide {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(230, 126, 34, 0.3);
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e67e22;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #e67e22;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #e67e22, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: #e67e22;
+        }
+        
+        h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e67e22;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e67e22;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-number.positive {
+            color: #27ae60;
+        }
+        
+        .stat-number.negative {
+            color: #e74c3c;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .stat-change {
+            font-size: 0.9em;
+            margin-top: 8px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .stat-change.positive {
+            background: rgba(39, 174, 96, 0.2);
+            color: #27ae60;
+        }
+        
+        .stat-change.negative {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .alert-box {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .data-table {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            background: #e67e22;
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .data-table tr:hover {
+            background: rgba(230, 126, 34, 0.1);
+        }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .bullet-points li:before {
+            content: "▶";
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .comparison-header {
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .agenda-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .agenda-item h4 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        
+        .action-item {
+            background: rgba(230, 126, 34, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .priority-high {
+            border-left-color: #e74c3c;
+        }
+        
+        .priority-medium {
+            border-left-color: #f39c12;
+        }
+        
+        .priority-low {
+            border-left-color: #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column, .three-column {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title Slide -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">Weekly Report</div>
+            </div>
+            <h1>Set on Spain</h1>
+            <div class="subtitle">Performance Summary | November 5-11, 2025</div>
+            <div class="info-box">
+                <h3>📊 Review Period</h3>
+                <p><strong>Current Week:</strong> November 5-11, 2025</p>
+                <p><strong>Comparison:</strong> October 29 - November 4, 2025</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">775</span>
+                    <div class="stat-label">Total Clicks</div>
+                    <div class="stat-change negative">-9.25%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4,392</span>
+                    <div class="stat-label">Impressions</div>
+                    <div class="stat-change negative">-18.32%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">17.65%</span>
+                    <div class="stat-label">CTR</div>
+                    <div class="stat-change positive">+11.10%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€1,080.70</span>
+                    <div class="stat-label">Ad Spend</div>
+                    <div class="stat-change negative">-20.04%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">57</span>
+                    <div class="stat-label">Conversions</div>
+                    <div class="stat-change positive">+1.79%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">€18.96</span>
+                    <div class="stat-label">Cost/Conv</div>
+                    <div class="stat-change positive">-21.44%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meeting Agenda -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">Agenda</div>
+            </div>
+            <h2>Meeting Agenda</h2>
+            
+            <div class="agenda-item">
+                <h4>1. DSA Campaign Performance Review - The Palms Estepona (10 mins)</h4>
+                <ul class="bullet-points">
+                    <li>Review new DSA campaign launch performance</li>
+                    <li>Analyze €43.84 spend and 25 clicks generated</li>
+                    <li>Discuss optimization opportunities and next steps</li>
+                </ul>
+            </div>
+
+            <div class="agenda-item">
+                <h4>2. Housing Policy Compliance Strategy (15 mins)</h4>
+                <ul class="bullet-points">
+                    <li>Methodology used for Los Flamingos ad approval</li>
+                    <li>Compare eligible vs restricted ad copy</li>
+                    <li>Roll-out plan for remaining restricted ads</li>
+                    <li>Timeline for implementation</li>
+                </ul>
+            </div>
+
+            <div class="agenda-item">
+                <h4>3. Campaign Performance - High & Low Priorities (10 mins)</h4>
+                <ul class="bullet-points">
+                    <li>High campaign performance analysis</li>
+                    <li>Low campaign wins and opportunities</li>
+                    <li>Budget allocation recommendations</li>
+                </ul>
+            </div>
+
+            <div class="agenda-item">
+                <h4>4. Weekly Performance Overview (10 mins)</h4>
+                <ul class="bullet-points">
+                    <li>Key metrics and trends</li>
+                    <li>Impression share concerns</li>
+                    <li>Top performing keywords and ad groups</li>
+                </ul>
+            </div>
+
+            <div class="agenda-item">
+                <h4>5. Action Items & Next Week Priorities (5 mins)</h4>
+                <ul class="bullet-points">
+                    <li>Immediate optimization tasks</li>
+                    <li>Timeline for housing policy updates</li>
+                    <li>Budget adjustment decisions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">01</div>
+            </div>
+            <h2>Executive Summary</h2>
+            
+            <div class="success-box">
+                <h3>🎯 Key Wins This Week</h3>
+                <ul class="bullet-points">
+                    <li><strong>CPA Improvement:</strong> Cost per conversion dropped 21.44% to €18.96 (best in weeks)</li>
+                    <li><strong>CTR Growth:</strong> Click-through rate improved 11.10% to 17.65%</li>
+                    <li><strong>Stable Conversions:</strong> 57 conversions maintained despite lower spend</li>
+                    <li><strong>DSA Launch:</strong> Successfully launched The Palms DSA with initial traction</li>
+                    <li><strong>Los Flamingos Compliance:</strong> Housing policy resolved for Four Seasons</li>
+                </ul>
+            </div>
+
+            <div class="alert-box">
+                <h3>⚠️ Critical Concerns</h3>
+                <ul class="bullet-points">
+                    <li><strong>Impression Loss:</strong> 18.32% drop in impressions (4,392 vs 5,377)</li>
+                    <li><strong>Budget Limitations:</strong> 49.77% lost impression share due to budget constraints</li>
+                    <li><strong>Search Impression Share:</strong> Down to 38.17% from 49.79% (-23.34%)</li>
+                    <li><strong>Click Volume:</strong> 9.25% decrease affecting overall reach</li>
+                </ul>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Performance Highlights</h3>
+                    <ul class="bullet-points">
+                        <li>Better efficiency with lower CPA</li>
+                        <li>Strong CTR indicates ad relevance</li>
+                        <li>Conversion rate improved to 7.35%</li>
+                        <li>Mobile bid adjustments paying off</li>
+                        <li>Santa Clara Homes: 228% click increase</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Immediate Action Required</h3>
+                    <ul class="bullet-points">
+                        <li>Address budget constraints urgently</li>
+                        <li>Roll out housing policy fixes</li>
+                        <li>Optimize DSA campaign targeting</li>
+                        <li>Review high campaign performance</li>
+                        <li>Scale winning low campaign ads</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DSA Campaign Analysis -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">02</div>
+            </div>
+            <h2>DSA Campaign: The Palms Estepona</h2>
+            <div class="subtitle">Dynamic Search Ads performance analysis and optimization strategy</div>
+
+            <div class="info-box">
+                <h3>📊 Campaign Launch Performance</h3>
+                <p>The Palms Estepona DSA campaign launched this week, marking the biggest single change in the account with a move from €0 to €43.84 in spend.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">€43.84</span>
+                    <div class="stat-label">Total Spend</div>
+                    <div class="stat-change positive">New Campaign</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">25</span>
+                    <div class="stat-label">Clicks Generated</div>
+                    <div class="stat-change positive">From Zero</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€1.75</span>
+                    <div class="stat-label">Avg CPC</div>
+                    <div class="stat-change">Est. Based on Spend</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">?</span>
+                    <div class="stat-label">Conversions</div>
+                    <div class="stat-change">To Be Reviewed</div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>DSA Advantages</h3>
+                    <ul class="bullet-points">
+                        <li>Automatic targeting of relevant searches</li>
+                        <li>Discovers new keyword opportunities</li>
+                        <li>Reduced keyword management overhead</li>
+                        <li>Dynamic headlines match user intent</li>
+                        <li>Complements existing keyword strategy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Optimization Priorities</h3>
+                    <ul class="bullet-points">
+                        <li>Review search term report for quality</li>
+                        <li>Add negative keywords for irrelevant traffic</li>
+                        <li>Ensure landing page quality</li>
+                        <li>Monitor conversion data closely</li>
+                        <li>Compare performance to keyword campaigns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💡 Recommendation: DSA Strategy</h3>
+                <p><strong>Week 1-2:</strong> Monitor search terms and add negatives for rental queries and competitor properties. Target: €20-25 CPA.</p>
+                <p><strong>Week 3-4:</strong> If CPA remains under €30, increase daily budget to €10-15 to capture more volume.</p>
+                <p><strong>Ongoing:</strong> Use DSA insights to identify new exact match keywords for standard campaigns.</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <strong>Action Required:</strong> Review DSA search term report this week and implement negative keyword strategy.
+            </div>
+        </div>
+
+        <!-- Housing Policy Compliance -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">03</div>
+            </div>
+            <h2>Housing Policy Compliance Solution</h2>
+            <div class="subtitle">Los Flamingos success methodology & rollout strategy</div>
+
+            <div class="success-box">
+                <h3>✅ Los Flamingos Ad Approved - Key Changes Identified</h3>
+                <p>The Four Seasons Los Flamingos ad was successfully approved after removing housing policy violations on October 20, 2025.</p>
+            </div>
+
+            <div class="comparison-card" style="margin-bottom: 20px;">
+                <div class="comparison-header">❌ RESTRICTED Ad (Paused)</div>
+                <div class="code-block">
+                    <strong>Description:</strong><br>
+                    "Luxury Apartments in Golf Resort Setting. From POA. Get Floor Plans Today!"<br><br>
+                    <strong>Headlines include:</strong><br>
+                    "Secure Your Dream Home Today"
+                </div>
+                <p style="margin-top: 15px; color: #e74c3c;"><strong>Violations:</strong></p>
+                <ul class="bullet-points">
+                    <li>"From POA" - Discriminatory pricing language</li>
+                    <li>"Get Floor Plans Today!" - Overly urgent promotional CTA</li>
+                    <li>"Secure Your Dream Home Today" - Emotional/aspirational language</li>
+                </ul>
+            </div>
+
+            <div class="comparison-card">
+                <div class="comparison-header">✅ APPROVED Ad (Active)</div>
+                <div class="code-block">
+                    <strong>Description:</strong><br>
+                    "Luxury Apartments in Golf Resort Setting. Request latest listings today!"<br><br>
+                    <strong>Headlines include:</strong><br>
+                    "Request Available Apartments"<br>
+                    "Book A Viewing"
+                </div>
+                <p style="margin-top: 15px; color: #27ae60;"><strong>Compliant Changes:</strong></p>
+                <ul class="bullet-points">
+                    <li>Removed all pricing references (POA)</li>
+                    <li>Changed to neutral "Request latest listings"</li>
+                    <li>Removed emotional urgency language</li>
+                    <li>Focused on factual property features</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>📋 Housing Policy Compliance Rules</h3>
+                <div class="two-column">
+                    <div>
+                        <h4 style="color: #e74c3c; margin-bottom: 10px;">❌ Avoid These:</h4>
+                        <ul class="bullet-points">
+                            <li>Price qualifiers (From, Starting at, POA)</li>
+                            <li>Urgent CTAs (Today, Now, Limited Time)</li>
+                            <li>Emotional language (Dream Home, Perfect)</li>
+                            <li>Family-specific (Family-friendly)</li>
+                            <li>Promotional urgency (Don't Miss Out)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #27ae60; margin-bottom: 10px;">✅ Use Instead:</h4>
+                        <ul class="bullet-points">
+                            <li>Request Information, Contact Us</li>
+                            <li>Schedule Viewing, Enquire Now</li>
+                            <li>Latest Availability, Current Listings</li>
+                            <li>Property Features, Amenities</li>
+                            <li>Location Benefits, Development Info</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Rollout Strategy for All Campaigns</h3>
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Timeline</th>
+                            <th>Actions</th>
+                            <th>Campaigns Affected</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 1</strong></td>
+                            <td>This Week</td>
+                            <td>Audit all ad copy for violations</td>
+                            <td>High & Medium Priority</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 2</strong></td>
+                            <td>Next Week</td>
+                            <td>Update descriptions & headlines</td>
+                            <td>Top 20 performing ads</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 3</strong></td>
+                            <td>Week 3</td>
+                            <td>Submit for review & monitor</td>
+                            <td>All remaining campaigns</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 4</strong></td>
+                            <td>Ongoing</td>
+                            <td>All new ads follow guidelines</td>
+                            <td>Future campaigns</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="action-item priority-high">
+                <strong>Immediate Action:</strong> Charles to conduct full account audit this week and prepare compliant ad copy for top 20 campaigns. Tony & Emma to review and approve by Friday.
+            </div>
+        </div>
+
+        <!-- Campaign Performance High -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">04</div>
+            </div>
+            <h2>High Campaign Performance Review</h2>
+            <div class="subtitle">SOS Campaign- High | €60/day budget</div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">280</span>
+                    <div class="stat-label">Clicks</div>
+                    <div class="stat-change negative">-17.16%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1,376</span>
+                    <div class="stat-label">Impressions</div>
+                    <div class="stat-change negative">-39.25%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">20.35%</span>
+                    <div class="stat-label">CTR</div>
+                    <div class="stat-change positive">+36.36%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€444.32</span>
+                    <div class="stat-label">Spend</div>
+                    <div class="stat-change negative">-25.12%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">21</span>
+                    <div class="stat-label">Conversions</div>
+                    <div class="stat-change negative">-19.23%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">€21.16</span>
+                    <div class="stat-label">CPA</div>
+                    <div class="stat-change positive">-7.30%</div>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h3>⚠️ Critical Issue: Budget Limitation</h3>
+                <p><strong>Lost Impression Share (Budget):</strong> 55.17% (up from 32.40%)</p>
+                <p><strong>Lost Impression Share (Rank):</strong> Only 4.30% (down from 18.92%)</p>
+                <p><strong>Analysis:</strong> The campaign is performing well (low rank loss) but is severely constrained by budget. Over half of potential impressions are being lost due to daily budget limits, not ad quality or bids.</p>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Top Performers in High Campaign</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Ad Group</th>
+                                <th>Clicks</th>
+                                <th>CTR</th>
+                            </tr>
+                            <tr>
+                                <td>180 - Four Seasons Los Flamingos</td>
+                                <td>13</td>
+                                <td>15.48%</td>
+                            </tr>
+                            <tr>
+                                <td>128 - Salvia</td>
+                                <td>23</td>
+                                <td>Strong</td>
+                            </tr>
+                            <tr>
+                                <td>182 - MARALTO</td>
+                                <td>24</td>
+                                <td>27.27%</td>
+                            </tr>
+                            <tr>
+                                <td>75 - Real De La Quinta</td>
+                                <td>42</td>
+                                <td>22.62%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Underperformers</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Ad Group</th>
+                                <th>Issue</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>60 - Village Verde</td>
+                                <td>-50% clicks</td>
+                                <td>Review ad copy</td>
+                            </tr>
+                            <tr>
+                                <td>13 - La Finca Jasmine</td>
+                                <td>-75% clicks</td>
+                                <td>Investigate</td>
+                            </tr>
+                            <tr>
+                                <td>184 - CASARES APARTMENTS</td>
+                                <td>-55% clicks</td>
+                                <td>Bid adjustment</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💰 Budget Recommendation: Increase High Campaign</h3>
+                <p><strong>Current:</strong> €60/day | <strong>Recommended:</strong> €85-100/day</p>
+                <p><strong>Rationale:</strong></p>
+                <ul class="bullet-points">
+                    <li>CPA of €21.16 is well within target (€32-33)</li>
+                    <li>55% of impressions lost to budget, not quality</li>
+                    <li>Strong CTR (20.35%) shows ad relevance</li>
+                    <li>Could capture 80-100 additional conversions/month at current efficiency</li>
+                    <li>ROI supports higher investment (€35k revenue per conversion)</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> +40-50% impression volume, +30-35 monthly conversions</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <strong>Decision Required:</strong> Approve budget increase for High campaign to capture lost impression share and scale winning ad groups.
+            </div>
+        </div>
+
+        <!-- Campaign Performance Low -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">05</div>
+            </div>
+            <h2>Low Campaign Performance Review</h2>
+            <div class="subtitle">SOS Campaign - Low | €10/day budget | Outstanding performance this week</div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number positive">42</span>
+                    <div class="stat-label">Clicks</div>
+                    <div class="stat-change positive">+366.67%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">342</span>
+                    <div class="stat-label">Impressions</div>
+                    <div class="stat-change positive">+111.11%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">12.28%</span>
+                    <div class="stat-label">CTR</div>
+                    <div class="stat-change positive">+121.05%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€23.02</span>
+                    <div class="stat-label">Spend</div>
+                    <div class="stat-change positive">+384.72%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">2</span>
+                    <div class="stat-label">Conversions</div>
+                    <div class="stat-change positive">From 0</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">€11.51</span>
+                    <div class="stat-label">CPA</div>
+                    <div class="stat-change positive">Excellent</div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>🎉 Low Campaign: Week's Biggest Win</h3>
+                <p>The Low campaign delivered exceptional results this week with a 367% increase in clicks and 2 conversions at an excellent €11.51 CPA - <strong>65% better than target!</strong></p>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Top Performers</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Ad Group</th>
+                                <th>Performance</th>
+                            </tr>
+                            <tr>
+                                <td>7 - Epic Marbella</td>
+                                <td>16 clicks (+1,500%)</td>
+                            </tr>
+                            <tr>
+                                <td>143 - Etherna Homes</td>
+                                <td>7 clicks (+600%)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Key Success Factors</h3>
+                    <ul class="bullet-points">
+                        <li>Target CPA bidding optimization</li>
+                        <li>Lower competition keywords</li>
+                        <li>Strong ad relevance</li>
+                        <li>Improved quality scores</li>
+                        <li>Better landing page experience</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>📊 Device Performance Analysis</h3>
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <th>Device</th>
+                            <th>Clicks</th>
+                            <th>CTR</th>
+                            <th>Conversions</th>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>28 (+460%)</td>
+                            <td>11.52%</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Desktop</td>
+                            <td>13 (+225%)</td>
+                            <td>14.29%</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Tablet</td>
+                            <td>1</td>
+                            <td>12.50%</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💡 Scaling Opportunity</h3>
+                <p><strong>Current Budget:</strong> €10/day | <strong>Current Performance:</strong> €11.51 CPA</p>
+                <p><strong>Recommendation:</strong> Increase budget to €18-20/day to capture more volume while maintaining excellent efficiency.</p>
+                <p><strong>Expected Outcome:</strong></p>
+                <ul class="bullet-points">
+                    <li>4-5 additional conversions per week</li>
+                    <li>CPA likely to remain under €15</li>
+                    <li>Strong ROI maintained</li>
+                    <li>Can identify more winning ad groups to promote to Medium/High tiers</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <strong>Recommendation:</strong> Scale Low campaign budget to €18-20/day to capitalize on exceptional performance while maintaining efficiency.
+            </div>
+        </div>
+
+        <!-- Weekly Performance Trends -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">06</div>
+            </div>
+            <h2>Weekly Performance Trends</h2>
+            <div class="subtitle">Daily breakdown & patterns analysis</div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Clicks</th>
+                        <th>Conversions</th>
+                        <th>Cost/Conv</th>
+                        <th>Spend</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Wed, Nov 5</td>
+                        <td>110</td>
+                        <td>13</td>
+                        <td>€11.76</td>
+                        <td>€152.94</td>
+                        <td style="color: #27ae60;">Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Thu, Nov 6</td>
+                        <td>97</td>
+                        <td>8</td>
+                        <td>€17.96</td>
+                        <td>€143.65</td>
+                        <td style="color: #27ae60;">Good</td>
+                    </tr>
+                    <tr>
+                        <td>Fri, Nov 7</td>
+                        <td>108</td>
+                        <td>8</td>
+                        <td>€19.42</td>
+                        <td>€155.33</td>
+                        <td style="color: #27ae60;">Good</td>
+                    </tr>
+                    <tr>
+                        <td>Sat, Nov 8</td>
+                        <td>112</td>
+                        <td>9</td>
+                        <td>€15.90</td>
+                        <td>€143.13</td>
+                        <td style="color: #27ae60;">Good</td>
+                    </tr>
+                    <tr>
+                        <td>Sun, Nov 9</td>
+                        <td>108</td>
+                        <td>12</td>
+                        <td>€13.94</td>
+                        <td>€167.31</td>
+                        <td style="color: #27ae60;">Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Mon, Nov 10</td>
+                        <td>107</td>
+                        <td>7</td>
+                        <td>€22.75</td>
+                        <td>€159.26</td>
+                        <td style="color: #f39c12;">Average</td>
+                    </tr>
+                    <tr>
+                        <td>Tue, Nov 11</td>
+                        <td>133</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>€159.07</td>
+                        <td style="color: #e74c3c;">Concern</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <div class="success-box">
+                        <h3>🌟 Best Days</h3>
+                        <p><strong>Wednesday, Nov 5:</strong></p>
+                        <ul class="bullet-points">
+                            <li>13 conversions</li>
+                            <li>€11.76 CPA (best of week)</li>
+                            <li>110 clicks</li>
+                        </ul>
+                        <p><strong>Sunday, Nov 9:</strong></p>
+                        <ul class="bullet-points">
+                            <li>12 conversions</li>
+                            <li>€13.94 CPA</li>
+                            <li>Strong weekend performance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="alert-box">
+                        <h3>⚠️ Day to Investigate</h3>
+                        <p><strong>Tuesday, Nov 11:</strong></p>
+                        <ul class="bullet-points">
+                            <li>Zero conversions</li>
+                            <li>Highest clicks (133)</li>
+                            <li>Good CTR maintained</li>
+                            <li>Possible tracking issue?</li>
+                            <li>Budget exhausted early?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>📈 Weekly Patterns Identified</h3>
+                <ul class="bullet-points">
+                    <li><strong>Strong Mid-Week Performance:</strong> Wednesday shows consistently excellent results</li>
+                    <li><strong>Weekend Strength:</strong> Saturday-Sunday maintain good conversion volume</li>
+                    <li><strong>Monday Dip:</strong> Typical pattern, CPA rises slightly</li>
+                    <li><strong>End-of-Week Concern:</strong> Tuesday's zero conversions requires investigation</li>
+                    <li><strong>Overall Trend:</strong> More efficient conversions than previous week despite lower volume</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <strong>Investigation Required:</strong> Check conversion tracking for Tuesday, Nov 11. Verify tag firing and review any landing page issues that may have prevented conversions despite strong click volume.
+            </div>
+        </div>
+
+        <!-- Top Keywords Performance -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">07</div>
+            </div>
+            <h2>Top Performing Keywords</h2>
+            <div class="subtitle">Keyword analysis & optimization opportunities</div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Match Type</th>
+                        <th>Spend</th>
+                        <th>Clicks</th>
+                        <th>CTR</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>maralto estepona</td>
+                        <td>Exact</td>
+                        <td>€35.55</td>
+                        <td>18</td>
+                        <td>27.27%</td>
+                        <td style="color: #27ae60;">Top Spender</td>
+                    </tr>
+                    <tr>
+                        <td>The Palms Estepona</td>
+                        <td>Exact</td>
+                        <td>€30.13</td>
+                        <td>12</td>
+                        <td>21.43%</td>
+                        <td style="color: #27ae60;">Strong</td>
+                    </tr>
+                    <tr>
+                        <td>Essence Residence</td>
+                        <td>Exact</td>
+                        <td>€28.66</td>
+                        <td>22</td>
+                        <td>52.38%</td>
+                        <td style="color: #27ae60;">High CTR</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Clara Homes</td>
+                        <td>Phrase</td>
+                        <td>€28.47</td>
+                        <td>17</td>
+                        <td>18.28%</td>
+                        <td style="color: #27ae60;">Growing</td>
+                    </tr>
+                    <tr>
+                        <td>salvia san pedro de alcantara</td>
+                        <td>Exact</td>
+                        <td>€26.61</td>
+                        <td>7</td>
+                        <td>53.85%</td>
+                        <td style="color: #27ae60;">Excellent CTR</td>
+                    </tr>
+                    <tr>
+                        <td>soul marbella</td>
+                        <td>Exact</td>
+                        <td>€22.56</td>
+                        <td>9</td>
+                        <td>18.37%</td>
+                        <td style="color: #f39c12;">Stable</td>
+                    </tr>
+                    <tr>
+                        <td>casares apartments</td>
+                        <td>Phrase</td>
+                        <td>€22.02</td>
+                        <td>14</td>
+                        <td>11.20%</td>
+                        <td style="color: #e74c3c;">Declining</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Highest CTR Keywords</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>CTR</th>
+                            </tr>
+                            <tr>
+                                <td>Mala Kai Resort</td>
+                                <td>55.56%</td>
+                            </tr>
+                            <tr>
+                                <td>salvia san pedro</td>
+                                <td>53.85%</td>
+                            </tr>
+                            <tr>
+                                <td>Essence Residence</td>
+                                <td>52.38%</td>
+                            </tr>
+                            <tr>
+                                <td>village verde</td>
+                                <td>50.00%</td>
+                            </tr>
+                            <tr>
+                                <td>Las Mesas Collection</td>
+                                <td>50.00%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Emerging Winners</h3>
+                    <ul class="bullet-points">
+                        <li><strong>Santa Clara Homes:</strong> +240% clicks (5→17)</li>
+                        <li><strong>The Palms:</strong> +20% clicks, new DSA support</li>
+                        <li><strong>Mala Kai Resort:</strong> 10 clicks from zero</li>
+                        <li><strong>Las Mesas Collection:</strong> 9 clicks from zero</li>
+                        <li><strong>oasis 325:</strong> 8 clicks from 1 (+700%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h3>⚠️ Keywords Needing Attention</h3>
+                <ul class="bullet-points">
+                    <li><strong>casares apartments:</strong> Down 52% in clicks, CTR dropped from 19.73% to 11.20%</li>
+                    <li><strong>Nubay variations:</strong> Mixed performance, need consolidation</li>
+                    <li><strong>village verde:</strong> High CTR but low conversion - landing page issue?</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💡 Keyword Strategy Recommendations</h3>
+                <ul class="bullet-points">
+                    <li><strong>Scale Winners:</strong> Increase bids 20% for 50%+ CTR keywords</li>
+                    <li><strong>New Opportunities:</strong> Add exact match for "Las Mesas Collection" and "Mala Kai"</li>
+                    <li><strong>Consolidate:</strong> Review Nubay keyword variations, focus budget on best performers</li>
+                    <li><strong>Investigate:</strong> Check "casares apartments" decline - competitor activity?</li>
+                    <li><strong>Test Broad Match:</strong> For top 5 exact match keywords, test broad match with Target CPA</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Budget & Impression Share -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">08</div>
+            </div>
+            <h2>Budget Constraints & Impression Share</h2>
+            <div class="subtitle">Critical analysis of growth limitations</div>
+
+            <div class="alert-box">
+                <h3>🚨 Urgent: Budget Limitations Severely Impacting Performance</h3>
+                <p>Search impression share has dropped to 38.17% (down from 49.79%), with 49.77% of impressions lost solely due to budget constraints.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number negative">38.17%</span>
+                    <div class="stat-label">Search Impr. Share</div>
+                    <div class="stat-change negative">-23.34% vs last week</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number negative">49.77%</span>
+                    <div class="stat-label">Lost IS (Budget)</div>
+                    <div class="stat-change negative">+64.89%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">14.49%</span>
+                    <div class="stat-label">Lost IS (Rank)</div>
+                    <div class="stat-change positive">-41.82%</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€160/day</span>
+                    <div class="stat-label">Current Budget</div>
+                    <div class="stat-change">Across all campaigns</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>📊 Budget Analysis by Campaign</h3>
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Daily Budget</th>
+                            <th>Lost IS (Budget)</th>
+                            <th>Lost IS (Rank)</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>SOS Campaign- High</td>
+                            <td>€60</td>
+                            <td>55.17%</td>
+                            <td>4.30%</td>
+                            <td style="color: #e74c3c;">Critical</td>
+                        </tr>
+                        <tr>
+                            <td>SOS Campaign- Medium</td>
+                            <td>€70</td>
+                            <td>56.84%</td>
+                            <td>6.94%</td>
+                            <td style="color: #e74c3c;">Critical</td>
+                        </tr>
+                        <tr>
+                            <td>109 - Santa Clara Homes</td>
+                            <td>€9</td>
+                            <td>0.00%</td>
+                            <td>42.75%</td>
+                            <td style="color: #27ae60;">Healthy</td>
+                        </tr>
+                        <tr>
+                            <td>SOS Campaign - low</td>
+                            <td>€10</td>
+                            <td>0.00%</td>
+                            <td>82.48%</td>
+                            <td style="color: #f39c12;">Rank Issue</td>
+                        </tr>
+                        <tr>
+                            <td>140 - Amaranta Living</td>
+                            <td>€9</td>
+                            <td>0.00%</td>
+                            <td>20.00%</td>
+                            <td style="color: #27ae60;">Good</td>
+                        </tr>
+                        <tr>
+                            <td>108 - Bayside Homes</td>
+                            <td>€2</td>
+                            <td>65.71%</td>
+                            <td>15.24%</td>
+                            <td style="color: #e74c3c;">Under-budgeted</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Impact of Budget Constraints</h3>
+                    <ul class="bullet-points">
+                        <li>Missing ~2,200 daily impressions (50% loss)</li>
+                        <li>Estimated 85-110 lost conversions/month</li>
+                        <li>€3M+ in lost potential property sales</li>
+                        <li>Competitors capturing our searches</li>
+                        <li>Strong ads not getting shown</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Why Budget Increase is Low Risk</h3>
+                    <ul class="bullet-points">
+                        <li>Current CPA (€18.96) well below target (€32-33)</li>
+                        <li>Only 14.49% lost to rank (quality is strong)</li>
+                        <li>ROI supports higher spend (€35k/conversion)</li>
+                        <li>Target CPA bidding will maintain efficiency</li>
+                        <li>Can scale back if CPA rises</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💰 Budget Increase Recommendation</h3>
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Current</th>
+                            <th>Recommended</th>
+                            <th>Increase</th>
+                            <th>Expected Monthly Conversions</th>
+                        </tr>
+                        <tr>
+                            <td>High</td>
+                            <td>€60</td>
+                            <td>€85-100</td>
+                            <td>+€40</td>
+                            <td>+30-35</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>€70</td>
+                            <td>€95-110</td>
+                            <td>+€40</td>
+                            <td>+35-40</td>
+                        </tr>
+                        <tr>
+                            <td>Low</td>
+                            <td>€10</td>
+                            <td>€18-20</td>
+                            <td>+€10</td>
+                            <td>+12-16</td>
+                        </tr>
+                        <tr>
+                            <td>Bayside Homes</td>
+                            <td>€2</td>
+                            <td>€5-7</td>
+                            <td>+€5</td>
+                            <td>+8-12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>€142</strong></td>
+                            <td><strong>€203-237</strong></td>
+                            <td><strong>+€95</strong></td>
+                            <td><strong>+85-103</strong></td>
+                        </tr>
+                    </table>
+                </div>
+                <p style="margin-top: 20px;"><strong>Monthly Investment:</strong> +€2,850 | <strong>Expected Additional Revenue:</strong> €2.98M - €3.6M | <strong>ROI:</strong> 1,045x - 1,263x</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <strong>Critical Decision Required:</strong> Approve phased budget increase starting with High and Medium campaigns to capture lost impression share and scale account to full potential.
+            </div>
+        </div>
+
+        <!-- Action Items & Next Steps -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">09</div>
+            </div>
+            <h2>Action Items & Next Week Priorities</h2>
+            
+            <div class="action-item priority-high">
+                <h3>🔥 Priority 1: Housing Policy Compliance Rollout</h3>
+                <p><strong>Owner:</strong> Charles | <strong>Due:</strong> Friday, November 15</p>
+                <ul class="bullet-points">
+                    <li>Complete full account audit for housing policy violations</li>
+                    <li>Prepare compliant ad copy for all restricted ads</li>
+                    <li>Submit draft copy to Tony & Emma for approval</li>
+                    <li>Implement approved changes by end of week</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <h3>🔥 Priority 2: Budget Increase Decision</h3>
+                <p><strong>Owner:</strong> Tony & Emma | <strong>Due:</strong> This Week</p>
+                <ul class="bullet-points">
+                    <li>Review budget increase recommendation (+€95/day)</li>
+                    <li>Approve phased rollout starting with High campaign</li>
+                    <li>Confirm monthly budget allocation</li>
+                    <li>Set CPA thresholds for each campaign</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <h3>🔥 Priority 3: DSA Campaign Optimization</h3>
+                <p><strong>Owner:</strong> Charles | <strong>Due:</strong> Wednesday, November 13</p>
+                <ul class="bullet-points">
+                    <li>Review DSA search term report</li>
+                    <li>Add negative keywords for rental and competitor queries</li>
+                    <li>Analyze conversion data and CPA</li>
+                    <li>Prepare scaling recommendation</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h3>📊 Priority 4: Tuesday Conversion Investigation</h3>
+                <p><strong>Owner:</strong> Charles | <strong>Due:</strong> Thursday, November 14</p>
+                <ul class="bullet-points">
+                    <li>Check conversion tag firing on Tuesday, Nov 11</li>
+                    <li>Review Google Analytics for session data</li>
+                    <li>Identify any landing page issues</li>
+                    <li>Implement fixes if tracking error found</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h3>📈 Priority 5: Keyword Optimization</h3>
+                <p><strong>Owner:</strong> Charles | <strong>Due:</strong> Friday, November 15</p>
+                <ul class="bullet-points">
+                    <li>Increase bids 20% for 50%+ CTR keywords</li>
+                    <li>Add exact match keywords for emerging winners</li>
+                    <li>Investigate "casares apartments" decline</li>
+                    <li>Consolidate Nubay keyword variations</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-low">
+                <h3>📝 Priority 6: Scale Low Campaign</h3>
+                <p><strong>Owner:</strong> Charles with Tony/Emma approval | <strong>Due:</strong> Next Week</p>
+                <ul class="bullet-points">
+                    <li>Increase Low campaign budget to €18-20/day</li>
+                    <li>Monitor CPA and conversion volume</li>
+                    <li>Identify ad groups for promotion to Medium tier</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>📅 Next Week's Focus</h3>
+                <ul class="bullet-points">
+                    <li><strong>Monday-Wednesday:</strong> Implement housing policy fixes and DSA optimization</li>
+                    <li><strong>Thursday:</strong> Roll out approved budget increases</li>
+                    <li><strong>Friday:</strong> Complete keyword optimizations and review week's performance</li>
+                    <li><strong>Next Meeting:</strong> Tuesday, November 19 | Review budget impact and housing policy results</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h3>🎯 Success Metrics for Next Week</h3>
+                <div class="three-column">
+                    <div>
+                        <strong>Impression Share:</strong><br>
+                        Target: 45%+ (up from 38.17%)
+                    </div>
+                    <div>
+                        <strong>Weekly Conversions:</strong><br>
+                        Target: 70+ (up from 57)
+                    </div>
+                    <div>
+                        <strong>CPA:</strong><br>
+                        Target: Maintain <€22
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Closing Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">Summary</div>
+            </div>
+            <h2>Week in Review: Key Takeaways</h2>
+            
+            <div class="success-box">
+                <h3>✅ This Week's Wins</h3>
+                <ul class="bullet-points">
+                    <li>CPA improved 21.44% to €18.96 (42% better than target)</li>
+                    <li>Low campaign delivered 367% click increase and €11.51 CPA</li>
+                    <li>Housing policy solution identified and documented</li>
+                    <li>DSA campaign successfully launched</li>
+                    <li>Maintained conversion volume despite budget constraints</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Critical Path Forward</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Immediate (This Week):</h4>
+                        <ul class="bullet-points">
+                            <li>Housing policy audit & fixes</li>
+                            <li>DSA optimization</li>
+                            <li>Budget decision</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Short-term (Next 2 Weeks):</h4>
+                        <ul class="bullet-points">
+                            <li>Scale winning campaigns</li>
+                            <li>Capture lost impression share</li>
+                            <li>Keyword optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>📊 Expected Results (Next 30 Days)</h3>
+                <p>With approved budget increases and optimizations:</p>
+                <ul class="bullet-points">
+                    <li><strong>Monthly Conversions:</strong> 240-280 (up from 170-190 current pace)</li>
+                    <li><strong>Impression Share:</strong> 55-65% (up from 38%)</li>
+                    <li><strong>Monthly Revenue:</strong> €8.4M - €9.8M in property sales</li>
+                    <li><strong>CPA:</strong> Maintain €20-25 range</li>
+                    <li><strong>ROI:</strong> 850-1,000x return on ad spend</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <h3 style="color: #e67e22;">Thank you for your continued partnership</h3>
+                <p style="font-size: 1.2em; margin-top: 20px;">Questions? Let's discuss in today's call.</p>
+                <p style="margin-top: 30px; opacity: 0.8;">Prepared by Charles Piper | Lead Guru<br>November 12, 2025</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

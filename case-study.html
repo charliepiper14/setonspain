@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Case Study</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            padding: 40px;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 40px;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            color: #ecf0f1;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        
+        .header h2 {
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        /* Timeline */
+        .timeline {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        .timeline h3 {
+            color: #2c3e50;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        
+        .timeline-bar {
+            background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
+            padding: 14px 30px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+        }
+        
+        .timeline-bar span {
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Main Metrics */
+        .main-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 3px solid;
+            transition: transform 0.2s;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .metric-card.green {
+            border-color: #27ae60;
+        }
+        
+        .metric-card.red {
+            border-color: #e74c3c;
+        }
+        
+        .metric-card.blue {
+            border-color: #3498db;
+        }
+        
+        .metric-value {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .metric-card.green .metric-value {
+            color: #27ae60;
+        }
+        
+        .metric-card.red .metric-value {
+            color: #e74c3c;
+        }
+        
+        .metric-card.blue .metric-value {
+            color: #3498db;
+        }
+        
+        .metric-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-detail {
+            font-size: 12px;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+        
+        /* Additional Metrics Section */
+        .section-header {
+            background: #f8f9fa;
+            padding: 30px 40px 20px;
+            text-align: center;
+        }
+        
+        .section-header h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        
+        .section-divider {
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #bdc3c7, transparent);
+            margin: 0 auto;
+        }
+        
+        /* Additional Metrics Grid */
+        .additional-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 30px 40px;
+            background: #f8f9fa;
+        }
+        
+        .small-metric {
+            background: white;
+            border-radius: 10px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 2px solid #ecf0f1;
+        }
+        
+        .small-metric-value {
+            font-size: 36px;
+            font-weight: 800;
+            min-width: 100px;
+            text-align: center;
+        }
+        
+        .small-metric-value.positive {
+            color: #27ae60;
+        }
+        
+        .small-metric-value.negative {
+            color: #e74c3c;
+        }
+        
+        .small-metric-info {
+            flex: 1;
+        }
+        
+        .small-metric-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        
+        .small-metric-detail {
+            font-size: 11px;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+        
+        /* Challenge & Solution Sections */
+        .content-section {
+            padding: 35px 40px;
+            background: #ffffff;
+        }
+        
+        .content-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .content-title {
+            background: #ecf0f1;
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border: 2px solid #bdc3c7;
+        }
+        
+        .content-list {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+        }
+        
+        .content-list li {
+            padding: 16px 20px;
+            background: white;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid;
+        }
+        
+        .challenge-item {
+            color: #34495e;
+            border-left-color: #e74c3c;
+        }
+        
+        .solution-item {
+            color: #27ae60;
+            font-weight: 600;
+            border-left-color: #27ae60;
+        }
+        
+        .content-list li::before {
+            margin-right: 12px;
+            font-weight: 700;
+        }
+        
+        .challenge-item::before {
+            content: "•";
+            color: #e74c3c;
+        }
+        
+        .solution-item::before {
+            content: "✓";
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Google Ads Case Study</h1>
+            <h2>Luxury Real Estate Market Transformation</h2>
+        </div>
+        
+        <!-- Timeline -->
+        <div class="timeline">
+            <h3>30-DAY TURNAROUND</h3>
+            <div class="timeline-bar">
+                <span>October 20 - November 17, 2025</span>
+            </div>
+        </div>
+        
+        <!-- Main Metrics -->
+        <div class="main-metrics">
+            <div class="metric-card green">
+                <div class="metric-value">321%</div>
+                <div class="metric-title">Conversion Increase</div>
+                <div class="metric-detail">47 → 198 Conversions</div>
+            </div>
+            
+            <div class="metric-card red">
+                <div class="metric-value">28%</div>
+                <div class="metric-title">CPA Reduction</div>
+                <div class="metric-detail">€31.61 → €22.80</div>
+            </div>
+            
+            <div class="metric-card blue">
+                <div class="metric-value">85%</div>
+                <div class="metric-title">Conv. Rate Growth</div>
+                <div class="metric-detail">3.6% → 6.7%</div>
+            </div>
+        </div>
+        
+        <!-- Additional Metrics Header -->
+        <div class="section-header">
+            <h3>Additional Performance Gains</h3>
+            <div class="section-divider"></div>
+        </div>
+        
+        <!-- Additional Metrics -->
+        <div class="additional-metrics">
+            <div class="small-metric">
+                <div class="small-metric-value positive">+128%</div>
+                <div class="small-metric-info">
+                    <div class="small-metric-label">Traffic Growth</div>
+                    <div class="small-metric-detail">1,297 → 2,955 Clicks</div>
+                </div>
+            </div>
+            
+            <div class="small-metric">
+                <div class="small-metric-value positive">+35%</div>
+                <div class="small-metric-info">
+                    <div class="small-metric-label">CTR Improvement</div>
+                    <div class="small-metric-detail">11.2% → 15.1%</div>
+                </div>
+            </div>
+            
+            <div class="small-metric">
+                <div class="small-metric-value positive">+22%</div>
+                <div class="small-metric-info">
+                    <div class="small-metric-label">Impression Share</div>
+                    <div class="small-metric-detail">35.3% → 43.2%</div>
+                </div>
+            </div>
+            
+            <div class="small-metric">
+                <div class="small-metric-value positive">-61%</div>
+                <div class="small-metric-info">
+                    <div class="small-metric-label">Lost IS (Rank)</div>
+                    <div class="small-metric-detail">73.6% → 28.6%</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Challenge Section -->
+        <div class="content-section">
+            <div class="content-title">The Challenge</div>
+            <ul class="content-list">
+                <li class="challenge-item">Rising costs (CPA doubled in 3 years)</li>
+                <li class="challenge-item">Low impression share (35% vs competitors at 40%+)</li>
+                <li class="challenge-item">Poor Quality Scores (3-5 across ad groups)</li>
+                <li class="challenge-item">Google housing policy violations</li>
+                <li class="challenge-item">Extreme competition (1,300+ agencies)</li>
+            </ul>
+        </div>
+        
+        <!-- Solution Section -->
+        <div class="content-section">
+            <div class="content-title">The Solution</div>
+            <ul class="content-list">
+                <li class="solution-item">Complete Quality Score optimization (120+ ad groups)</li>
+                <li class="solution-item">Resolved all housing policy violations</li>
+                <li class="solution-item">Strategic campaign restructuring by geography</li>
+                <li class="solution-item">Bid strategy refinement (Target CPA)</li>
+                <li class="solution-item">Development-specific keyword targeting</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

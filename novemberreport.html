@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set on Spain - 30 Day Performance Report | December 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2b5c 0%, #2c4590 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .slide {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(230, 126, 34, 0.3);
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e67e22;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #e67e22;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #e67e22, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: #e67e22;
+        }
+        
+        h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e67e22;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e67e22;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-number.positive {
+            color: #27ae60;
+        }
+        
+        .stat-number.negative {
+            color: #e74c3c;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .stat-change {
+            font-size: 0.9em;
+            margin-top: 8px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .stat-change.positive {
+            background: rgba(39, 174, 96, 0.2);
+            color: #27ae60;
+        }
+        
+        .stat-change.negative {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+        }
+        
+        .stat-change.neutral {
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .alert-box {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .data-table {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            background: #e67e22;
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .data-table tr:hover {
+            background: rgba(230, 126, 34, 0.1);
+        }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .bullet-points li:before {
+            content: "";
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #e67e22;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-header {
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .action-item {
+            background: rgba(230, 126, 34, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .priority-high {
+            border-left-color: #e74c3c;
+        }
+        
+        .priority-medium {
+            border-left-color: #f39c12;
+        }
+        
+        .priority-low {
+            border-left-color: #3498db;
+        }
+        
+        .competitor-bar {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+        }
+        
+        .competitor-name {
+            width: 180px;
+            font-size: 0.95em;
+        }
+        
+        .competitor-fill {
+            height: 28px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .competitor-fill.you {
+            background: linear-gradient(90deg, #e67e22, #d35400);
+        }
+        
+        .competitor-fill.main-competitor {
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+        }
+        
+        .vs-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+        }
+        
+        .vs-box {
+            text-align: center;
+            padding: 25px 35px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+        }
+        
+        .vs-box.platform {
+            border: 3px solid #27ae60;
+        }
+        
+        .vs-box.actual {
+            border: 3px solid #e74c3c;
+        }
+        
+        .vs-divider {
+            font-size: 2em;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin: 25px 0;
+        }
+        
+        .timeline-week {
+            width: 120px;
+            font-weight: bold;
+            color: #e67e22;
+            font-size: 1.1em;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding-left: 25px;
+            border-left: 3px solid rgba(230, 126, 34, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .two-column, .three-column {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Title Slide -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">30 Day Report</div>
+            </div>
+            <h1>Set on Spain</h1>
+            <div class="subtitle">30 Day Performance Review | November 3 to December 2, 2025</div>
+            
+            <div class="info-box">
+                <h3>Report Overview</h3>
+                <p>This comprehensive 30-day analysis examines campaign performance against your lead form conversion goals, competitive positioning versus hihomes.com.es, and identifies strategic opportunities to optimize December 2025 and January 2026 performance.</p>
+            </div>
+            
+            <div class="vs-container">
+                <div class="vs-box platform">
+                    <div style="font-size: 0.95em; opacity: 0.85; margin-bottom: 8px;">Platform CPA</div>
+                    <div style="font-size: 2.5em; font-weight: bold; color: #27ae60;">€22.30</div>
+                    <div style="font-size: 0.85em; opacity: 0.8; margin-top: 5px;">All conversion events</div>
+                </div>
+                <div class="vs-divider">vs</div>
+                <div class="vs-box actual">
+                    <div style="font-size: 0.95em; opacity: 0.85; margin-bottom: 8px;">True CPA</div>
+                    <div style="font-size: 2.5em; font-weight: bold; color: #e74c3c;">€82.39</div>
+                    <div style="font-size: 0.85em; opacity: 0.8; margin-top: 5px;">Lead forms only (52 leads)</div>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">€4,284</span>
+                    <div class="stat-label">Total Ad Spend</div>
+                    <div class="stat-change positive">+33.5% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">52</span>
+                    <div class="stat-label">Lead Form Submissions</div>
+                    <div class="stat-change negative">-7% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">17.0%</span>
+                    <div class="stat-label">Click Through Rate</div>
+                    <div class="stat-change positive">+34% improvement</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2,978</span>
+                    <div class="stat-label">Total Clicks</div>
+                    <div class="stat-change positive">+38% increase</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">33.77%</span>
+                    <div class="stat-label">Impression Share</div>
+                    <div class="stat-change negative">-25% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number negative">47.84%</span>
+                    <div class="stat-label">Lost IS (Budget)</div>
+                    <div class="stat-change negative">+992% increase</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">01</div>
+            </div>
+            <h2>Executive Summary</h2>
+            
+            <div class="success-box">
+                <h3>Key Wins This Period</h3>
+                <ul class="bullet-points">
+                    <li><strong>CTR Excellence:</strong> Click-through rate improved 34% to 17.0%, indicating strong ad relevance</li>
+                    <li><strong>Traffic Growth:</strong> 38% increase in clicks (2,978 vs 2,156) showing expanded reach</li>
+                    <li><strong>Top Performers:</strong> Essence Residence at €12.76 CPA, Sunset Bay at €11.19 CPA prove the model works</li>
+                    <li><strong>Competitive Position:</strong> Maintained impression share parity with hihomes.com.es (33.77% vs 32.41%)</li>
+                    <li><strong>SOS Medium Efficiency:</strong> 104.5 conversions at €20.42 CPA, well below target</li>
+                </ul>
+            </div>
+
+            <div class="alert-box">
+                <h3>Critical Concerns</h3>
+                <ul class="bullet-points">
+                    <li><strong>True CPA Gap:</strong> €82.39 actual lead form CPA versus €32-33 target (150% over)</li>
+                    <li><strong>Budget Constraint:</strong> 47.84% of impressions lost to budget (up 992% from 4.38%)</li>
+                    <li><strong>Lead Volume:</strong> Only 52 lead forms from €4,284 spend (down from 56 prior period)</li>
+                    <li><strong>Weekend Weakness:</strong> Saturday Nov 22 spiked to €109.51 CPA</li>
+                    <li><strong>DSA Test:</strong> €53.15 spent with zero lead form conversions</li>
+                </ul>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Performance Highlights</h3>
+                    <ul class="bullet-points">
+                        <li>SOS Low campaign at €16.59 CPA (50% below target)</li>
+                        <li>Conversion rate improved to 6.45%</li>
+                        <li>Average CPC reduced 3.3% to €1.44</li>
+                        <li>Santa Clara Homes: 72% impression share</li>
+                        <li>Mobile lead forms dominating (29 vs 8 desktop)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Immediate Actions Required</h3>
+                    <ul class="bullet-points">
+                        <li>Pause DSA and reallocate budget</li>
+                        <li>Increase mobile bid adjustments</li>
+                        <li>Reduce desktop bids by 15%</li>
+                        <li>Implement weekend dayparting</li>
+                        <li>Scale SOS Medium budget</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lead Form Conversion Analysis -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">02</div>
+            </div>
+            <h2>Lead Form Conversion Analysis</h2>
+            <div class="subtitle">Benchmarking performance against actual lead form submissions</div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Lead Form Breakdown</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Conversion Action</th>
+                                <th>Count</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>HM | Lead Form Submit</td>
+                                <td><strong>37</strong></td>
+                                <td style="color: #27ae60;">Active</td>
+                            </tr>
+                            <tr>
+                                <td>Lead form - Submit</td>
+                                <td><strong>14</strong></td>
+                                <td style="color: #27ae60;">Active</td>
+                            </tr>
+                            <tr>
+                                <td>Leads from Messages</td>
+                                <td>1</td>
+                                <td style="color: #27ae60;">Active</td>
+                            </tr>
+                            <tr style="background: rgba(230, 126, 34, 0.3);">
+                                <td><strong>Total Lead Forms</strong></td>
+                                <td><strong>52</strong></td>
+                                <td>-</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Conversion Math</h3>
+                    <div class="comparison-card">
+                        <p style="margin: 12px 0;"><strong>Total Spend:</strong> €4,284.27</p>
+                        <p style="margin: 12px 0;"><strong>Lead Forms:</strong> 52</p>
+                        <p style="margin: 12px 0;"><strong>True CPA:</strong> €4,284.27 / 52 = <span style="color: #e74c3c; font-weight: bold;">€82.39</span></p>
+                        <p style="margin: 12px 0;"><strong>Target CPA:</strong> €32-33</p>
+                        <p style="margin: 12px 0;"><strong>Gap:</strong> <span style="color: #e74c3c;">€49-50 over target</span></p>
+                    </div>
+                    
+                    <div class="comparison-card" style="border-left-color: #3498db;">
+                        <p><strong>Prior Period:</strong> 56 lead forms at €57.30 CPA</p>
+                        <p style="margin-top: 8px;"><strong>Change:</strong> -4 leads (+44% CPA increase)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box" style="margin-top: 25px;">
+                <h3>Why Platform CPA Looks Better</h3>
+                <p>Platform reports 192 total conversions including engagement events. These soft conversions inflate perceived performance but do not represent actual leads entering your sales pipeline:</p>
+                <ul class="bullet-points">
+                    <li><strong>Min 3 pages per session:</strong> 139 events (engagement, not leads)</li>
+                    <li><strong>Resales property submit:</strong> 1 event</li>
+                    <li><strong>Other engagement:</strong> Various micro-conversions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Campaign Performance -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">03</div>
+            </div>
+            <h2>Campaign Performance Breakdown</h2>
+            
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Clicks</th>
+                        <th>CTR</th>
+                        <th>Conv</th>
+                        <th>CPA</th>
+                        <th>Imp Share</th>
+                    </tr>
+                    <tr style="background: rgba(39, 174, 96, 0.15);">
+                        <td><strong>SOS Medium</strong></td>
+                        <td>€2,133.94</td>
+                        <td>1,639</td>
+                        <td>18.23%</td>
+                        <td>104.5</td>
+                        <td style="color: #27ae60;">€20.42</td>
+                        <td>35.11%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS High</strong></td>
+                        <td>€1,823.11</td>
+                        <td>1,068</td>
+                        <td>16.93%</td>
+                        <td>77.58</td>
+                        <td>€23.50</td>
+                        <td>35.74%</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Clara Homes</td>
+                        <td>€150.56</td>
+                        <td>97</td>
+                        <td>13.04%</td>
+                        <td>4.0</td>
+                        <td>€37.64</td>
+                        <td style="color: #27ae60;">72.01%</td>
+                    </tr>
+                    <tr style="background: rgba(39, 174, 96, 0.15);">
+                        <td><strong>SOS Low</strong></td>
+                        <td>€66.34</td>
+                        <td>132</td>
+                        <td>11.13%</td>
+                        <td>4.0</td>
+                        <td style="color: #27ae60;">€16.59</td>
+                        <td>18.08%</td>
+                    </tr>
+                    <tr style="background: rgba(231, 76, 60, 0.15);">
+                        <td>Bayside Homes</td>
+                        <td>€62.90</td>
+                        <td>23</td>
+                        <td>18.70%</td>
+                        <td>1.0</td>
+                        <td style="color: #e74c3c;">€62.90</td>
+                        <td>41.57%</td>
+                    </tr>
+                    <tr style="background: rgba(231, 76, 60, 0.15);">
+                        <td>Amaranta Living</td>
+                        <td>€47.41</td>
+                        <td>19</td>
+                        <td>11.88%</td>
+                        <td>1.0</td>
+                        <td style="color: #e74c3c;">€47.41</td>
+                        <td>81.51%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="two-column" style="margin-top: 25px;">
+                <div class="success-box">
+                    <h3>Best Performers</h3>
+                    <ul class="bullet-points">
+                        <li><strong>SOS Low:</strong> €16.59 CPA demonstrates scaling potential (50% below target)</li>
+                        <li><strong>SOS Medium:</strong> Highest volume (104.5 conv) at efficient €20.42 CPA</li>
+                        <li><strong>Santa Clara:</strong> Strong impression share (72%) indicates low competition</li>
+                    </ul>
+                </div>
+                
+                <div class="alert-box">
+                    <h3>Underperformers</h3>
+                    <ul class="bullet-points">
+                        <li><strong>Bayside Homes:</strong> €62.90 CPA with minimal volume (1 conv)</li>
+                        <li><strong>Amaranta Living:</strong> CPA declined 1,175% vs prior period</li>
+                        <li><strong>SOS High:</strong> Lost IS from budget jumped 971%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Landscape -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">04</div>
+            </div>
+            <h2>Competitive Landscape</h2>
+            <div class="subtitle">Auction insights analysis against key Costa del Sol competitors</div>
+
+            <div class="comparison-card">
+                <h3 style="color: #f39c12; margin-bottom: 20px;">Impression Share Comparison</h3>
+                <div style="margin: 20px 0;">
+                    <div class="competitor-bar">
+                        <div class="competitor-name"><strong>Set on Spain</strong></div>
+                        <div class="competitor-fill you" style="width: 33.77%;">33.77%</div>
+                    </div>
+                    <div class="competitor-bar">
+                        <div class="competitor-name" style="color: #e74c3c;"><strong>hihomes.com.es</strong></div>
+                        <div class="competitor-fill main-competitor" style="width: 32.41%;">32.41%</div>
+                    </div>
+                    <div class="competitor-bar">
+                        <div class="competitor-name">idiliqestates.com</div>
+                        <div class="competitor-fill" style="width: 10%;">&lt;10%</div>
+                    </div>
+                    <div class="competitor-bar">
+                        <div class="competitor-name">cloudninespain.com</div>
+                        <div class="competitor-fill" style="width: 10%;">&lt;10%</div>
+                    </div>
+                    <div class="competitor-bar">
+                        <div class="competitor-name">newestepona.com</div>
+                        <div class="competitor-fill" style="width: 10%;">&lt;10%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column" style="margin-top: 25px;">
+                <div>
+                    <h3>hihomes.com.es Analysis</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <td>Overlap Rate</td>
+                                <td><strong>45.96%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Position Above Rate</td>
+                                <td style="color: #e74c3c;"><strong>58.91%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Top of Page Rate</td>
+                                <td>83.31%</td>
+                            </tr>
+                            <tr>
+                                <td>Abs. Top of Page</td>
+                                <td>36.31%</td>
+                            </tr>
+                            <tr>
+                                <td>Outranking Share</td>
+                                <td style="color: #e74c3c;">24.62%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Your Positioning</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <td>Your Top of Page Rate</td>
+                                <td><strong>79.66%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Your Abs. Top of Page</td>
+                                <td><strong>35.95%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Lost IS (Budget)</td>
+                                <td style="color: #e74c3c;"><strong>47.84%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Lost IS (Rank)</td>
+                                <td>20.93%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box" style="margin-top: 25px;">
+                <h3>Key Competitive Finding</h3>
+                <p>hihomes.com.es outranks you 58.91% of the time when you compete head to head. They appear in 45.96% of the same auctions. Your primary constraint is budget (47.84% lost IS due to budget) rather than ad rank quality. This means increasing budget on proven performers would recover significant impression share.</p>
+            </div>
+        </div>
+
+        <!-- Top Performing Ad Groups -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">05</div>
+            </div>
+            <h2>Top Performing Ad Groups</h2>
+            <div class="subtitle">Development-specific performance analysis based on platform conversion data</div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Ad Group</th>
+                        <th>Campaign</th>
+                        <th>Conv</th>
+                        <th>CPA</th>
+                        <th>Clicks</th>
+                        <th>CTR</th>
+                        <th>Spend</th>
+                    </tr>
+                    <tr style="background: rgba(39, 174, 96, 0.15);">
+                        <td><strong>Essence Residence</strong></td>
+                        <td>Medium</td>
+                        <td>17</td>
+                        <td style="color: #27ae60;">€12.76</td>
+                        <td>140</td>
+                        <td>33.10%</td>
+                        <td>€216.86</td>
+                    </tr>
+                    <tr style="background: rgba(39, 174, 96, 0.15);">
+                        <td><strong>The View Marbella</strong></td>
+                        <td>High</td>
+                        <td>8</td>
+                        <td style="color: #27ae60;">€22.38</td>
+                        <td>93</td>
+                        <td>17.10%</td>
+                        <td>€179.05</td>
+                    </tr>
+                    <tr style="background: rgba(39, 174, 96, 0.15);">
+                        <td><strong>Sunset Bay</strong></td>
+                        <td>Medium</td>
+                        <td>7</td>
+                        <td style="color: #27ae60;">€11.19</td>
+                        <td>64</td>
+                        <td>22.07%</td>
+                        <td>€78.35</td>
+                    </tr>
+                    <tr style="background: rgba(39, 174, 96, 0.15);">
+                        <td><strong>Capri</strong></td>
+                        <td>Medium</td>
+                        <td>6</td>
+                        <td style="color: #27ae60;">€15.52</td>
+                        <td>85</td>
+                        <td>29.93%</td>
+                        <td>€93.14</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Salvia</strong></td>
+                        <td>High</td>
+                        <td>6</td>
+                        <td>€30.36</td>
+                        <td>69</td>
+                        <td>24.64%</td>
+                        <td>€182.17</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Four Seasons Los Flamingos</strong></td>
+                        <td>High</td>
+                        <td>5.08</td>
+                        <td>€20.87</td>
+                        <td>66</td>
+                        <td>18.75%</td>
+                        <td>€106.08</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Soul Marbella</strong></td>
+                        <td>High</td>
+                        <td>5</td>
+                        <td>€23.46</td>
+                        <td>77</td>
+                        <td>15.68%</td>
+                        <td>€117.31</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Idyllic</strong></td>
+                        <td>Medium</td>
+                        <td>5</td>
+                        <td style="color: #27ae60;">€15.98</td>
+                        <td>62</td>
+                        <td>17.27%</td>
+                        <td>€79.90</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="success-box" style="margin-top: 25px;">
+                <h3>Scaling Priority</h3>
+                <p>Essence Residence, Sunset Bay, and Capri show excellent efficiency with CPAs under €16 and strong CTRs. These ad groups have proven conversion potential and should receive increased budget allocation in December to capture more of the available search demand.</p>
+            </div>
+        </div>
+
+        <!-- Weekly Trends -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">06</div>
+            </div>
+            <h2>Weekly Performance Trends</h2>
+            <div class="subtitle">30-day analysis showing performance patterns</div>
+
+            <div class="three-column">
+                <div class="comparison-card" style="border-left-color: #27ae60;">
+                    <h4 style="color: #27ae60;">Week 1 (Nov 3-9)</h4>
+                    <p><strong>Conversions:</strong> 65</p>
+                    <p><strong>Spend:</strong> €1,062</p>
+                    <p><strong>CPA:</strong> €16.34</p>
+                    <p style="color: #27ae60; margin-top: 10px;">Best performing week</p>
+                </div>
+                <div class="comparison-card" style="border-left-color: #f39c12;">
+                    <h4 style="color: #f39c12;">Week 2 (Nov 10-16)</h4>
+                    <p><strong>Conversions:</strong> 46.58</p>
+                    <p><strong>Spend:</strong> €1,060</p>
+                    <p><strong>CPA:</strong> €22.76</p>
+                    <p style="color: #f39c12; margin-top: 10px;">Moderate decline</p>
+                </div>
+                <div class="comparison-card" style="border-left-color: #e74c3c;">
+                    <h4 style="color: #e74c3c;">Week 3 (Nov 17-23)</h4>
+                    <p><strong>Conversions:</strong> 40</p>
+                    <p><strong>Spend:</strong> €995</p>
+                    <p><strong>CPA:</strong> €24.88</p>
+                    <p style="color: #e74c3c; margin-top: 10px;">Efficiency dip</p>
+                </div>
+            </div>
+
+            <div class="two-column" style="margin-top: 25px;">
+                <div class="comparison-card" style="border-left-color: #e74c3c;">
+                    <h4 style="color: #e74c3c;">Week 4 (Nov 24-30)</h4>
+                    <p><strong>Conversions:</strong> 35</p>
+                    <p><strong>Spend:</strong> €889</p>
+                    <p><strong>CPA:</strong> €25.40</p>
+                    <p style="color: #e74c3c; margin-top: 10px;">November slowdown</p>
+                </div>
+                <div class="comparison-card" style="border-left-color: #e74c3c;">
+                    <h4 style="color: #e74c3c;">Dec 1-2 (Partial)</h4>
+                    <p><strong>Conversions:</strong> 5</p>
+                    <p><strong>Spend:</strong> €279</p>
+                    <p><strong>CPA:</strong> €55.80</p>
+                    <p style="color: #e74c3c; margin-top: 10px;">December soft start</p>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 25px;">
+                <h3>Trend Analysis</h3>
+                <p>Performance declined progressively through November with Week 1 showing the strongest results (€16.34 CPA). The Nov 22 CPA spike to €109.51 (Saturday) and subsequent weekend softness suggests dayparting adjustments needed. December 2 showed zero conversions on €144 spend, indicating competitive pressure or seasonal shift requiring immediate attention.</p>
+            </div>
+        </div>
+
+        <!-- Device Performance -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">07</div>
+            </div>
+            <h2>Device Performance Analysis</h2>
+            <div class="subtitle">Lead form submissions by device showing clear mobile dominance</div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number positive">29</span>
+                    <div class="stat-label">Mobile Lead Forms</div>
+                    <div class="stat-change positive">Primary converter</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">8</span>
+                    <div class="stat-label">Desktop Lead Forms</div>
+                    <div class="stat-change neutral">Secondary volume</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number negative">0</span>
+                    <div class="stat-label">Tablet Lead Forms</div>
+                    <div class="stat-change negative">Zero submissions</div>
+                </div>
+            </div>
+
+            <div class="two-column" style="margin-top: 30px;">
+                <div>
+                    <h3>Mobile Performance</h3>
+                    <ul class="bullet-points">
+                        <li>SOS Medium Mobile: 22 HM lead forms</li>
+                        <li>SOS High Mobile: 7 HM lead forms</li>
+                        <li>Strong mobile CTR across campaigns</li>
+                        <li>Currently has +15% mobile bid adjustment</li>
+                    </ul>
+                    <div class="success-box" style="margin-top: 15px;">
+                        <p><strong>Recommendation:</strong> Increase mobile bid adjustment to +25% on SOS Medium based on proven lead form performance.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Desktop Performance</h3>
+                    <ul class="bullet-points">
+                        <li>SOS Medium Desktop: 6 HM lead forms</li>
+                        <li>SOS High Desktop: 2 HM lead forms</li>
+                        <li>Higher spend per lead than mobile</li>
+                        <li>No current bid adjustment</li>
+                    </ul>
+                    <div class="alert-box" style="margin-top: 15px;">
+                        <p><strong>Recommendation:</strong> Implement -15% desktop bid adjustment to shift budget toward mobile efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Critical Issues -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">08</div>
+            </div>
+            <h2>Critical Issues Identified</h2>
+            
+            <div class="action-item priority-high">
+                <h3>Issue 1: Budget Constraint Limiting Growth</h3>
+                <p style="margin-top: 10px;">47.84% of impressions lost due to budget (up 992% from 4.38% prior period). Your ads qualify to show but budget runs out before capturing available demand. hihomes.com.es is capturing these impressions.</p>
+                <p style="margin-top: 10px;"><strong>Impact:</strong> Approximately 8,400 additional impressions lost daily to budget constraints.</p>
+            </div>
+            
+            <div class="action-item priority-high">
+                <h3>Issue 2: True CPA 150% Above Target</h3>
+                <p style="margin-top: 10px;">€82.39 actual lead form CPA versus €32-33 target. Platform metrics obscure this gap by including engagement events as conversions.</p>
+                <p style="margin-top: 10px;"><strong>Impact:</strong> Each lead costs €49-50 more than target, reducing ROI on €35,000 average commission.</p>
+            </div>
+            
+            <div class="action-item priority-medium">
+                <h3>Issue 3: Weekend Performance Collapse</h3>
+                <p style="margin-top: 10px;">Saturday Nov 22 showed €109.51 CPA spike. Weekend conversion rates consistently lower than weekday performance. Saturday and Sunday combined produced limited lead forms relative to spend.</p>
+                <p style="margin-top: 10px;"><strong>Impact:</strong> Approximately €200-300 weekly spend during low-conversion periods.</p>
+            </div>
+            
+            <div class="action-item priority-medium">
+                <h3>Issue 4: Underperforming Campaigns Consuming Budget</h3>
+                <p style="margin-top: 10px;">Bayside Homes (€62.90 CPA, 1 lead), Amaranta Living (€47.41 CPA, 1 lead), and DSA test (€53.15 spend, 0 leads) collectively spent €163 with minimal returns.</p>
+                <p style="margin-top: 10px;"><strong>Impact:</strong> €163 could generate 10+ additional impressions on proven performers.</p>
+            </div>
+            
+            <div class="action-item priority-low">
+                <h3>Issue 5: Desktop Inefficiency</h3>
+                <p style="margin-top: 10px;">Desktop generating fewer lead forms at higher cost than mobile. No bid adjustment currently in place to optimize device mix.</p>
+                <p style="margin-top: 10px;"><strong>Impact:</strong> Estimated €15-20 weekly in suboptimal device allocation.</p>
+            </div>
+        </div>
+
+        <!-- December Strategic Action Plan -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">09</div>
+            </div>
+            <h2>December 2025 Strategic Action Plan</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Week 1</div>
+                <div class="timeline-content">
+                    <h4 style="color: #e67e22;">Immediate Optimizations (Dec 2-8)</h4>
+                    <ul class="bullet-points">
+                        <li>Pause DSA campaign (€53 spent, zero lead forms)</li>
+                        <li>Reduce Bayside Homes and Amaranta Living budgets by 50%</li>
+                        <li>Reallocate €30/day to SOS Medium top performers</li>
+                        <li>Implement -15% desktop bid adjustment account-wide</li>
+                        <li>Increase mobile bid adjustment to +25% on SOS Medium</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Week 2</div>
+                <div class="timeline-content">
+                    <h4 style="color: #e67e22;">Scaling and Testing (Dec 9-15)</h4>
+                    <ul class="bullet-points">
+                        <li>Increase SOS Medium budget from €70 to €85/day</li>
+                        <li>Add dayparting: reduce bids 25% Saturday 8pm to Sunday 6am</li>
+                        <li>Test Target Impression Share bidding on Essence Residence ad group</li>
+                        <li>Launch structured snippets (Amenities, Property Types) across all ads</li>
+                        <li>Add 2-line descriptions to all sitelinks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Week 3</div>
+                <div class="timeline-content">
+                    <h4 style="color: #e67e22;">Competitive Push (Dec 16-22)</h4>
+                    <ul class="bullet-points">
+                        <li>If Week 2 CPA below €70: increase SOS Medium to €100/day</li>
+                        <li>Implement Target Impression Share (90% top of page) on top 5 ad groups</li>
+                        <li>Add callout extensions highlighting holiday viewing availability</li>
+                        <li>Test new ad copy variants with seasonal messaging</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Week 4</div>
+                <div class="timeline-content">
+                    <h4 style="color: #e67e22;">Holiday Period Management (Dec 23-31)</h4>
+                    <ul class="bullet-points">
+                        <li>Maintain aggressive positioning for holiday searchers</li>
+                        <li>Monitor for seasonal CPA changes and adjust accordingly</li>
+                        <li>Prepare January campaign structure based on December learnings</li>
+                        <li>Document top performing developments for 2026 scaling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Recommendations -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">10</div>
+            </div>
+            <h2>Budget Reallocation Recommendations</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>Current Daily Budget</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <td>SOS Medium</td>
+                                <td>€70.00</td>
+                            </tr>
+                            <tr>
+                                <td>SOS High</td>
+                                <td>€60.00</td>
+                            </tr>
+                            <tr>
+                                <td>SOS Low</td>
+                                <td>€10.00</td>
+                            </tr>
+                            <tr>
+                                <td>Santa Clara</td>
+                                <td>€9.00</td>
+                            </tr>
+                            <tr>
+                                <td>Amaranta</td>
+                                <td>€9.00</td>
+                            </tr>
+                            <tr>
+                                <td>Bayside</td>
+                                <td>€2.00</td>
+                            </tr>
+                            <tr style="background: rgba(230, 126, 34, 0.3);">
+                                <td><strong>Total</strong></td>
+                                <td><strong>€160.00</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Recommended Daily Budget</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr style="background: rgba(39, 174, 96, 0.15);">
+                                <td>SOS Medium</td>
+                                <td><strong>€100.00</strong> (+43%)</td>
+                            </tr>
+                            <tr>
+                                <td>SOS High</td>
+                                <td>€60.00 (hold)</td>
+                            </tr>
+                            <tr style="background: rgba(39, 174, 96, 0.15);">
+                                <td>SOS Low</td>
+                                <td><strong>€15.00</strong> (+50%)</td>
+                            </tr>
+                            <tr>
+                                <td>Santa Clara</td>
+                                <td>€9.00 (hold)</td>
+                            </tr>
+                            <tr style="background: rgba(231, 76, 60, 0.15);">
+                                <td>Amaranta</td>
+                                <td><strong>€5.00</strong> (-44%)</td>
+                            </tr>
+                            <tr style="background: rgba(231, 76, 60, 0.15);">
+                                <td>Bayside</td>
+                                <td><strong>€1.00</strong> (-50%)</td>
+                            </tr>
+                            <tr style="background: rgba(230, 126, 34, 0.3);">
+                                <td><strong>Total</strong></td>
+                                <td><strong>€190.00</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 25px;">
+                <h3>Budget Strategy Rationale</h3>
+                <p>Increase total daily budget by €30 (19%) while shifting allocation toward proven performers. SOS Medium at €20.42 CPA justifies additional investment. SOS Low efficiency (€16.59 CPA) warrants scaling test. Underperformers receive reduced budget pending performance improvement.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 25px;">
+                <h3>Projected Impact</h3>
+                <div class="three-column" style="margin-top: 15px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2em; font-weight: bold;">+25%</div>
+                        <div>Lead Volume</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2em; font-weight: bold;">-15%</div>
+                        <div>True CPA Reduction</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2em; font-weight: bold;">+10%</div>
+                        <div>Impression Share</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- January 2026 Outlook -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">11</div>
+            </div>
+            <h2>January 2026 Strategic Outlook</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>January Opportunities</h3>
+                    <ul class="bullet-points">
+                        <li><strong>New Year Property Seekers:</strong> January typically sees renewed interest from Northern European buyers planning spring viewings</li>
+                        <li><strong>Reduced Competition:</strong> Some competitors may reduce budgets post-holidays, creating impression share opportunity</li>
+                        <li><strong>Fresh Budget Cycles:</strong> Your audience (business owners) often have new year investment budgets</li>
+                        <li><strong>Seasonal Messaging:</strong> "New Year, New Home" positioning for Scandinavian and Dutch buyers</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>January Preparation</h3>
+                    <ul class="bullet-points">
+                        <li><strong>Ad Copy Refresh:</strong> Prepare 2026 messaging variants before Dec 31</li>
+                        <li><strong>Budget Planning:</strong> Request Q1 budget increase approval based on December performance</li>
+                        <li><strong>Landing Page Updates:</strong> Ensure development availability is current for January launches</li>
+                        <li><strong>Customer Match:</strong> Upload holiday lead list for remarketing activation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 30px;">
+                <h3>January KPI Targets</h3>
+                <div class="stats-grid" style="margin-top: 15px;">
+                    <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <div style="font-size: 2em; font-weight: bold;">75</div>
+                        <div>Lead Form Submissions</div>
+                        <div style="font-size: 0.85em; opacity: 0.8;">+44% vs November</div>
+                    </div>
+                    <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <div style="font-size: 2em; font-weight: bold;">€65</div>
+                        <div>Target True CPA</div>
+                        <div style="font-size: 0.85em; opacity: 0.8;">-21% vs current</div>
+                    </div>
+                    <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <div style="font-size: 2em; font-weight: bold;">45%</div>
+                        <div>Impression Share</div>
+                        <div style="font-size: 0.85em; opacity: 0.8;">+11pp increase</div>
+                    </div>
+                    <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <div style="font-size: 2em; font-weight: bold;">€5,700</div>
+                        <div>Monthly Budget</div>
+                        <div style="font-size: 0.85em; opacity: 0.8;">€190/day target</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Items & Next Steps -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">12</div>
+            </div>
+            <h2>Action Items and Next Steps</h2>
+
+            <div class="highlight-box">
+                <h3>30-Day Summary</h3>
+                <div class="two-column" style="margin-top: 15px;">
+                    <div>
+                        <h4 style="color: white;">What Worked</h4>
+                        <ul class="bullet-points">
+                            <li>CTR improved 34% showing strong ad relevance</li>
+                            <li>Essence Residence at €12.76 CPA proves model works</li>
+                            <li>Maintained competitive positioning vs hihomes</li>
+                            <li>Mobile continues to drive lead quality</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: white;">What Needs Attention</h4>
+                        <ul class="bullet-points">
+                            <li>True CPA at €82.39 vs €32-33 target</li>
+                            <li>47.84% impressions lost to budget constraints</li>
+                            <li>Weekend performance significantly weaker</li>
+                            <li>DSA test did not produce lead forms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column" style="margin-top: 30px;">
+                <div>
+                    <h3>Your Action Items</h3>
+                    <div class="action-item priority-high">
+                        <p>Approve budget increase to €190/day</p>
+                    </div>
+                    <div class="action-item priority-high">
+                        <p>Review lead quality from November conversions</p>
+                    </div>
+                    <div class="action-item priority-medium">
+                        <p>Confirm priority developments for December push</p>
+                    </div>
+                    <div class="action-item priority-medium">
+                        <p>Provide CRM export for Customer Match upload</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>My Action Items</h3>
+                    <div class="action-item priority-high">
+                        <p>Implement device bid adjustments by Dec 6</p>
+                    </div>
+                    <div class="action-item priority-high">
+                        <p>Pause DSA and reallocate budget by Dec 4</p>
+                    </div>
+                    <div class="action-item priority-medium">
+                        <p>Launch dayparting schedule by Dec 9</p>
+                    </div>
+                    <div class="action-item priority-medium">
+                        <p>Add structured snippets across all campaigns</p>
+                    </div>
+                    <div class="action-item priority-low">
+                        <p>Weekly performance updates every Wednesday</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box" style="margin-top: 30px;">
+                <h3>Bottom Line</h3>
+                <p>The fundamentals are strong. Your bottom-of-funnel strategy targeting development names continues to outperform generic real estate keywords. The primary lever for December improvement is budget reallocation toward proven performers (SOS Medium, Essence Residence, Sunset Bay) combined with reduced weekend spending and mobile bid optimization. With these adjustments, hitting 75 lead forms in January at sub-€70 CPA is achievable.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <h3 style="color: #e67e22;">Thank you for your continued partnership</h3>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

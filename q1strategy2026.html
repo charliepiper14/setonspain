@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set on Spain - Q4 2025 Review & Q1 2026 Strategic Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2b5c 0%, #2c4590 100%);
+            color: #ffffff;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .slide {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(230, 126, 34, 0.5);
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e67e22;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #e67e22;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #f39c12;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: #f39c12;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffd280;
+        }
+        
+        p {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e67e22;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #ffd280;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .stat-number.positive {
+            color: #5dff9a;
+        }
+        
+        .stat-number.negative {
+            color: #ff7b7b;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            color: #ffffff;
+        }
+        
+        .stat-change {
+            font-size: 0.9em;
+            margin-top: 8px;
+            padding: 5px 12px;
+            border-radius: 10px;
+            display: inline-block;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+        
+        .stat-change.positive {
+            background: rgba(46, 204, 113, 0.4);
+            color: #5dff9a;
+        }
+        
+        .stat-change.negative {
+            background: rgba(231, 76, 60, 0.4);
+            color: #ff7b7b;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #d35400, #a04000);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .highlight-box h3,
+        .highlight-box h4,
+        .highlight-box p,
+        .highlight-box li,
+        .highlight-box span,
+        .highlight-box strong {
+            color: #ffffff !important;
+        }
+        
+        .alert-box {
+            background: linear-gradient(135deg, #a93226, #7b241c);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .alert-box h3,
+        .alert-box h4,
+        .alert-box p,
+        .alert-box li,
+        .alert-box span,
+        .alert-box strong {
+            color: #ffffff !important;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #1e8449, #145a32);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .success-box h3,
+        .success-box h4,
+        .success-box p,
+        .success-box li,
+        .success-box span,
+        .success-box strong {
+            color: #ffffff !important;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #1a5276, #0e2f44);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .info-box h3,
+        .info-box h4,
+        .info-box p,
+        .info-box li,
+        .info-box span,
+        .info-box strong {
+            color: #ffffff !important;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .data-table {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            background: #d35400;
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 0.95em;
+            color: #ffffff;
+        }
+        
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .data-table tr:hover {
+            background: rgba(230, 126, 34, 0.2);
+        }
+        
+        .data-table td strong {
+            color: #ffd280;
+        }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #ffffff;
+        }
+        
+        .bullet-points li:before {
+            content: "▸";
+            color: #ffd280;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .bullet-points li strong {
+            color: #ffd280;
+        }
+        
+        .comparison-card {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #e67e22;
+            margin-bottom: 15px;
+        }
+        
+        .comparison-card p,
+        .comparison-card li {
+            color: #ffffff;
+        }
+        
+        .comparison-header {
+            font-weight: bold;
+            color: #ffd280;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .action-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .action-item h3 {
+            color: #ffd280;
+            margin-bottom: 10px;
+        }
+        
+        .action-item p,
+        .action-item li {
+            color: #ffffff;
+        }
+        
+        .action-item p strong {
+            color: #ffffff;
+        }
+        
+        .priority-high {
+            border-left-color: #e74c3c;
+        }
+        
+        .priority-high h3 {
+            color: #ff7b7b;
+        }
+        
+        .priority-medium {
+            border-left-color: #f39c12;
+        }
+        
+        .priority-low {
+            border-left-color: #5dade2;
+        }
+        
+        .priority-low h3 {
+            color: #85c1e9;
+        }
+        
+        .phase-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 25px;
+            border-top: 4px solid #e67e22;
+            margin: 15px 0;
+        }
+        
+        .phase-card p,
+        .phase-card li {
+            color: #ffffff;
+        }
+        
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .phase-number {
+            background: #e67e22;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .kpi-target {
+            background: rgba(46, 204, 113, 0.4);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 5px;
+            color: #ffffff;
+            font-weight: 600;
+            border: 1px solid rgba(46, 204, 113, 0.6);
+        }
+        
+        .competitor-bar {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .competitor-bar span {
+            color: #ffffff;
+        }
+        
+        .bar-fill {
+            height: 8px;
+            background: linear-gradient(90deg, #e67e22, #f39c12);
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin: 15px 0;
+        }
+        
+        .timeline-marker {
+            width: 40px;
+            height: 40px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+            color: #ffffff;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .timeline-content strong {
+            color: #ffd280;
+            font-size: 1.1em;
+        }
+        
+        .timeline-content p {
+            color: #ffffff;
+            margin-top: 5px;
+        }
+        
+        .roi-calculator {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #27ae60;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .roi-calculator h3 {
+            color: #5dff9a;
+        }
+        
+        .roi-calculator p {
+            color: #ffffff;
+            margin: 8px 0;
+        }
+        
+        .roi-calculator p strong {
+            color: #ffd280;
+        }
+        
+        strong {
+            color: #ffd280;
+        }
+        
+        /* Ensure all text in colored boxes is white */
+        .success-box .bullet-points li strong,
+        .alert-box .bullet-points li strong,
+        .highlight-box .bullet-points li strong,
+        .info-box .bullet-points li strong,
+        .success-box .bullet-points li:before,
+        .alert-box .bullet-points li:before,
+        .highlight-box .bullet-points li:before,
+        .info-box .bullet-points li:before {
+            color: #ffffff !important;
+        }
+        
+        /* Green text highlight for positive values */
+        .positive-value {
+            color: #5dff9a !important;
+        }
+        
+        /* Red text highlight for negative/alert values */
+        .negative-value {
+            color: #ff7b7b !important;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column, .three-column {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Title Slide -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">Strategic Review</div>
+            </div>
+            <h1>Set on Spain</h1>
+            <div class="subtitle">Q4 2025 Performance Review and Q1 2026 Strategic Roadmap</div>
+            <div class="info-box">
+                <h3>Report Overview</h3>
+                <p><strong>Review Period:</strong> October 1 - December 31, 2025</p>
+                <p><strong>Comparison Period:</strong> July 1 - September 30, 2025</p>
+                <p><strong>Strategic Planning:</strong> Q1 2026 (January - March)</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">366</span>
+                    <div class="stat-label">Total Conversions</div>
+                    <div class="stat-change positive">+73.55% vs Q3</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">€28.12</span>
+                    <div class="stat-label">Cost Per Lead</div>
+                    <div class="stat-change positive">-10.97% improvement</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">7,299</span>
+                    <div class="stat-label">Total Clicks</div>
+                    <div class="stat-change positive">+28.68% vs Q3</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€10,297</span>
+                    <div class="stat-label">Ad Spend</div>
+                    <div class="stat-change">+54.52% investment</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">14.46%</span>
+                    <div class="stat-label">Click Through Rate</div>
+                    <div class="stat-change positive">+18.18% vs Q3</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">5.02%</span>
+                    <div class="stat-label">Conversion Rate</div>
+                    <div class="stat-change positive">+34.87% vs Q3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">01</div>
+            </div>
+            <h2>Executive Summary: Q4 2025 Performance</h2>
+            
+            <div class="success-box">
+                <h3>Q4 2025 Major Achievements</h3>
+                <ul class="bullet-points">
+                    <li><strong>Lead Volume Surge:</strong> 366 conversions in Q4 vs 211 in Q3, representing a 73.55% increase</li>
+                    <li><strong>Cost Efficiency Gains:</strong> CPA reduced from €31.58 to €28.12, delivering 10.97% more efficiency</li>
+                    <li><strong>Conversion Rate Excellence:</strong> 5.02% conversion rate, up 34.87% from Q3, significantly above industry average</li>
+                    <li><strong>Market Share Growth:</strong> Search impression share increased to 40.53% from 35.59%, a 13.88% improvement</li>
+                    <li><strong>New Campaign Success:</strong> 8 new development campaigns launched with strong early performance</li>
+                </ul>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Revenue Impact Analysis</h3>
+                    <div class="roi-calculator">
+                        <p><strong>Q4 Lead Volume:</strong> 366 qualified leads</p>
+                        <p><strong>Expected Appointments (10%):</strong> 36.6 property viewings</p>
+                        <p><strong>Projected Sales (25-30%):</strong> 9-11 property sales</p>
+                        <p><strong>Average Sale Value:</strong> €700,000</p>
+                        <p><strong>Commission Rate:</strong> 5%</p>
+                        <p style="font-size: 1.3em; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 15px;"><strong>Projected Q4 Revenue:</strong> €315,000 - €385,000</p>
+                        <p><strong>Ad Spend:</strong> €10,297</p>
+                        <p class="positive-value" style="font-weight: bold;"><strong style="color: #5dff9a;">Return on Investment:</strong> 30x - 37x</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Strategic Milestones Achieved</h3>
+                    <ul class="bullet-points">
+                        <li>Successfully restructured campaigns by development priority tiers</li>
+                        <li>Resolved housing policy compliance for Four Seasons Los Flamingos</li>
+                        <li>Launched Dynamic Search Ads for The Palms Estepona</li>
+                        <li>Implemented enhanced conversion tracking</li>
+                        <li>Established competitive positioning against hihomes.com.es</li>
+                        <li>Scaled budget investment by 54% with maintained efficiency</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h3>Critical Areas Requiring Q1 Attention</h3>
+                <ul class="bullet-points">
+                    <li><strong>Impression Share Constraint:</strong> 25.55% of impressions lost to budget limitations</li>
+                    <li><strong>Housing Policy Expansion:</strong> Methodology proven, requires rollout to remaining restricted ads</li>
+                    <li><strong>Competitive Pressure:</strong> hihomes.com.es maintains 85.92% top of page rate vs our 79.08%</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Campaign Performance Deep Dive -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">02</div>
+            </div>
+            <h2>Campaign Performance Deep Dive</h2>
+            <div class="subtitle">Tiered campaign structure analysis and optimization insights</div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Budget</th>
+                        <th>Spend</th>
+                        <th>Clicks</th>
+                        <th>Conversions</th>
+                        <th>CPA</th>
+                        <th>Change vs Q3</th>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Campaign - High</strong></td>
+                        <td>€70/day</td>
+                        <td>€4,243</td>
+                        <td>2,639</td>
+                        <td>145.2</td>
+                        <td>€29.22</td>
+                        <td class="positive-value">+163.99% conversions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Campaign - Medium</strong></td>
+                        <td>€70/day</td>
+                        <td>€5,552</td>
+                        <td>4,266</td>
+                        <td>207.5</td>
+                        <td>€26.75</td>
+                        <td class="positive-value">+70.55% conversions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Campaign - Low</strong></td>
+                        <td>€10/day</td>
+                        <td>€84</td>
+                        <td>180</td>
+                        <td>4.0</td>
+                        <td>€20.95</td>
+                        <td class="positive-value">+200% conversions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Santa Clara Homes</strong></td>
+                        <td>€9/day</td>
+                        <td>€182</td>
+                        <td>117</td>
+                        <td>5.5</td>
+                        <td>€33.15</td>
+                        <td class="positive-value">+37.50% conversions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Amaranta Living</strong></td>
+                        <td>€9/day</td>
+                        <td>€57</td>
+                        <td>31</td>
+                        <td>3.0</td>
+                        <td>€19.10</td>
+                        <td class="positive-value">New in Q4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bayside Homes</strong></td>
+                        <td>€2/day</td>
+                        <td>€177</td>
+                        <td>63</td>
+                        <td>1.0</td>
+                        <td>€177.08</td>
+                        <td class="negative-value">-50% conversions</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Top Performing Ad Groups (Q4 Winners)</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Ad Group</th>
+                                <th>Conv.</th>
+                                <th>CPA</th>
+                            </tr>
+                            <tr>
+                                <td>Essence Residence</td>
+                                <td>34</td>
+                                <td class="positive-value">€16.74</td>
+                            </tr>
+                            <tr>
+                                <td>Nubay</td>
+                                <td>25</td>
+                                <td>€24.51</td>
+                            </tr>
+                            <tr>
+                                <td>The Palms at Estepona</td>
+                                <td>18</td>
+                                <td>€30.10</td>
+                            </tr>
+                            <tr>
+                                <td>Village Verde</td>
+                                <td>14</td>
+                                <td>€24.28</td>
+                            </tr>
+                            <tr>
+                                <td>Soul Marbella</td>
+                                <td>14</td>
+                                <td>€24.81</td>
+                            </tr>
+                            <tr>
+                                <td>Salvia</td>
+                                <td>12</td>
+                                <td>€38.81</td>
+                            </tr>
+                            <tr>
+                                <td>Asperia</td>
+                                <td>12</td>
+                                <td>€22.40</td>
+                            </tr>
+                            <tr>
+                                <td>Sunset Bay</td>
+                                <td>11</td>
+                                <td class="positive-value">€15.73</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>New Q4 Campaign Launches</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Development</th>
+                                <th>Conv.</th>
+                                <th>CPA</th>
+                            </tr>
+                            <tr>
+                                <td>CASARES APARTMENTS</td>
+                                <td>10</td>
+                                <td class="positive-value">€9.95</td>
+                            </tr>
+                            <tr>
+                                <td>MARALTO</td>
+                                <td>10</td>
+                                <td>€31.30</td>
+                            </tr>
+                            <tr>
+                                <td>SKYE CASARES GOLF</td>
+                                <td>9.5</td>
+                                <td class="positive-value">€13.81</td>
+                            </tr>
+                            <tr>
+                                <td>Four Seasons Los Flamingos</td>
+                                <td>9.08</td>
+                                <td>€23.74</td>
+                            </tr>
+                            <tr>
+                                <td>ALURA LIVING</td>
+                                <td>3</td>
+                                <td class="positive-value">€9.54</td>
+                            </tr>
+                            <tr>
+                                <td>SOLAIA RESIDENCE</td>
+                                <td>1</td>
+                                <td>€43.99</td>
+                            </tr>
+                            <tr>
+                                <td>ALOHA FOREST</td>
+                                <td>0</td>
+                                <td>-</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Insight: Medium Campaign Efficiency</h3>
+                <p>The SOS Campaign - Medium delivered the highest volume (207.5 conversions) at the best CPA (€26.75), outperforming the High campaign despite similar budget allocation. This indicates opportunity to reallocate budget from High to Medium tier for improved efficiency.</p>
+            </div>
+        </div>
+
+        <!-- Competitive Analysis -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">03</div>
+            </div>
+            <h2>Competitive Landscape Analysis</h2>
+            <div class="subtitle">Market position and competitive intelligence for Costa del Sol property market</div>
+
+            <div class="info-box">
+                <h3>Market Position Summary</h3>
+                <p>Set on Spain maintains the leading impression share position at 40.23%, slightly ahead of primary competitor hihomes.com.es at 38.06%. However, competitive gap in top-of-page rate represents key optimization opportunity.</p>
+            </div>
+
+            <h3>Impression Share Comparison</h3>
+            <div class="competitor-bar">
+                <span><strong>Set on Spain (You)</strong></span>
+                <span class="positive-value" style="font-weight: bold;">40.23%</span>
+            </div>
+            <div class="bar-fill" style="width: 40.23%;"></div>
+            
+            <div class="competitor-bar">
+                <span>hihomes.com.es</span>
+                <span class="negative-value">38.06%</span>
+            </div>
+            <div class="bar-fill" style="width: 38.06%; background: linear-gradient(90deg, #e74c3c, #c0392b);"></div>
+            
+            <div class="competitor-bar">
+                <span>cloudninespain.com</span>
+                <span>10.29%</span>
+            </div>
+            <div class="bar-fill" style="width: 10.29%; background: linear-gradient(90deg, #5dade2, #3498db);"></div>
+            
+            <div class="competitor-bar">
+                <span>newestepona.com</span>
+                <span>10.09%</span>
+            </div>
+            <div class="bar-fill" style="width: 10.09%; background: linear-gradient(90deg, #5dade2, #3498db);"></div>
+
+            <div class="two-column" style="margin-top: 30px;">
+                <div>
+                    <h3>Top of Page Rate Analysis</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Competitor</th>
+                                <th>Top of Page</th>
+                                <th>Position Above</th>
+                            </tr>
+                            <tr>
+                                <td>hihomes.com.es</td>
+                                <td class="negative-value">85.92%</td>
+                                <td class="negative-value">64.65%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Set on Spain</strong></td>
+                                <td><strong>79.08%</strong></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>booking.com</td>
+                                <td>83.47%</td>
+                                <td>33.82%</td>
+                            </tr>
+                            <tr>
+                                <td>developments.es</td>
+                                <td>79.68%</td>
+                                <td>45.95%</td>
+                            </tr>
+                            <tr>
+                                <td>kingestates.es</td>
+                                <td>78.66%</td>
+                                <td>44.49%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Competitive Intelligence</h3>
+                    <div class="comparison-card">
+                        <div class="comparison-header">hihomes.com.es Advantage</div>
+                        <ul class="bullet-points">
+                            <li>Higher top-of-page rate (85.92% vs 79.08%)</li>
+                            <li>Position above rate of 64.65%</li>
+                            <li>Active YouTube content strategy</li>
+                            <li>Aggressive bidding on premium keywords</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Set on Spain Advantages</div>
+                        <ul class="bullet-points">
+                            <li>Higher overall impression share (40.23% vs 38.06%)</li>
+                            <li>Superior conversion rate (5.02%)</li>
+                            <li>Bottom-funnel keyword dominance</li>
+                            <li>Development-specific expertise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h3>Q1 Competitive Priority</h3>
+                <p>Close the 6.84 percentage point gap in top-of-page rate through strategic bid increases on high-value development keywords. Target: Achieve 85%+ top-of-page rate by end of Q1 while maintaining CPA below €33.</p>
+            </div>
+        </div>
+
+        <!-- Device and Geographic Performance -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">04</div>
+            </div>
+            <h2>Device and Geographic Performance</h2>
+            <div class="subtitle">Audience segmentation insights and optimization opportunities</div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Device Performance Breakdown</h3>
+                    <div class="stats-grid" style="grid-template-columns: 1fr;">
+                        <div class="stat-card">
+                            <span class="stat-number">229</span>
+                            <div class="stat-label">Mobile Conversions</div>
+                            <div class="stat-change">62.6% of total volume</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">128</span>
+                            <div class="stat-label">Desktop Conversions</div>
+                            <div class="stat-change">35% of total volume</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">9</span>
+                            <div class="stat-label">Tablet Conversions</div>
+                            <div class="stat-change">2.4% of total volume</div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Device</th>
+                                <th>Spend</th>
+                                <th>CPA</th>
+                                <th>vs Q3</th>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td>€6,265</td>
+                                <td>€27.35</td>
+                                <td class="positive-value">+68.56%</td>
+                            </tr>
+                            <tr>
+                                <td>Desktop</td>
+                                <td>€3,756</td>
+                                <td>€29.32</td>
+                                <td class="positive-value">+205.02%</td>
+                            </tr>
+                            <tr>
+                                <td>Tablet</td>
+                                <td>€274</td>
+                                <td>€30.48</td>
+                                <td class="positive-value">+50%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Top Converting Countries</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Country</th>
+                                <th>Conv.</th>
+                                <th>Spend</th>
+                            </tr>
+                            <tr>
+                                <td>Spain (Local)</td>
+                                <td>67.7</td>
+                                <td>€1,787</td>
+                            </tr>
+                            <tr>
+                                <td>United Kingdom</td>
+                                <td>19</td>
+                                <td>€447</td>
+                            </tr>
+                            <tr>
+                                <td>Netherlands</td>
+                                <td>9.5</td>
+                                <td>€380</td>
+                            </tr>
+                            <tr>
+                                <td>Belgium</td>
+                                <td>8</td>
+                                <td>€263</td>
+                            </tr>
+                            <tr>
+                                <td>United States</td>
+                                <td>6</td>
+                                <td>€186</td>
+                            </tr>
+                            <tr>
+                                <td>France</td>
+                                <td>4</td>
+                                <td>€59</td>
+                            </tr>
+                            <tr>
+                                <td>Canada</td>
+                                <td>3</td>
+                                <td>€55</td>
+                            </tr>
+                            <tr>
+                                <td>Czechia</td>
+                                <td>2</td>
+                                <td>€54</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Geographic Insight: Scandinavian Markets Underperforming</h3>
+                <p>Despite being identified as a key target demographic (Swedish, Norwegian, Danish business owners), Scandinavian markets are generating minimal conversions. Q1 strategy should include dedicated campaign testing for these high-value markets with localized messaging and bid adjustments.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Peak Performance Hours Analysis</h3>
+                <div class="three-column">
+                    <div>
+                        <h4>Highest Impression Hours</h4>
+                        <ul class="bullet-points">
+                            <li>11am - 2pm (600+ impressions)</li>
+                            <li>3pm - 5pm (500+ impressions)</li>
+                            <li>Tuesday/Wednesday peak days</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Weekend Pattern</h4>
+                        <ul class="bullet-points">
+                            <li>Saturday 10am - 6pm strong</li>
+                            <li>Sunday 11am - 7pm peak</li>
+                            <li>Leisure browsing behavior</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Recommendation</h4>
+                        <ul class="bullet-points">
+                            <li>+15% bid adjustment 11am - 2pm</li>
+                            <li>+10% weekend afternoons</li>
+                            <li>Reduce overnight bidding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Keywords Analysis -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">05</div>
+            </div>
+            <h2>Keyword Performance Analysis</h2>
+            <div class="subtitle">Bottom-of-funnel development keyword strategy performance</div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Top Spend Keywords (Q4)</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Search Term Theme</th>
+                                <th>Spend</th>
+                                <th>Clicks</th>
+                            </tr>
+                            <tr>
+                                <td>Estepona developments</td>
+                                <td>€2,025</td>
+                                <td>1,269</td>
+                            </tr>
+                            <tr>
+                                <td>Marbella properties</td>
+                                <td>€640</td>
+                                <td>417</td>
+                            </tr>
+                            <tr>
+                                <td>Nubay Manilva</td>
+                                <td>€373</td>
+                                <td>208</td>
+                            </tr>
+                            <tr>
+                                <td>The Palms Estepona</td>
+                                <td>€451</td>
+                                <td>189</td>
+                            </tr>
+                            <tr>
+                                <td>Essence Residence</td>
+                                <td>€310</td>
+                                <td>216</td>
+                            </tr>
+                            <tr>
+                                <td>Maralto Estepona</td>
+                                <td>€221</td>
+                                <td>107</td>
+                            </tr>
+                            <tr>
+                                <td>Village Verde</td>
+                                <td>€154</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>Asperia Estepona</td>
+                                <td>€153</td>
+                                <td>110</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Emerging Development Searches</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Development</th>
+                                <th>Growth</th>
+                                <th>Opportunity</th>
+                            </tr>
+                            <tr>
+                                <td>Mala Kai Resort</td>
+                                <td class="positive-value">+183%</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Skye Casares Golf</td>
+                                <td class="positive-value">New</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Las Mesas Collection</td>
+                                <td class="positive-value">+142%</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Altos del Chaparral</td>
+                                <td class="positive-value">+167%</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Lagumare Estepona</td>
+                                <td class="positive-value">+163%</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Camarate Hills</td>
+                                <td class="positive-value">+72%</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Zenith Estepona</td>
+                                <td class="positive-value">+138%</td>
+                                <td>Medium</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>Bottom-of-Funnel Strategy Validation</h3>
+                <p>The development-specific keyword strategy continues to outperform generic real estate terms. Keywords containing specific development names maintain CTR rates of 15-25% compared to industry average of 3-5% for generic property terms. This validates the strategic approach of targeting buyers who have already identified specific developments.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Q1 Keyword Expansion Opportunities</h3>
+                <div class="three-column">
+                    <div>
+                        <h4>Priority 1: Scale Winners</h4>
+                        <ul class="bullet-points">
+                            <li>Essence Residence variants</li>
+                            <li>Nubay phrase match</li>
+                            <li>The Palms variations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Priority 2: New Launches</h4>
+                        <ul class="bullet-points">
+                            <li>Solaia Residence</li>
+                            <li>Aloha Forest expansion</li>
+                            <li>MORASOL refinement</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Priority 3: Geographic</h4>
+                        <ul class="bullet-points">
+                            <li>Casares development cluster</li>
+                            <li>Sotogrande premium segment</li>
+                            <li>Benahavis villa keywords</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q1 2026 Strategic Roadmap -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">06</div>
+            </div>
+            <h2>Q1 2026 Strategic Roadmap</h2>
+            <div class="subtitle">90-day optimization and growth strategy</div>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3 style="margin: 0; color: #ffd280;">Phase 1: Foundation and Compliance</h3>
+                    <span class="phase-number">January 2026</span>
+                </div>
+                <div class="two-column">
+                    <div>
+                        <h4>Primary Objectives</h4>
+                        <ul class="bullet-points">
+                            <li>Complete housing policy compliance rollout for all restricted ads</li>
+                            <li>Implement proven Los Flamingos ad copy methodology across account</li>
+                            <li>Launch Scandinavian market testing campaign</li>
+                            <li>Establish baseline metrics for Q1 performance tracking</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Target KPIs</h4>
+                        <div class="kpi-target">CPA: Under €30</div>
+                        <div class="kpi-target">Conversions: 130+</div>
+                        <div class="kpi-target">Impression Share: 45%</div>
+                        <div class="kpi-target">Housing Compliant: 100%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3 style="margin: 0; color: #ffd280;">Phase 2: Expansion and Optimization</h3>
+                    <span class="phase-number">February 2026</span>
+                </div>
+                <div class="two-column">
+                    <div>
+                        <h4>Primary Objectives</h4>
+                        <ul class="bullet-points">
+                            <li>Scale budget to capture lost impression share (target +25%)</li>
+                            <li>Expand DSA campaigns to top 5 performing developments</li>
+                            <li>Implement dayparting optimization based on Q4 data</li>
+                            <li>Launch competitive bidding strategy against hihomes.com.es</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Target KPIs</h4>
+                        <div class="kpi-target">CPA: Under €32</div>
+                        <div class="kpi-target">Conversions: 150+</div>
+                        <div class="kpi-target">Top of Page: 83%</div>
+                        <div class="kpi-target">Lost IS (Budget): Under 15%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3 style="margin: 0; color: #ffd280;">Phase 3: Scale and Consolidation</h3>
+                    <span class="phase-number">March 2026</span>
+                </div>
+                <div class="two-column">
+                    <div>
+                        <h4>Primary Objectives</h4>
+                        <ul class="bullet-points">
+                            <li>Maximize budget efficiency on proven campaigns</li>
+                            <li>Launch Performance Max test for top-of-funnel reach</li>
+                            <li>Implement audience layering for high-value demographics</li>
+                            <li>Prepare Q2 strategy based on Q1 learnings</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Target KPIs</h4>
+                        <div class="kpi-target">CPA: Under €33</div>
+                        <div class="kpi-target">Conversions: 160+</div>
+                        <div class="kpi-target">Impression Share: 50%</div>
+                        <div class="kpi-target">ROI: 35x+</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Q1 2026 Summary Targets</h3>
+                <div class="three-column">
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.5em; font-weight: bold; display: block;">440+</span>
+                        <span>Quarterly Conversions</span>
+                        <span style="display: block; font-size: 0.9em; opacity: 0.9;">+20% vs Q4</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.5em; font-weight: bold; display: block;">€31</span>
+                        <span>Average CPA Target</span>
+                        <span style="display: block; font-size: 0.9em; opacity: 0.9;">Within target range</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.5em; font-weight: bold; display: block;">50%</span>
+                        <span>Impression Share</span>
+                        <span style="display: block; font-size: 0.9em; opacity: 0.9;">+10% vs Q4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Recommendations -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">07</div>
+            </div>
+            <h2>Q1 2026 Budget Recommendations</h2>
+            <div class="subtitle">Strategic investment allocation for maximum ROI</div>
+
+            <div class="alert-box">
+                <h3>Current Budget Constraint Impact</h3>
+                <p>Q4 data reveals 25.55% of impressions lost due to budget limitations, with High and Medium campaigns showing over 55% lost impression share to budget. This represents significant missed opportunity for qualified lead capture.</p>
+            </div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Current Budget</th>
+                        <th>Recommended Q1</th>
+                        <th>Increase</th>
+                        <th>Rationale</th>
+                    </tr>
+                    <tr>
+                        <td>SOS Campaign - High</td>
+                        <td>€70/day</td>
+                        <td>€90/day</td>
+                        <td>+29%</td>
+                        <td>55% lost IS to budget; strong CPA</td>
+                    </tr>
+                    <tr>
+                        <td>SOS Campaign - Medium</td>
+                        <td>€70/day</td>
+                        <td>€95/day</td>
+                        <td>+36%</td>
+                        <td>Best efficiency; highest volume potential</td>
+                    </tr>
+                    <tr>
+                        <td>SOS Campaign - Low</td>
+                        <td>€10/day</td>
+                        <td>€20/day</td>
+                        <td>+100%</td>
+                        <td>Exceptional €20.95 CPA; scale winners</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Clara Homes</td>
+                        <td>€9/day</td>
+                        <td>€15/day</td>
+                        <td>+67%</td>
+                        <td>Strong performer; dedicated coverage</td>
+                    </tr>
+                    <tr>
+                        <td>Amaranta Living</td>
+                        <td>€9/day</td>
+                        <td>€15/day</td>
+                        <td>+67%</td>
+                        <td>Best CPA at €19.10; growth potential</td>
+                    </tr>
+                    <tr>
+                        <td>Bayside Homes</td>
+                        <td>€2/day</td>
+                        <td>€5/day</td>
+                        <td>+150%</td>
+                        <td>Under-budgeted; 65.71% lost IS</td>
+                    </tr>
+                    <tr>
+                        <td>New: Scandinavian Test</td>
+                        <td>€0</td>
+                        <td>€15/day</td>
+                        <td>New</td>
+                        <td>Target demographic expansion</td>
+                    </tr>
+                    <tr style="background: rgba(230, 126, 34, 0.3);">
+                        <td><strong>Total Daily</strong></td>
+                        <td><strong>€170/day</strong></td>
+                        <td><strong>€255/day</strong></td>
+                        <td><strong>+50%</strong></td>
+                        <td><strong>€7,650/month</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="roi-calculator">
+                <h3>Q1 Investment Projection</h3>
+                <div class="two-column">
+                    <div>
+                        <p><strong>Proposed Q1 Spend:</strong> €22,950</p>
+                        <p><strong>Projected Conversions:</strong> 440-480</p>
+                        <p><strong>Expected Appointments (10%):</strong> 44-48</p>
+                        <p><strong>Projected Sales (25-30%):</strong> 11-14</p>
+                    </div>
+                    <div>
+                        <p><strong>Average Commission:</strong> €35,000</p>
+                        <p><strong>Projected Q1 Revenue:</strong> €385,000 - €490,000</p>
+                        <p><strong>Return on Investment:</strong> 16.8x - 21.3x</p>
+                        <p class="positive-value" style="font-weight: bold;"><strong style="color: #5dff9a;">Incremental Revenue vs Q4:</strong> +€70,000 - €105,000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>Budget Increase Justification</h3>
+                <p>The 50% budget increase is justified by: (1) Proven CPA efficiency below target threshold, (2) Significant lost impression share to budget constraints, (3) Strong Q4 ROI of 30x+, (4) Market opportunity with upcoming spring property season, and (5) Competitive positioning opportunity against hihomes.com.es.</p>
+            </div>
+        </div>
+
+        <!-- Housing Policy Strategy -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">08</div>
+            </div>
+            <h2>Housing Policy Compliance Strategy</h2>
+            <div class="subtitle">Proven methodology rollout for Q1 2026</div>
+
+            <div class="success-box">
+                <h3>Los Flamingos Success Case Study</h3>
+                <p>The Four Seasons Los Flamingos ad was successfully approved in Q4 after implementing compliant ad copy methodology. This approach generated 9.08 conversions at €23.74 CPA during Q4, validating the strategy.</p>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <div class="comparison-card" style="border-left-color: #e74c3c;">
+                        <div class="comparison-header" style="color: #ff7b7b;">Non-Compliant Language (Avoid)</div>
+                        <ul class="bullet-points">
+                            <li>"From POA" or any price qualifiers</li>
+                            <li>"Secure Your Dream Home Today"</li>
+                            <li>"Get Floor Plans Today!"</li>
+                            <li>"Family-friendly" or demographic terms</li>
+                            <li>"Limited Time" or urgency language</li>
+                            <li>"Perfect for retirement"</li>
+                            <li>"Ideal for families"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="comparison-card" style="border-left-color: #27ae60;">
+                        <div class="comparison-header" style="color: #5dff9a;">Compliant Language (Use)</div>
+                        <ul class="bullet-points">
+                            <li>"Request latest listings"</li>
+                            <li>"Request Available Apartments"</li>
+                            <li>"Book A Viewing"</li>
+                            <li>"Contact Us for Information"</li>
+                            <li>"Explore Available Properties"</li>
+                            <li>"Schedule a Property Tour"</li>
+                            <li>"View Development Details"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Q1 Compliance Rollout Plan</h3>
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <strong>Week 1-2: Audit and Documentation</strong>
+                        <p>Complete audit of all ad groups for housing policy violations. Document all ads requiring updates.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <strong>Week 3-4: Priority Campaign Updates</strong>
+                        <p>Update High and Medium campaign ads using approved Los Flamingos methodology. Submit for review.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <strong>Week 5-6: Secondary Campaign Rollout</strong>
+                        <p>Apply compliant copy to Low campaign, standalone campaigns, and any new ad groups.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <strong>Ongoing: Monitoring and Appeals</strong>
+                        <p>Monitor approval status, submit appeals for any rejections, and document learnings for future reference.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Expected Impact</h3>
+                <p>Full housing policy compliance will unlock restricted ad inventory, potentially increasing available impressions by 15-20% and reducing lost impression share due to ad eligibility issues.</p>
+            </div>
+        </div>
+
+        <!-- Action Items and Next Steps -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">09</div>
+            </div>
+            <h2>Immediate Action Items</h2>
+            <div class="subtitle">Q1 2026 execution priorities</div>
+
+            <div class="action-item priority-high">
+                <h3>Priority 1: Budget Approval and Implementation</h3>
+                <p><strong>Owner:</strong> Tony and Emma  |  <strong>Due:</strong> Week 1 of January</p>
+                <ul class="bullet-points">
+                    <li>Review and approve proposed Q1 budget increase from €170/day to €255/day</li>
+                    <li>Confirm phased rollout approach (start with Medium campaign increase)</li>
+                    <li>Set CPA threshold alerts for budget protection</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <h3>Priority 2: Housing Policy Compliance Rollout</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> End of January</p>
+                <ul class="bullet-points">
+                    <li>Complete full account audit for housing policy violations</li>
+                    <li>Prepare compliant ad copy for all restricted ads</li>
+                    <li>Submit updates and monitor approval status</li>
+                    <li>Document methodology for future reference</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <h3>Priority 3: Competitive Positioning Enhancement</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> Mid-January</p>
+                <ul class="bullet-points">
+                    <li>Implement strategic bid increases on top 10 converting keywords</li>
+                    <li>Target 85% top-of-page rate (currently 79.08%)</li>
+                    <li>Monitor competitor hihomes.com.es auction insights weekly</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h3>Priority 4: Scandinavian Market Test</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> Week 2 of January</p>
+                <ul class="bullet-points">
+                    <li>Create dedicated campaign for Swedish, Norwegian, Danish audiences</li>
+                    <li>Implement +20% bid adjustments for Scandinavian countries</li>
+                    <li>Test localized messaging and landing page optimization</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h3>Priority 5: DSA Campaign Expansion</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> February</p>
+                <ul class="bullet-points">
+                    <li>Expand DSA from The Palms to top 5 performing developments</li>
+                    <li>Implement negative keyword strategy for rental intent queries</li>
+                    <li>Monitor search term reports for new keyword opportunities</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-low">
+                <h3>Priority 6: Performance Max Preparation</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> March</p>
+                <ul class="bullet-points">
+                    <li>Prepare creative assets for PMAX campaign test</li>
+                    <li>Define audience signals based on Q4 conversion data</li>
+                    <li>Set up dedicated PMAX budget allocation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Closing Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">Summary</div>
+            </div>
+            <h2>Q1 2026 Strategic Summary</h2>
+            
+            <div class="success-box">
+                <h3>Q4 2025 Achievements</h3>
+                <div class="three-column">
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">+73.55%</span>
+                        <span>Conversion Growth</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">-10.97%</span>
+                        <span>CPA Improvement</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">30x+</span>
+                        <span>Return on Investment</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Q1 2026 Strategic Focus Areas</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Growth Initiatives</h4>
+                        <ul class="bullet-points">
+                            <li>50% budget increase to capture lost impression share</li>
+                            <li>Scandinavian market expansion campaign</li>
+                            <li>DSA rollout to top performing developments</li>
+                            <li>Performance Max test for top-of-funnel reach</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Optimization Priorities</h4>
+                        <ul class="bullet-points">
+                            <li>Housing policy compliance for 100% ad eligibility</li>
+                            <li>Competitive bid strategy against hihomes.com.es</li>
+                            <li>Dayparting optimization for peak performance hours</li>
+                            <li>Device bid refinement based on conversion data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Q1 2026 Success Metrics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">440+</span>
+                        <div class="stat-label">Quarterly Conversions</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">€31</span>
+                        <div class="stat-label">Target CPA</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50%</span>
+                        <div class="stat-label">Impression Share</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">85%</span>
+                        <div class="stat-label">Top of Page Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roi-calculator">
+                <h3>Projected Q1 2026 Business Impact</h3>
+                <div class="two-column">
+                    <div>
+                        <p><strong>Projected Qualified Leads:</strong> 440-480</p>
+                        <p><strong>Expected Property Viewings:</strong> 44-48</p>
+                        <p><strong>Projected Property Sales:</strong> 11-14</p>
+                    </div>
+                    <div>
+                        <p><strong>Estimated Commission Revenue:</strong> €385,000 - €490,000</p>
+                        <p><strong>Ad Investment:</strong> €22,950</p>
+                        <p class="positive-value" style="font-size: 1.2em; font-weight: bold;"><strong style="color: #5dff9a;">Projected ROI:</strong> 16.8x - 21.3x</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(0,0,0,0.5); border-radius: 15px; border: 2px solid #e67e22;">
+                <h3 style="color: #ffd280; margin-bottom: 15px;">Thank You for Your Partnership</h3>
+                <p style="font-size: 1.1em; color: #ffffff;">Looking forward to a successful Q1 2026 together.</p>
+                <p style="color: #ffffff; margin-top: 15px; opacity: 0.9;">Next Strategy Call: Wednesday, January 8, 2026 at 12:00 PM CET</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

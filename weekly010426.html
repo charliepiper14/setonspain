@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set on Spain - Weekly Performance Review (Mar 25-31, 2026)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2b5c 0%, #2c4590 100%);
+            color: #ffffff; line-height: 1.7; font-size: 16px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px; }
+        .slide {
+            background: rgba(0,0,0,0.35); backdrop-filter: blur(10px);
+            border-radius: 20px; padding: 40px; margin-bottom: 40px;
+            border: 2px solid rgba(230,126,34,0.5);
+        }
+        .slide-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #e67e22;
+        }
+        .logo { height: 60px; }
+        .slide-number {
+            background: #e67e22; padding: 10px 20px; border-radius: 25px;
+            font-weight: bold; font-size: 1.1em; color: #ffffff;
+        }
+        h1 { font-size: 3em; margin-bottom: 15px; color: #f39c12; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        h2 { font-size: 2.2em; margin-bottom: 25px; color: #f39c12; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+        h3 { font-size: 1.5em; margin-bottom: 15px; color: #ffffff; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+        h4 { font-size: 1.2em; margin-bottom: 10px; color: #ffd280; }
+        p { color: #ffffff; margin-bottom: 10px; }
+        .subtitle { font-size: 1.3em; text-align: center; margin-bottom: 30px; color: #ffffff; opacity: 0.9; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin: 30px 0; }
+        .stat-card {
+            background: rgba(0,0,0,0.5); padding: 25px; border-radius: 15px;
+            text-align: center; border: 2px solid #e67e22; transition: transform 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-5px); background: rgba(0,0,0,0.6); }
+        .stat-number { font-size: 2.2em; font-weight: bold; color: #ffd280; display: block; margin-bottom: 10px; }
+        .stat-number.positive { color: #5dff9a; }
+        .stat-number.negative { color: #ff7b7b; }
+        .stat-label { font-size: 0.95em; color: #ffffff; }
+        .stat-change {
+            font-size: 0.9em; margin-top: 8px; padding: 5px 12px; border-radius: 10px;
+            display: inline-block; font-weight: 600; background: rgba(255,255,255,0.15); color: #ffffff;
+        }
+        .stat-change.positive { background: rgba(46,204,113,0.4); color: #5dff9a; }
+        .stat-change.negative { background: rgba(231,76,60,0.4); color: #ff7b7b; }
+        .stat-change.neutral { background: rgba(255,255,255,0.15); color: #ffffff; }
+        .highlight-box { background: linear-gradient(135deg, #d35400, #a04000); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .highlight-box h3, .highlight-box h4, .highlight-box p, .highlight-box li, .highlight-box span, .highlight-box strong { color: #ffffff !important; }
+        .alert-box { background: linear-gradient(135deg, #a93226, #7b241c); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .alert-box h3, .alert-box h4, .alert-box p, .alert-box li, .alert-box span, .alert-box strong { color: #ffffff !important; }
+        .success-box { background: linear-gradient(135deg, #1e8449, #145a32); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .success-box h3, .success-box h4, .success-box p, .success-box li, .success-box span, .success-box strong { color: #ffffff !important; }
+        .info-box { background: linear-gradient(135deg, #1a5276, #0e2f44); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .info-box h3, .info-box h4, .info-box p, .info-box li, .info-box span, .info-box strong { color: #ffffff !important; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+        .three-column { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; }
+        .data-table { background: rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; margin: 20px 0; }
+        .data-table table { width: 100%; border-collapse: collapse; }
+        .data-table th { background: #d35400; padding: 15px; font-weight: bold; text-align: left; font-size: 0.95em; color: #ffffff; }
+        .data-table td { padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.2); color: #ffffff; }
+        .data-table tr:nth-child(even) { background: rgba(255,255,255,0.08); }
+        .data-table tr:hover { background: rgba(230,126,34,0.2); }
+        .data-table td strong { color: #ffd280; }
+        .bullet-points { list-style: none; margin: 20px 0; }
+        .bullet-points li { margin: 12px 0; padding-left: 25px; position: relative; color: #ffffff; }
+        .bullet-points li:before { content: "▸"; color: #ffd280; position: absolute; left: 0; font-weight: bold; }
+        .bullet-points li strong { color: #ffd280; }
+        .comparison-card { background: rgba(0,0,0,0.5); padding: 20px; border-radius: 12px; border-left: 4px solid #e67e22; margin-bottom: 15px; }
+        .comparison-card p, .comparison-card li { color: #ffffff; }
+        .comparison-header { font-weight: bold; color: #ffd280; margin-bottom: 10px; font-size: 1.1em; }
+        .action-item { background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #e67e22; }
+        .action-item h3 { color: #ffd280; margin-bottom: 10px; }
+        .action-item p, .action-item li { color: #ffffff; }
+        .action-item p strong { color: #ffffff; }
+        .priority-high { border-left-color: #e74c3c; }
+        .priority-high h3 { color: #ff7b7b; }
+        .priority-medium { border-left-color: #f39c12; }
+        .priority-low { border-left-color: #5dade2; }
+        .priority-low h3 { color: #85c1e9; }
+        .competitor-bar { background: rgba(0,0,0,0.5); border-radius: 8px; padding: 12px 15px; margin: 8px 0; display: flex; justify-content: space-between; align-items: center; }
+        .competitor-bar span { color: #ffffff; }
+        .bar-fill { height: 8px; background: linear-gradient(90deg, #e67e22, #f39c12); border-radius: 4px; margin-top: 5px; }
+        .positive-value { color: #5dff9a !important; }
+        .negative-value { color: #ff7b7b !important; }
+        strong { color: #ffd280; }
+        .success-box .bullet-points li strong, .alert-box .bullet-points li strong, .highlight-box .bullet-points li strong, .info-box .bullet-points li strong,
+        .success-box .bullet-points li:before, .alert-box .bullet-points li:before, .highlight-box .bullet-points li:before, .info-box .bullet-points li:before { color: #ffffff !important; }
+        @media (max-width: 768px) { .two-column, .three-column { grid-template-columns: 1fr; } h1 { font-size: 2em; } h2 { font-size: 1.6em; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Title Slide -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">Weekly Review</div>
+            </div>
+            <h1>Set on Spain</h1>
+            <div class="subtitle">Weekly Performance Review: March 25 - 31, 2026</div>
+            <div class="info-box">
+                <p><strong>Report Period:</strong> March 25 - 31, 2026</p>
+                <p><strong>Comparison Period:</strong> March 18 - 24, 2026</p>
+                <p><strong>Prepared by:</strong> Charles Piper, Senior Media Buyer, Heath Media</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">26.50</span>
+                    <div class="stat-label">Conversions</div>
+                    <div class="stat-change negative">-35.37% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€55.70</span>
+                    <div class="stat-label">Cost Per Lead</div>
+                    <div class="stat-change negative">+18.56% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">799</span>
+                    <div class="stat-label">Clicks</div>
+                    <div class="stat-change negative">-19.54% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€1,476</span>
+                    <div class="stat-label">Ad Spend</div>
+                    <div class="stat-change neutral">-23.37% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">15.83%</span>
+                    <div class="stat-label">Click Through Rate</div>
+                    <div class="stat-change positive">+3.04% vs prior</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">53.67%</span>
+                    <div class="stat-label">Search Impression Share</div>
+                    <div class="stat-change neutral">-3.86% vs prior</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Breakdown -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">01</div>
+            </div>
+            <h2>Campaign Performance Breakdown</h2>
+            <div class="subtitle">Mar 25-31 vs Mar 18-24, 2026</div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Convs</th>
+                        <th>CPA</th>
+                        <th>Search IS</th>
+                        <th>Lost Top IS (Rank)</th>
+                        <th>Lost IS (Budget)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS High</strong></td>
+                        <td>€926.45</td>
+                        <td>17.50</td>
+                        <td>€52.94</td>
+                        <td class="positive-value">70.99%</td>
+                        <td class="positive-value">24.18% (was 28.50%)</td>
+                        <td class="negative-value">11.74%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Medium</strong></td>
+                        <td>€529.54</td>
+                        <td>8.00</td>
+                        <td>€66.19</td>
+                        <td>53.70%</td>
+                        <td class="positive-value">45.43% (was 52.09%)</td>
+                        <td class="negative-value">7.67%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Low</strong></td>
+                        <td>€1.86</td>
+                        <td>0</td>
+                        <td>n/a</td>
+                        <td>&lt;10%</td>
+                        <td>&gt;90%</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Amaranta Living</strong></td>
+                        <td>€3.45</td>
+                        <td>1.00</td>
+                        <td class="positive-value">€3.45</td>
+                        <td>80.00%</td>
+                        <td>20.00%</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bayside Homes</strong></td>
+                        <td>€14.80</td>
+                        <td>0</td>
+                        <td>n/a</td>
+                        <td>31.58%</td>
+                        <td>42.11%</td>
+                        <td>29.82%</td>
+                    </tr>
+                    <tr style="background: rgba(230,126,34,0.3);">
+                        <td><strong>Account Total</strong></td>
+                        <td><strong>€1,476.09</strong></td>
+                        <td><strong>26.50</strong></td>
+                        <td><strong>€55.70</strong></td>
+                        <td><strong>53.67%</strong></td>
+                        <td><strong>43.99%</strong></td>
+                        <td><strong>8.39%</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="two-column">
+                <div class="success-box">
+                    <h3>Positive Signals</h3>
+                    <ul class="bullet-points">
+                        <li>Lost top IS to rank improved across both campaigns (High down 4.32pp, Medium down 6.66pp)</li>
+                        <li>High campaign IS held above 70% for the second consecutive week</li>
+                        <li>CTR improved to 15.83% from 15.36%, showing stronger ad relevance</li>
+                        <li>Avg. CPC reduced to €1.85 from €1.94, efficiency improving</li>
+                    </ul>
+                </div>
+                <div class="alert-box">
+                    <h3>Watch Items</h3>
+                    <ul class="bullet-points">
+                        <li>Conversion volume dropped 35% vs prior week (26.50 vs 41)</li>
+                        <li>Budget constraint growing: lost IS to budget at 8.39% (was 3.72%)</li>
+                        <li>Medium campaign CPA at €66.19, well above the €32-33 target range</li>
+                        <li>Impression volume down 21.91% across the account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Position -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">02</div>
+            </div>
+            <h2>Competitive Position vs hihomes</h2>
+            <div class="subtitle">Auction insights by campaign: absolute top of page rate and impression share</div>
+
+            <div class="three-column">
+                <div class="comparison-card">
+                    <div class="comparison-header">High Campaign</div>
+                    <p><strong>Abs. Top of Page</strong></p>
+                    <p class="positive-value" style="font-size: 1.8em; font-weight: bold;">54.22% vs 40.15%</p>
+                    <p style="margin-top: 10px;"><strong>Impression Share</strong></p>
+                    <p style="font-size: 1.4em;">69.47% vs 44.97%</p>
+                    <div class="stat-change positive" style="margin-top: 10px;">Leading on both metrics</div>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-header">Medium Campaign</div>
+                    <p><strong>Abs. Top of Page</strong></p>
+                    <p class="negative-value" style="font-size: 1.8em; font-weight: bold;">43.18% vs 51.67%</p>
+                    <p style="margin-top: 10px;"><strong>Impression Share</strong></p>
+                    <p class="positive-value" style="font-size: 1.4em;">53.46% vs 43.08%</p>
+                    <div class="stat-change negative" style="margin-top: 10px;">8.49pp gap on abs. top</div>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-header">Account Level</div>
+                    <p><strong>Abs. Top of Page</strong></p>
+                    <p style="font-size: 1.8em; font-weight: bold;">48.33% vs 50.00%</p>
+                    <p style="margin-top: 10px;"><strong>Impression Share</strong></p>
+                    <p class="positive-value" style="font-size: 1.4em;">53.11% vs 46.23%</p>
+                    <div class="stat-change neutral" style="margin-top: 10px;">Near parity at account level</div>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 30px;">
+                <h3>Competitive Position Summary</h3>
+                <p>We continue to lead hihomes on overall impression share across every campaign tier. The High campaign is now firmly ahead on abs. top of page (54.22% vs 40.15%), a position that has strengthened over recent weeks. The Medium campaign remains the priority close: hihomes holds a 8.49pp lead on abs. top of page (51.67% vs 43.18%), though we lead on IS (53.46% vs 43.08%). Closing this position gap is the key focus heading into April.</p>
+            </div>
+
+            <h3 style="margin-top: 30px;">Other Competitors</h3>
+            <div class="competitor-bar"><span><strong>Set on Spain</strong></span><span class="positive-value" style="font-weight: bold;">53.11% IS</span></div>
+            <div class="bar-fill" style="width: 53.11%;"></div>
+            <div class="competitor-bar"><span>hihomes.com.es</span><span>46.23% IS</span></div>
+            <div class="bar-fill" style="width: 46.23%; background: linear-gradient(90deg, #e74c3c, #c0392b);"></div>
+            <div class="competitor-bar"><span>booking.com</span><span>&lt;10% IS</span></div>
+            <div class="bar-fill" style="width: 8%; background: linear-gradient(90deg, #5dade2, #3498db);"></div>
+            <div class="competitor-bar"><span>developments.es</span><span>&lt;10% IS</span></div>
+            <div class="bar-fill" style="width: 7%; background: linear-gradient(90deg, #5dade2, #3498db);"></div>
+        </div>
+
+        <!-- Top Converters & New Launches -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">03</div>
+            </div>
+            <h2>Top Converters and New Development Launches</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>Top Converting Ad Groups (This Week)</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Ad Group</th>
+                                <th>Convs</th>
+                                <th>CPA</th>
+                                <th>Campaign</th>
+                            </tr>
+                            <tr>
+                                <td>The Palms at Estepona</td>
+                                <td>3.00</td>
+                                <td class="positive-value">€18.89</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Alcantara del Mar</td>
+                                <td>3.00</td>
+                                <td>€25.77</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Greenity (NEW)</strong></td>
+                                <td>2.00</td>
+                                <td class="positive-value">€5.08</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Riviera Hill</td>
+                                <td>2.00</td>
+                                <td class="positive-value">€14.77</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Vitta Nature II</td>
+                                <td>2.00</td>
+                                <td class="positive-value">€8.83</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Royal River</td>
+                                <td>1.50</td>
+                                <td class="positive-value">€17.61</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Arrecife Resort</td>
+                                <td>1.00</td>
+                                <td class="positive-value">€13.42</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua Gardens</td>
+                                <td>1.00</td>
+                                <td class="positive-value">€14.95</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Solemar</td>
+                                <td>1.00</td>
+                                <td class="positive-value">€10.86</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Amaranta Living</td>
+                                <td>1.00</td>
+                                <td class="positive-value">€3.45</td>
+                                <td>Standalone</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>New Development Ad Group Status</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Development</th>
+                                <th>Impr.</th>
+                                <th>Clicks</th>
+                                <th>Convs</th>
+                                <th>IS</th>
+                            </tr>
+                            <tr>
+                                <td><strong>220 Greenity Mijas Costa</strong></td>
+                                <td>25</td>
+                                <td>9</td>
+                                <td class="positive-value">2</td>
+                                <td>67.86%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>219 Unelma Estepona</strong></td>
+                                <td>48</td>
+                                <td>10</td>
+                                <td>0</td>
+                                <td class="positive-value">91.43%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>218 Seven Pearls Villas</strong></td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>100%</td>
+                            </tr>
+                            <tr>
+                                <td>217 Vesta Mare</td>
+                                <td>115</td>
+                                <td>26</td>
+                                <td>0</td>
+                                <td>77.78%</td>
+                            </tr>
+                            <tr>
+                                <td>216 The Eagle Mijas</td>
+                                <td>81</td>
+                                <td>15</td>
+                                <td>0</td>
+                                <td>84.48%</td>
+                            </tr>
+                            <tr>
+                                <td>215 The Kove Mijas</td>
+                                <td>56</td>
+                                <td>8</td>
+                                <td>0</td>
+                                <td>57.14%</td>
+                            </tr>
+                            <tr>
+                                <td>214 Almina Residences</td>
+                                <td>109</td>
+                                <td>13</td>
+                                <td>0</td>
+                                <td>83.15%</td>
+                            </tr>
+                            <tr>
+                                <td>213 Cala Serena Sun</td>
+                                <td>52</td>
+                                <td>7</td>
+                                <td>0</td>
+                                <td>58.18%</td>
+                            </tr>
+                            <tr>
+                                <td>212 Omnia Estepona</td>
+                                <td>72</td>
+                                <td>19</td>
+                                <td class="positive-value">1</td>
+                                <td>79.37%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box" style="margin-top: 20px;">
+                <h3>New Launch Highlight: 220 Greenity Mijas Costa</h3>
+                <p>First week live and already delivering 2 conversions at €5.08 CPA with a 36% CTR. Strong early signal and exactly the kind of return we get from launching on new developments before the competition moves in. Abs. top IS at 14.29% with room to push higher through bid floor adjustments.</p>
+            </div>
+            <div class="info-box">
+                <h3>New Launch Highlight: 219 Unelma Estepona</h3>
+                <p>Strong IS at 91.43% in its first week, capturing almost the entire available auction. 10 clicks from 48 impressions at 20.83% CTR. No conversions yet but the volume and position signal is encouraging.</p>
+            </div>
+        </div>
+
+        <!-- Device Performance -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">04</div>
+            </div>
+            <h2>Device Performance and CWV Impact</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>Conversions by Device</h3>
+                    <div class="stats-grid" style="grid-template-columns: 1fr;">
+                        <div class="stat-card">
+                            <span class="stat-number positive">19.50</span>
+                            <div class="stat-label">Mobile Conversions</div>
+                            <div class="stat-change">73.6% of total | CPA ~€46</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number negative">4.00</span>
+                            <div class="stat-label">Desktop Conversions</div>
+                            <div class="stat-change negative">15.1% of total | CPA ~€134</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">3.00</span>
+                            <div class="stat-label">Tablet Conversions</div>
+                            <div class="stat-change positive">11.3% of total | CPA ~€15</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Core Web Vitals: Where This Fits</h3>
+                    <div class="alert-box">
+                        <h4>Current Status</h4>
+                        <p>All 30 tested landing pages continue to fail mobile CWV. Average mobile performance score remains around 25/100 with average page load exceeding 6 seconds.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Funnel Labs Update</h4>
+                        <p>Tony and Emma have received the Funnel Labs quote for CWV remediation. Under review alongside the option of a full website rebuild. WordPress access will be shared with Kenny for CMS and theme audit once scope is confirmed.</p>
+                        <p style="margin-top: 10px;">Awaiting confirmation to proceed. This is the single biggest improvement available for reducing CPC, improving ad rank, and closing the position gap at lower cost.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Why CWV Matters Right Now</h3>
+                <p>Mobile delivers 73.6% of all conversions at roughly one-third the CPA of desktop. Every improvement to mobile page speed feeds directly into Quality Score, which reduces the bid required to hold abs. top of page. With hihomes still ahead of us on Medium campaign position, the CWV fix is what closes that gap at a lower ongoing cost rather than through bid increases alone.</p>
+            </div>
+        </div>
+
+        <!-- Actions This Week -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">05</div>
+            </div>
+            <h2>What We Did and What's Next</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>Completed This Week</h3>
+                    <div class="comparison-card">
+                        <ul class="bullet-points">
+                            <li><strong>Greenity Mijas Costa (220) launched:</strong> 2 conversions at €5.08 CPA in first week live from Lisa's brief</li>
+                            <li><strong>Unelma Estepona (219) launched:</strong> 91.43% IS out of the gate, strong first-week positioning</li>
+                            <li><strong>Seven Pearls Villas (218) launched:</strong> Live and capturing initial impressions, very early stage</li>
+                            <li><strong>Bid floor adjustments:</strong> Applied across converting ad groups in both campaigns. Lost top IS to rank improved in both High (down 4.32pp) and Medium (down 6.66pp)</li>
+                            <li><strong>Structured snippets:</strong> Ikkil Bay Medium campaign snippets added per Lisa's request</li>
+                            <li><strong>Absolute Estepona URL fix:</strong> Re-review submitted and approved after Lisa's landing page rename</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Priority Actions Next Week</h3>
+                    <div class="action-item priority-high">
+                        <h3>Close Medium Abs. Top of Page Gap</h3>
+                        <p>hihomes at 51.67% vs our 43.18%. Bid floor review on non-converting Medium groups to free budget for position pushes on converting groups.</p>
+                    </div>
+                    <div class="action-item priority-high">
+                        <h3>Address Budget Constraint</h3>
+                        <p>Lost IS to budget now at 8.39% (account), 11.74% (High), 7.67% (Medium). Recommend discussion on Wednesday call.</p>
+                    </div>
+                    <div class="action-item priority-medium">
+                        <h3>Scale Greenity (220)</h3>
+                        <p>€5.08 CPA with 2 conversions in week one. Bid floor raise to push abs. top IS from 14.29% and capture more of the available auction.</p>
+                    </div>
+                    <div class="action-item priority-medium">
+                        <h3>Funnel Labs CWV Sign-Off</h3>
+                        <p>Follow up on Tony and Emma's review of the quote. The sooner this moves, the sooner Quality Score improvements feed into position and CPA.</p>
+                    </div>
+                    <div class="action-item priority-low">
+                        <h3>Alcantara del Mar Variants</h3>
+                        <p>Townhouse and villa ad variants setup continuing as discussed. Main ad group delivered 3 conversions at €25.77 this week.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- From You / Easter -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+                <div class="slide-number">06</div>
+            </div>
+            <h2>From You and Key Dates</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>What We Need</h3>
+                    <div class="action-item">
+                        <h3>Tony</h3>
+                        <p>Lead count for this period when you get a chance, so we can validate against platform data.</p>
+                    </div>
+                    <div class="action-item">
+                        <h3>Tony and Emma</h3>
+                        <p>Confirmation on the Funnel Labs CWV quote so we can get remediation underway. This directly impacts Quality Score and our ability to hold top positions at lower cost.</p>
+                    </div>
+                    <div class="action-item">
+                        <h3>Lisa</h3>
+                        <p>Confirmation when any further ad copy or structured snippet batches are ready. Greenity images to confirm all approved following the earlier bikini image disapprovals.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Easter Bank Holiday Notice</h3>
+                    <div class="alert-box">
+                        <h4>Office Closed</h4>
+                        <p><strong>Friday 3rd April</strong> and <strong>Monday 6th April</strong> for the long Easter weekend.</p>
+                        <p style="margin-top: 10px;">I will be keeping an eye on performance over the weekend but there will be no regular comms during that period.</p>
+                        <p style="margin-top: 10px;">If anything urgent comes up, please message as usual in the Slack channel and I will pick it up as soon as I can.</p>
+                        <p style="margin-top: 10px;">Working on the account as usual this week. Performance update on Wednesday or Thursday.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

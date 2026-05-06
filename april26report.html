@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set on Spain - April 2026 Monthly Review and May 2026 Strategic Plan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2b5c 0%, #2c4590 100%);
+            color: #ffffff;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .slide {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(230, 126, 34, 0.5);
+        }
+
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e67e22;
+        }
+
+        .logo { height: 60px; }
+
+        .slide-number {
+            background: #e67e22;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #f39c12;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: #f39c12;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffd280;
+        }
+
+        p {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e67e22;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #ffd280;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .stat-number.positive { color: #5dff9a; }
+        .stat-number.negative { color: #ff7b7b; }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #ffffff;
+        }
+
+        .stat-change {
+            font-size: 0.9em;
+            margin-top: 8px;
+            padding: 5px 12px;
+            border-radius: 10px;
+            display: inline-block;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+
+        .stat-change.positive { background: rgba(46, 204, 113, 0.4); color: #5dff9a; }
+        .stat-change.negative { background: rgba(231, 76, 60, 0.4); color: #ff7b7b; }
+
+        .highlight-box { background: linear-gradient(135deg, #d35400, #a04000); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .highlight-box h3, .highlight-box h4, .highlight-box p, .highlight-box li, .highlight-box span, .highlight-box strong { color: #ffffff !important; }
+
+        .alert-box { background: linear-gradient(135deg, #a93226, #7b241c); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .alert-box h3, .alert-box h4, .alert-box p, .alert-box li, .alert-box span, .alert-box strong { color: #ffffff !important; }
+
+        .success-box { background: linear-gradient(135deg, #1e8449, #145a32); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .success-box h3, .success-box h4, .success-box p, .success-box li, .success-box span, .success-box strong { color: #ffffff !important; }
+
+        .info-box { background: linear-gradient(135deg, #1a5276, #0e2f44); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .info-box h3, .info-box h4, .info-box p, .info-box li, .info-box span, .info-box strong { color: #ffffff !important; }
+
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+        .three-column { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; }
+
+        .data-table {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .data-table table { width: 100%; border-collapse: collapse; }
+
+        .data-table th {
+            background: #d35400;
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 0.95em;
+            color: #ffffff;
+        }
+
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        .data-table tr:nth-child(even) { background: rgba(255, 255, 255, 0.08); }
+        .data-table tr:hover { background: rgba(230, 126, 34, 0.2); }
+        .data-table td strong { color: #ffd280; }
+
+        .bullet-points { list-style: none; margin: 20px 0; }
+
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .bullet-points li:before {
+            content: "▸";
+            color: #ffd280;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .bullet-points li strong { color: #ffd280; }
+
+        .comparison-card {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #e67e22;
+            margin-bottom: 15px;
+        }
+
+        .comparison-card p, .comparison-card li { color: #ffffff; }
+
+        .comparison-header {
+            font-weight: bold;
+            color: #ffd280;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .action-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #e67e22;
+        }
+
+        .action-item h3 { color: #ffd280; margin-bottom: 10px; }
+        .action-item p, .action-item li { color: #ffffff; }
+        .action-item p strong { color: #ffffff; }
+        .priority-high { border-left-color: #e74c3c; }
+        .priority-high h3 { color: #ff7b7b; }
+        .priority-medium { border-left-color: #f39c12; }
+        .priority-low { border-left-color: #5dade2; }
+        .priority-low h3 { color: #85c1e9; }
+
+        .phase-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 25px;
+            border-top: 4px solid #e67e22;
+            margin: 15px 0;
+        }
+
+        .phase-card p, .phase-card li { color: #ffffff; }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .phase-number {
+            background: #e67e22;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .kpi-target {
+            background: rgba(46, 204, 113, 0.4);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 5px;
+            color: #ffffff;
+            font-weight: 600;
+            border: 1px solid rgba(46, 204, 113, 0.6);
+        }
+
+        .competitor-bar {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .competitor-bar span { color: #ffffff; }
+
+        .bar-fill {
+            height: 8px;
+            background: linear-gradient(90deg, #e67e22, #f39c12);
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .timeline-item { display: flex; margin: 15px 0; }
+
+        .timeline-marker {
+            width: 40px;
+            height: 40px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+            color: #ffffff;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-content strong { color: #ffd280; font-size: 1.1em; }
+        .timeline-content p { color: #ffffff; margin-top: 5px; }
+
+        .roi-calculator {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #27ae60;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .roi-calculator h3 { color: #5dff9a; }
+        .roi-calculator p { color: #ffffff; margin: 8px 0; }
+        .roi-calculator p strong { color: #ffd280; }
+
+        strong { color: #ffd280; }
+
+        .success-box .bullet-points li strong, .alert-box .bullet-points li strong, .highlight-box .bullet-points li strong, .info-box .bullet-points li strong,
+        .success-box .bullet-points li:before, .alert-box .bullet-points li:before, .highlight-box .bullet-points li:before, .info-box .bullet-points li:before {
+            color: #ffffff !important;
+        }
+
+        .positive-value { color: #5dff9a !important; }
+        .negative-value { color: #ff7b7b !important; }
+
+        @media (max-width: 768px) {
+            .two-column, .three-column { grid-template-columns: 1fr; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Title Slide -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">Monthly Review</div>
+            </div>
+            <h1>Set on Spain</h1>
+            <div class="subtitle">April 2026 Monthly Performance Review and May 2026 Strategic Plan</div>
+            <div class="info-box">
+                <h3>Report Overview</h3>
+                <p><strong>Review Period:</strong> April 1 - April 30, 2026</p>
+                <p><strong>Comparison Period:</strong> March 2 - March 31, 2026</p>
+                <p><strong>Source of Truth for Conversions:</strong> HM Lead Form Submit (primary conversion event)</p>
+                <p><strong>Strategic Planning:</strong> May 2026</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number negative">65.03</span>
+                    <div class="stat-label">HM Lead Form Submits</div>
+                    <div class="stat-change negative">-29.3% vs March</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number negative">€110.75</span>
+                    <div class="stat-label">HM Lead Form CPA</div>
+                    <div class="stat-change negative">+59.6% vs March</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4,159</span>
+                    <div class="stat-label">Total Clicks</div>
+                    <div class="stat-change positive">+8.9% vs March</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€7,202</span>
+                    <div class="stat-label">Total Ad Spend</div>
+                    <div class="stat-change">+12.8% investment</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number positive">48.56%</span>
+                    <div class="stat-label">High Abs Top vs hihomes 47.41%</div>
+                    <div class="stat-change positive">+1.15pp ahead</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">36.25%</span>
+                    <div class="stat-label">Medium Abs Top vs hihomes 53.89%</div>
+                    <div class="stat-change negative">-17.64pp gap</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">01</div>
+            </div>
+            <h2>Executive Summary: April 2026 Performance</h2>
+
+            <div class="alert-box">
+                <h3>The April Story in One Line</h3>
+                <p>April was a tougher month on lead volume against an exceptionally strong March, but we ended the month in a stronger competitive position than we started, having overtaken hihomes on absolute top of page rate at the High campaign level for the first time.</p>
+            </div>
+
+            <div class="success-box">
+                <h3>April 2026 Wins</h3>
+                <ul class="bullet-points">
+                    <li><strong>High Campaign Position Crossover:</strong> Absolute top of page rate finished April at 48.56% vs hihomes 47.41% - first sustained crossover after months of trailing</li>
+                    <li><strong>Medium Campaign Lead Growth:</strong> 26.5 HM Lead Form submits vs March 24.5, the only campaign to grow leads month over month</li>
+                    <li><strong>Structured Snippets Complete:</strong> All 57 remaining Medium ad groups completed, account-wide assets validation rolled in</li>
+                    <li><strong>Five New Ad Groups Live:</strong> 222 Tyrian, 223 Serenity Views, plus Eagle Hills, Amaris Villas and Palm Residences briefed</li>
+                    <li><strong>Bid Tweaks Productive:</strong> 4 of 7 target CPA increases delivered first conversions, Zinnia abs top up 17.3pp</li>
+                </ul>
+            </div>
+
+            <div class="alert-box">
+                <h3>April 2026 Challenges</h3>
+                <ul class="bullet-points">
+                    <li><strong>HM Lead Form Volume Drop:</strong> 65.03 leads vs March 92, down 29.3%, driven entirely by High campaign</li>
+                    <li><strong>High Campaign CPA Spike:</strong> €123.39 in April vs €63.73 in March, leads halved while spend rose 10%</li>
+                    <li><strong>Medium Abs Top Gap:</strong> 17.64pp behind hihomes despite IS growth, confirms structural rank issue not budget</li>
+                    <li><strong>hihomes Counter-Push:</strong> Late April hihomes raised bids hard after losing top spot, regained ground in last week</li>
+                    <li><strong>Market Softness:</strong> Tony confirmed wider Costa del Sol pullback, agents reporting longer decision cycles</li>
+                </ul>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>HM Lead Form by Campaign</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Campaign</th>
+                                <th>April</th>
+                                <th>March</th>
+                                <th>Change</th>
+                            </tr>
+                            <tr>
+                                <td><strong>SOS Campaign - High</strong></td>
+                                <td>38.5</td>
+                                <td>67.5</td>
+                                <td class="negative-value">-43.0%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SOS Campaign - Medium</strong></td>
+                                <td class="positive-value">26.5</td>
+                                <td>24.5</td>
+                                <td class="positive-value">+8.3%</td>
+                            </tr>
+                            <tr>
+                                <td>Bayside Homes</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Amaranta Living</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>-</td>
+                            </tr>
+                            <tr style="background: rgba(230, 126, 34, 0.3);">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>65.03</strong></td>
+                                <td><strong>92.0</strong></td>
+                                <td><strong class="negative-value">-29.3%</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Revenue Impact Read</h3>
+                    <div class="roi-calculator">
+                        <p><strong>April HM Leads:</strong> 65.03 qualified inquiries</p>
+                        <p><strong>Expected Appointments at 10%:</strong> 6-7 viewings</p>
+                        <p><strong>Projected Sales at 25-30%:</strong> 1-2 sales</p>
+                        <p><strong>Average Sale Value:</strong> €700,000</p>
+                        <p><strong>Commission at 5%:</strong> €35,000 per sale</p>
+                        <p style="font-size: 1.1em; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 15px;"><strong>Indicative April Pipeline Value:</strong> €35,000 - €70,000</p>
+                        <p><strong>Ad Spend April:</strong> €7,202.30</p>
+                        <p class="positive-value" style="font-weight: bold;"><strong style="color: #5dff9a;">Modelled ROI:</strong> 4.9x - 9.7x</p>
+                        <p style="font-size: 0.85em; margin-top: 10px; opacity: 0.8;">Tony to confirm actual sales pipeline conversion rate for the period</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Performance Deep Dive -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">02</div>
+            </div>
+            <h2>Campaign Performance Deep Dive</h2>
+            <div class="subtitle">Validated against the campaign report and overview cards</div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Clicks</th>
+                        <th>HM Leads</th>
+                        <th>HM CPA</th>
+                        <th>IS</th>
+                        <th>Lost IS Rank</th>
+                        <th>Lost IS Budget</th>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Campaign - High</strong></td>
+                        <td>€4,750.44</td>
+                        <td>2,393</td>
+                        <td>38.5</td>
+                        <td class="negative-value">€123.39</td>
+                        <td class="positive-value">72.96%</td>
+                        <td>33.43%</td>
+                        <td class="negative-value">3.16%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOS Campaign - Medium</strong></td>
+                        <td>€2,371.20</td>
+                        <td>1,710</td>
+                        <td class="positive-value">26.5</td>
+                        <td>€89.38</td>
+                        <td>52.00%</td>
+                        <td class="negative-value">56.78%</td>
+                        <td>0.00%</td>
+                    </tr>
+                    <tr>
+                        <td>108 - Bayside Homes</td>
+                        <td>€62.96</td>
+                        <td>27</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>50.99%</td>
+                        <td>11.71%</td>
+                        <td>37.30%</td>
+                    </tr>
+                    <tr>
+                        <td>140 - Amaranta Living</td>
+                        <td>€14.77</td>
+                        <td>16</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>76.51%</td>
+                        <td>23.49%</td>
+                        <td>0.00%</td>
+                    </tr>
+                    <tr>
+                        <td>SOS Campaign - low</td>
+                        <td>€2.93</td>
+                        <td>13</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>&lt; 10%</td>
+                        <td>&gt; 90%</td>
+                        <td>1.18%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>High Campaign Diagnosis</h3>
+                    <div class="comparison-card">
+                        <div class="comparison-header">What changed</div>
+                        <ul class="bullet-points">
+                            <li>Spend up 10.4% to €4,750.44</li>
+                            <li>HM leads down 43% to 38.5</li>
+                            <li>CPA almost doubled from €63.73 to €123.39</li>
+                            <li>IS held strong at 72.96%, up from 71.05%</li>
+                            <li>Lost IS rank improved 1.59pp to 33.43%</li>
+                            <li>Lost IS budget rose to 3.16%, signalling some constraint</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Read</div>
+                        <p>The High campaign is winning the auction more often and at better positions, but conversion rate fell sharply. This is a market quality signal, not an account performance issue. Tony confirmed the wider Costa del Sol market is softer through April.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Medium Campaign Diagnosis</h3>
+                    <div class="comparison-card">
+                        <div class="comparison-header">What changed</div>
+                        <ul class="bullet-points">
+                            <li>Spend up 19.0% to €2,371.20</li>
+                            <li>HM leads up 8.3% to 26.5</li>
+                            <li>CPA up modestly to €89.38 from €81.34</li>
+                            <li>IS climbed to 52.00% from 50.42%</li>
+                            <li>Lost IS rank 56.78%, the structural ceiling</li>
+                            <li>Lost IS budget 0.00%, no budget constraint at all</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Read</div>
+                        <p>Medium is the only campaign that grew leads in April. The structured snippets completion and Lisa's callout work is feeding through. Rank remains the limiter, not budget.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Strategic Insight: The Mix Is Shifting</h3>
+                <p>March: High delivered 73.4% of all HM leads. April: 59.2%. Medium has moved from 26.6% of leads to 40.8% of leads month over month. The Medium campaign optimization work is genuinely changing the account mix, and this is healthy diversification away from over-reliance on a small number of premium-bid ad groups.</p>
+            </div>
+        </div>
+
+        <!-- New Ad Group Launches -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">03</div>
+            </div>
+            <h2>New Ad Group Launches in April</h2>
+            <div class="subtitle">Five new High campaign ad groups built and live during April</div>
+
+            <div class="info-box">
+                <h3>Build and Launch Timeline</h3>
+                <p>April saw an unusually high cadence of new development briefs from Lisa. All five were built and taken live within 24-48 hours of brief receipt, maintaining the first-mover advantage on uncontested search volume.</p>
+            </div>
+
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>AG</th>
+                        <th>Development</th>
+                        <th>Launch Status</th>
+                        <th>April Spend</th>
+                        <th>April Conv</th>
+                        <th>Abs Top</th>
+                        <th>IS</th>
+                        <th>Read</th>
+                    </tr>
+                    <tr>
+                        <td><strong>221</strong></td>
+                        <td><strong>Nacare Residences</strong></td>
+                        <td>Live mid-April</td>
+                        <td>€135.75</td>
+                        <td>1</td>
+                        <td class="positive-value">42.14%</td>
+                        <td class="positive-value">82.57%</td>
+                        <td class="positive-value">Strong debut</td>
+                    </tr>
+                    <tr>
+                        <td><strong>222</strong></td>
+                        <td><strong>Tyrian Residences</strong></td>
+                        <td>Live late April</td>
+                        <td>€170.12</td>
+                        <td>2</td>
+                        <td class="positive-value">58.82%</td>
+                        <td class="positive-value">86.27%</td>
+                        <td class="positive-value">Best new launch debut</td>
+                    </tr>
+                    <tr>
+                        <td><strong>223</strong></td>
+                        <td><strong>Serenity Views</strong></td>
+                        <td>Live end April</td>
+                        <td>€0.00</td>
+                        <td>0</td>
+                        <td>&lt; 10%</td>
+                        <td>&lt; 10%</td>
+                        <td>Too early to read</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Eagle Hills Estepona</td>
+                        <td>Live late April</td>
+                        <td>Pending settle</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>In learning phase</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Amaris Villas Estepona</td>
+                        <td>Briefed end April</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Build in progress</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Palm Residences</td>
+                        <td>Briefed end April</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Build in progress</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="success-box">
+                <h3>222 Tyrian Residences - Standout Performer</h3>
+                <p>Tyrian was the highest-spending new ad group of April, generating 64 clicks at a 39.82% CTR on the exact match keyword. The 58.82% absolute top of page rate from a cold start is the strongest debut performance in the recent ad group expansion. Unit economics already at €85 per HM lead, comfortably within strategic CPA range.</p>
+            </div>
+
+            <h3>April 212-220 Series Status Update</h3>
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>AG</th>
+                        <th>Development</th>
+                        <th>Spend</th>
+                        <th>Clicks</th>
+                        <th>HM Conv</th>
+                        <th>Abs Top</th>
+                        <th>Read</th>
+                    </tr>
+                    <tr>
+                        <td>212</td>
+                        <td>Omnia Estepona</td>
+                        <td>€76.78</td>
+                        <td>41</td>
+                        <td>0</td>
+                        <td>43.18%</td>
+                        <td>Holding well</td>
+                    </tr>
+                    <tr>
+                        <td>213</td>
+                        <td>Cala Serena Sun</td>
+                        <td>€32.10</td>
+                        <td>23</td>
+                        <td>0</td>
+                        <td class="negative-value">12.50%</td>
+                        <td class="negative-value">Position weak</td>
+                    </tr>
+                    <tr>
+                        <td>214</td>
+                        <td>Almina Residences</td>
+                        <td>€95.43</td>
+                        <td>56</td>
+                        <td>0</td>
+                        <td>33.71%</td>
+                        <td>Solid IS, no leads yet</td>
+                    </tr>
+                    <tr>
+                        <td>215</td>
+                        <td>The Kove Mijas</td>
+                        <td>€123.49</td>
+                        <td>57</td>
+                        <td>0</td>
+                        <td>17.92%</td>
+                        <td class="negative-value">Position needs lift</td>
+                    </tr>
+                    <tr>
+                        <td>216</td>
+                        <td>The Eagle Mijas</td>
+                        <td>€145.99</td>
+                        <td>65</td>
+                        <td class="positive-value">2</td>
+                        <td>21.51%</td>
+                        <td class="positive-value">Converting</td>
+                    </tr>
+                    <tr>
+                        <td>217</td>
+                        <td>Vesta Mare</td>
+                        <td>€280.69</td>
+                        <td>154</td>
+                        <td class="positive-value">3</td>
+                        <td class="positive-value">42.45%</td>
+                        <td class="positive-value">Top performer of new series</td>
+                    </tr>
+                    <tr>
+                        <td>218</td>
+                        <td>Seven Pearls Villas</td>
+                        <td>€0.00</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>Low search volume</td>
+                    </tr>
+                    <tr>
+                        <td>219</td>
+                        <td>Unelma Estepona</td>
+                        <td>€139.43</td>
+                        <td>89</td>
+                        <td>0</td>
+                        <td class="negative-value">23.32%</td>
+                        <td class="negative-value">Late month position drop</td>
+                    </tr>
+                    <tr>
+                        <td>220</td>
+                        <td>Greenity Mijas Costa</td>
+                        <td>€97.52</td>
+                        <td>60</td>
+                        <td>0</td>
+                        <td>30.43%</td>
+                        <td>Brochure issue resolved</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Competitive Analysis -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">04</div>
+            </div>
+            <h2>Competitive Position vs hihomes</h2>
+            <div class="subtitle">The metric that matters most to the client - absolute top of page rate</div>
+
+            <div class="success-box">
+                <h3>The Headline of April</h3>
+                <p>For the High campaign, you finished April ahead of hihomes on absolute top of page rate at 48.56% vs 47.41%. This is the first time we have held the lead at month level, after spending most of Q1 trailing by 5-15 percentage points.</p>
+            </div>
+
+            <h3>Account-Wide Impression Share</h3>
+            <div class="competitor-bar">
+                <span><strong>Set on Spain (You)</strong></span>
+                <span class="positive-value" style="font-weight: bold;">55.18%</span>
+            </div>
+            <div class="bar-fill" style="width: 55.18%;"></div>
+
+            <div class="competitor-bar">
+                <span>hihomes.com.es</span>
+                <span class="negative-value">44.21%</span>
+            </div>
+            <div class="bar-fill" style="width: 44.21%; background: linear-gradient(90deg, #e74c3c, #c0392b);"></div>
+
+            <div class="competitor-bar">
+                <span>cloudninespain.com</span>
+                <span>&lt; 10%</span>
+            </div>
+            <div class="bar-fill" style="width: 9%; background: linear-gradient(90deg, #5dade2, #3498db);"></div>
+
+            <div class="competitor-bar">
+                <span>booking.com</span>
+                <span>&lt; 10%</span>
+            </div>
+            <div class="bar-fill" style="width: 9%; background: linear-gradient(90deg, #5dade2, #3498db);"></div>
+
+            <div class="two-column" style="margin-top: 30px;">
+                <div>
+                    <h3>High Campaign vs hihomes</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Metric</th>
+                                <th>You</th>
+                                <th>hihomes</th>
+                                <th>Read</th>
+                            </tr>
+                            <tr>
+                                <td>Impression Share</td>
+                                <td class="positive-value">72.96%</td>
+                                <td>44.59%</td>
+                                <td class="positive-value">+28.4pp lead</td>
+                            </tr>
+                            <tr>
+                                <td>Top of Page Rate</td>
+                                <td>88.29%</td>
+                                <td>92.56%</td>
+                                <td class="negative-value">-4.27pp</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Abs Top of Page</strong></td>
+                                <td class="positive-value"><strong>48.56%</strong></td>
+                                <td>47.41%</td>
+                                <td class="positive-value"><strong>+1.15pp ahead</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Medium Campaign vs hihomes</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Metric</th>
+                                <th>You</th>
+                                <th>hihomes</th>
+                                <th>Read</th>
+                            </tr>
+                            <tr>
+                                <td>Impression Share</td>
+                                <td class="positive-value">52.00%</td>
+                                <td>41.52%</td>
+                                <td class="positive-value">+10.5pp lead</td>
+                            </tr>
+                            <tr>
+                                <td>Top of Page Rate</td>
+                                <td>83.60%</td>
+                                <td>90.41%</td>
+                                <td class="negative-value">-6.81pp</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Abs Top of Page</strong></td>
+                                <td><strong>36.25%</strong></td>
+                                <td class="negative-value">53.89%</td>
+                                <td class="negative-value"><strong>-17.64pp gap</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <h3>How April Played Out Week by Week</h3>
+            <div class="timeline-item">
+                <div class="timeline-marker">W1</div>
+                <div class="timeline-content">
+                    <strong>April 5-11: Closing the gap</strong>
+                    <p>High abs top 49.19% vs hihomes 50.34%, gap under 2pp. Budget fix from prior week freed headroom but rank exposed as the limiter.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">W2</div>
+                <div class="timeline-content">
+                    <strong>April 12-18: First crossover</strong>
+                    <p>High abs top 49.85% vs hihomes 49.38%, ahead by 0.47pp. Disapproval flags resolved across Marea, Mijas Views, Essence Residence and Altos del Chaparral.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">W3</div>
+                <div class="timeline-content">
+                    <strong>April 15-21: Lead extended</strong>
+                    <p>High abs top 46.50% vs hihomes 45.12%, ahead by 1.38pp. Market-wide pullback affected both you and hihomes, but hihomes pulled back further. Bid tweaks applied on 7 Medium ad groups.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">W4</div>
+                <div class="timeline-content">
+                    <strong>April 22-28: Counter-push from hihomes</strong>
+                    <p>High abs top fell to 42.95% as hihomes pushed bids up to 49.08%, swung 7.51pp in their favour. Spend down 12.6% week, GAds conv up 30%, blended CPA dropped sharply.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>What This Means for May</h3>
+                <p>The April crossover on High proves the strategy works. The late month counter-push from hihomes is a competitive response, not an account weakness. Holding the lead requires sustained pressure on the High ad groups where the rank gap is widest, plus the overdue Medium structural improvement work which is now within reach with structured snippets complete.</p>
+            </div>
+        </div>
+
+        <!-- Bid Tweak Readback -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">05</div>
+            </div>
+            <h2>April Activity Readback</h2>
+            <div class="subtitle">What was changed during the month and how it performed</div>
+
+            <h3>Medium Campaign Bid Tweaks (Applied W3)</h3>
+            <p>15-20% target CPA increases applied to seven Medium ad groups identified as having position headroom and conversion latency.</p>
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Ad Group</th>
+                        <th>New Target CPA</th>
+                        <th>Late April Conv</th>
+                        <th>Abs Top Trend</th>
+                        <th>Verdict</th>
+                    </tr>
+                    <tr>
+                        <td>11 - Ikkil Bay Estepona</td>
+                        <td>€48.80</td>
+                        <td class="positive-value">1 (was 0)</td>
+                        <td class="negative-value">&lt; 10% (was 11%)</td>
+                        <td>Conversion landed</td>
+                    </tr>
+                    <tr>
+                        <td>135 - Mare Marbella</td>
+                        <td>€42.80</td>
+                        <td class="positive-value">2 (was 0)</td>
+                        <td class="positive-value">13.94% (was 11.05%)</td>
+                        <td class="positive-value">Both improved</td>
+                    </tr>
+                    <tr>
+                        <td>141 - Naya Residences</td>
+                        <td>€65.80</td>
+                        <td>0</td>
+                        <td class="positive-value">17.54% (was 14.04%)</td>
+                        <td>Position up, conv pending</td>
+                    </tr>
+                    <tr>
+                        <td>19 - Oasis 325</td>
+                        <td>€49.80</td>
+                        <td class="positive-value">1 (was 0)</td>
+                        <td class="positive-value">13.02% (was 11.11%)</td>
+                        <td class="positive-value">Conversion landed</td>
+                    </tr>
+                    <tr>
+                        <td>83 - Zenity Azure Estepona</td>
+                        <td>€42.80</td>
+                        <td>0</td>
+                        <td class="negative-value">&lt; 10% (was 16.39%)</td>
+                        <td class="negative-value">Position slipped</td>
+                    </tr>
+                    <tr>
+                        <td>166 - Zinnia Homes</td>
+                        <td>€59.00</td>
+                        <td>0</td>
+                        <td class="positive-value">33.33% (was 16.07%)</td>
+                        <td class="positive-value">Best gain (+17.3pp)</td>
+                    </tr>
+                    <tr>
+                        <td>142 - Bliss Homes</td>
+                        <td>€48.80</td>
+                        <td class="positive-value">2 (was 0)</td>
+                        <td>&lt; 10%</td>
+                        <td class="positive-value">Strong conv at low cost</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="info-box">
+                <h3>Bid Tweak Verdict</h3>
+                <p>4 of 7 ad groups (Mare Marbella, Bliss Homes, Ikkil Bay, Oasis 325) generated their first conversions vs zero in the prior period. Zinnia delivered the largest abs top gain of the round at +17.3pp. Zenity Azure slipped despite the increase and warrants a closer look at landing page relevance and quality score for May. Bliss spent very little despite the higher target, signalling search volume rather than bidding as the lever.</p>
+            </div>
+
+            <h3>Other April Activity</h3>
+            <div class="three-column">
+                <div class="comparison-card">
+                    <div class="comparison-header">Account Maintenance</div>
+                    <ul class="bullet-points">
+                        <li>129 Marea paused (developer withdrew)</li>
+                        <li>96 One Bali Villas paused (rebrand)</li>
+                        <li>165 Nalu paused (Emma instruction)</li>
+                        <li>149 Lyra URL refresh resolved</li>
+                        <li>Absolute Estepona URL re-eligibility resolved</li>
+                        <li>220 Greenity brochure fix resolved</li>
+                    </ul>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-header">Optimisation Work</div>
+                    <ul class="bullet-points">
+                        <li>Structured snippets completed on remaining 57 Medium ad groups</li>
+                        <li>Assets validation columns added to tracker (sitelinks, callouts, counts)</li>
+                        <li>Search terms quality review and negative keyword maintenance</li>
+                        <li>Daily competitive auction insights monitoring</li>
+                    </ul>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-header">Strategy and Comms</div>
+                    <ul class="bullet-points">
+                        <li>4 weekly performance calls completed</li>
+                        <li>Funnel Labs decision deferred to 6 May call</li>
+                        <li>Kenny held in loop, no formal commitment</li>
+                        <li>Tony's true lead count requested weekly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Device and Audience -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">06</div>
+            </div>
+            <h2>Device and Audience Performance</h2>
+            <div class="subtitle">Where leads are coming from across April</div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Device Performance</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Device</th>
+                                <th>Spend</th>
+                                <th>GAds Conv</th>
+                                <th>CPA</th>
+                                <th>vs March</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Mobile</strong></td>
+                                <td>€4,989.06</td>
+                                <td>90.03</td>
+                                <td>€55.42</td>
+                                <td class="negative-value">+€12.84</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desktop</strong></td>
+                                <td>€2,065.92</td>
+                                <td>30.00</td>
+                                <td>€68.86</td>
+                                <td class="negative-value">+€12.74</td>
+                            </tr>
+                            <tr>
+                                <td>Tablet</td>
+                                <td>€147.32</td>
+                                <td>0</td>
+                                <td>-</td>
+                                <td>0 conv (was 5)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Read</div>
+                        <ul class="bullet-points">
+                            <li>Mobile maintains 75% conversion volume share</li>
+                            <li>Mobile retains the CPA advantage at €55 vs €69 desktop</li>
+                            <li>Both devices saw CPA inflation of approximately €13 month over month, consistent with the wider lead drop</li>
+                            <li>Tablet zero conv is a flag, was 5 conv last month</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Audience by Age (impression share)</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Age</th>
+                                <th>Impressions</th>
+                                <th>% Known</th>
+                            </tr>
+                            <tr>
+                                <td>18-24</td>
+                                <td>386</td>
+                                <td>2.55%</td>
+                            </tr>
+                            <tr>
+                                <td>25-34</td>
+                                <td>2,544</td>
+                                <td>16.80%</td>
+                            </tr>
+                            <tr>
+                                <td>35-44</td>
+                                <td>3,344</td>
+                                <td>22.08%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>45-54</strong></td>
+                                <td><strong>3,971</strong></td>
+                                <td class="positive-value"><strong>26.23%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>55-64</td>
+                                <td>3,408</td>
+                                <td>22.51%</td>
+                            </tr>
+                            <tr>
+                                <td>65+</td>
+                                <td>1,547</td>
+                                <td>10.22%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Read</div>
+                        <p>Core 35-64 segment captured 70.82% of known impressions, fully aligned with Tony's stated ICP of 40-60 year old business owners. Slight skew toward male (52.36% vs 47.82% female). No bid adjustment action required, the targeting is hitting the right audience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Day of Week Pattern</h3>
+                <p>Wednesday and Thursday delivered the highest impression volume of the month at 4,762 and 4,459 respectively, both up materially on March. Saturday and Sunday remained the quieter days. The mid-week peak aligns with how high-intent buyers research properties during working hours, supporting the bottom-of-funnel positioning.</p>
+                <div class="three-column" style="margin-top: 15px;">
+                    <div>
+                        <h4>Strongest Days (April)</h4>
+                        <ul class="bullet-points">
+                            <li>Wednesday: 4,762 impr</li>
+                            <li>Thursday: 4,459 impr</li>
+                            <li>Tuesday: 4,216 impr</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Quieter Days</h4>
+                        <ul class="bullet-points">
+                            <li>Saturday: 3,021 impr</li>
+                            <li>Sunday: 3,200 impr</li>
+                            <li>Friday: 3,446 impr</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Recommendation</h4>
+                        <ul class="bullet-points">
+                            <li>Maintain weekday focus</li>
+                            <li>No dayparting changes needed</li>
+                            <li>Pattern healthy and predictable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Keywords -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">07</div>
+            </div>
+            <h2>Keyword and Search Performance</h2>
+            <div class="subtitle">Bottom of funnel development name strategy delivering on intent</div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Top Spend Keywords</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Spend</th>
+                                <th>Clicks</th>
+                                <th>CTR</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Nubay Manilva</strong></td>
+                                <td>€188.83</td>
+                                <td>111</td>
+                                <td>16.47%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vesta Mare Manilva</strong></td>
+                                <td>€179.62</td>
+                                <td>86</td>
+                                <td class="positive-value">21.83%</td>
+                            </tr>
+                            <tr>
+                                <td>Alcantara del Mar</td>
+                                <td>€178.37</td>
+                                <td>60</td>
+                                <td>20.27%</td>
+                            </tr>
+                            <tr>
+                                <td>The Privilege Estepona</td>
+                                <td>€152.75</td>
+                                <td>91</td>
+                                <td>23.39%</td>
+                            </tr>
+                            <tr>
+                                <td>Ayana Estepona</td>
+                                <td>€148.82</td>
+                                <td>111</td>
+                                <td>17.70%</td>
+                            </tr>
+                            <tr>
+                                <td>Maralto Estepona</td>
+                                <td>€146.24</td>
+                                <td>67</td>
+                                <td>19.09%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tyrian Estepona</strong></td>
+                                <td>€131.52</td>
+                                <td>45</td>
+                                <td class="positive-value">39.82%</td>
+                            </tr>
+                            <tr>
+                                <td>Unelma Estepona</td>
+                                <td>€125.88</td>
+                                <td>80</td>
+                                <td>20.89%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3>Highest Volume Search Terms</h3>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th>Search Term</th>
+                                <th>Cost</th>
+                                <th>Impr</th>
+                            </tr>
+                            <tr>
+                                <td>nubay manilva</td>
+                                <td>€157.51</td>
+                                <td>449</td>
+                            </tr>
+                            <tr>
+                                <td>ayana estepona</td>
+                                <td>€111.54</td>
+                                <td>399</td>
+                            </tr>
+                            <tr>
+                                <td>unelma estepona</td>
+                                <td>€115.77</td>
+                                <td>358</td>
+                            </tr>
+                            <tr>
+                                <td>vanian gardens</td>
+                                <td>€71.38</td>
+                                <td>354</td>
+                            </tr>
+                            <tr>
+                                <td>the sky marbella</td>
+                                <td>€57.32</td>
+                                <td>343</td>
+                            </tr>
+                            <tr>
+                                <td>the kove mijas</td>
+                                <td>€56.77</td>
+                                <td>339</td>
+                            </tr>
+                            <tr>
+                                <td>maralto estepona</td>
+                                <td>€134.30</td>
+                                <td>325</td>
+                            </tr>
+                            <tr>
+                                <td>calanova collection</td>
+                                <td>€49.53</td>
+                                <td>275</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>Strategy Validation</h3>
+                <p>The development-specific bottom of funnel keyword strategy continues to perform exactly as designed. CTRs of 16-40% on exact match development name keywords are 5-10x typical real estate search CTR benchmarks. Tyrian at 39.82% CTR is the strongest single-keyword performance in the account, validating the rapid-launch approach Lisa and Charles operate when new developments come to market.</p>
+            </div>
+
+            <div class="alert-box">
+                <h3>Where Spend Is Up But Conversion Is Down</h3>
+                <p>Vesta Mare spend doubled month over month (€179.62 vs €87.63), Tyrian launched fresh at €131.52, Unelma jumped from €12.14 to €125.88. New ad group costs ate into the High campaign budget without yet converting at scale, partly explaining the High campaign CPA spike. This is normal launch behaviour, not a problem - the question is whether the conversion rate normalises in May.</p>
+            </div>
+        </div>
+
+        <!-- May 2026 Strategic Plan -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">08</div>
+            </div>
+            <h2>May 2026 Strategic Plan</h2>
+            <div class="subtitle">Holding the High lead, lifting the Medium, deciding on Funnel Labs</div>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3 style="margin: 0; color: #ffd280;">Phase 1: Decision Week</h3>
+                    <span class="phase-number">May 5-11</span>
+                </div>
+                <div class="two-column">
+                    <div>
+                        <h4>Primary Objectives</h4>
+                        <ul class="bullet-points">
+                            <li>Wednesday 6 May call - Tony and Emma confirm Funnel Labs route (rebuild vs speed-only)</li>
+                            <li>Confirm budget shape for May, hold or pull back</li>
+                            <li>Reactivate or archive Tyrian based on Lisa status</li>
+                            <li>Eagle Hills, Amaris Villas, Palm Residences live by end week</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Target KPIs</h4>
+                        <div class="kpi-target">High abs top &gt; 50%</div>
+                        <div class="kpi-target">HM Leads target 80+</div>
+                        <div class="kpi-target">CPA &lt; €100</div>
+                        <div class="kpi-target">All new AGs live</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3 style="margin: 0; color: #ffd280;">Phase 2: Medium Campaign Push</h3>
+                    <span class="phase-number">May 12-18</span>
+                </div>
+                <div class="two-column">
+                    <div>
+                        <h4>Primary Objectives</h4>
+                        <ul class="bullet-points">
+                            <li>Begin closing the 17.64pp Medium abs top gap vs hihomes</li>
+                            <li>Apply targeted bid increases on highest-spend Medium ad groups</li>
+                            <li>Mid-month review of completed structured snippets impact on quality score</li>
+                            <li>Lisa to complete remaining Medium callout work</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Target KPIs</h4>
+                        <div class="kpi-target">Medium abs top &gt; 40%</div>
+                        <div class="kpi-target">Medium HM CPA &lt; €80</div>
+                        <div class="kpi-target">Lost IS rank &lt; 50%</div>
+                        <div class="kpi-target">Snippets QS lift visible</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3 style="margin: 0; color: #ffd280;">Phase 3: Cull and Consolidate</h3>
+                    <span class="phase-number">May 19-31</span>
+                </div>
+                <div class="two-column">
+                    <div>
+                        <h4>Primary Objectives</h4>
+                        <ul class="bullet-points">
+                            <li>Zero-conversion ad group review across both campaigns over a 30-day window</li>
+                            <li>Cull or restructure ad groups consistently spending without converting</li>
+                            <li>Reallocate freed budget to top abs top performers</li>
+                            <li>Mare Marbella decision per Tony's flag (drag on stats vs Marbella keyword premium)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Target KPIs</h4>
+                        <div class="kpi-target">Cull complete</div>
+                        <div class="kpi-target">Account efficiency lift</div>
+                        <div class="kpi-target">Blended CPA &lt; €90</div>
+                        <div class="kpi-target">Position held vs hihomes</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>May 2026 Aggregated Targets</h3>
+                <div class="three-column">
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.5em; font-weight: bold; display: block;">85+</span>
+                        <span>HM Lead Form Submits</span>
+                        <span style="display: block; font-size: 0.9em; opacity: 0.9;">+30% vs April</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.5em; font-weight: bold; display: block;">€85</span>
+                        <span>HM Lead Form CPA Target</span>
+                        <span style="display: block; font-size: 0.9em; opacity: 0.9;">-23% vs April</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.5em; font-weight: bold; display: block;">50%+</span>
+                        <span>High Abs Top of Page</span>
+                        <span style="display: block; font-size: 0.9em; opacity: 0.9;">Maintain lead vs hihomes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funnel Labs Decision -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">09</div>
+            </div>
+            <h2>Funnel Labs and Website Decision</h2>
+            <div class="subtitle">Locked decision date Wednesday 6 May 2026</div>
+
+            <div class="info-box">
+                <h3>Where We Are</h3>
+                <p>Tony and Emma have been comparing Kenny's two routes (full WordPress rebuild at £8,500 plus £250/month maintenance, or CWV speed-only remediation) against a competing speed-only quote from another supplier at significantly lower cost. The decision was deferred from early April through to Wednesday 6 May to allow time for a side-by-side comparison and an internal Tony-Emma sit-down on additional website requirements.</p>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Option A: Full Rebuild</div>
+                        <ul class="bullet-points">
+                            <li>£8,500 build cost, £250/month ongoing</li>
+                            <li>Near-replica with CWV built in</li>
+                            <li>Future-proof platform, no plugin compatibility issues</li>
+                            <li>Long term option, addresses SiteGround question</li>
+                            <li>Higher upfront, lower long term risk</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Option B: Speed Only (Funnel Labs)</div>
+                        <ul class="bullet-points">
+                            <li>Approximately £5,500</li>
+                            <li>Targets the 30 failing landing pages</li>
+                            <li>Patches existing site, retains current architecture</li>
+                            <li>Tony has indicated this is unlikely to be selected</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Option C: Speed Only (Alternative)</div>
+                        <ul class="bullet-points">
+                            <li>Considerably lower than Funnel Labs quote</li>
+                            <li>Same scope on paper, validation pending</li>
+                            <li>Frees budget for sustained Google Ads investment</li>
+                            <li>Short term fix, defers website rebuild question</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Tony's Stated Position (April 22 Call)</div>
+                        <p>"I'd rather spend it on Google Ads than a new website. But the problem is, if Google Ads are not converting, then that also makes it more difficult. So then we'll have to cut back on the spend on Google Ads to fund a new website."</p>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">The Commercial Tension</div>
+                        <p>April spend ran at €240 per day on average, projecting to €7,200 monthly. Tony has flagged a possible €5,000 cap if April lead volume does not recover. The website decision has to be made against a backdrop of commercial discipline, not in isolation.</p>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-header">Heath Media Position</div>
+                        <p>The website is converting and is not the immediate problem. CWV speed remediation would address the structural performance gap that affects quality score across the 30 failing pages. The choice between full rebuild and speed-only is fundamentally about timing and capital allocation, not about quality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h3>What Needs to Happen on 6 May</h3>
+                <ul class="bullet-points">
+                    <li>Tony and Emma confirm route (rebuild, Funnel Labs speed, alternative speed)</li>
+                    <li>Confirm timing - immediate, deferred, or paused</li>
+                    <li>Confirm Google Ads budget shape for May - hold, increase or pull back</li>
+                    <li>Charles to update Kenny same day with the outcome</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Action Items -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">10</div>
+            </div>
+            <h2>May 2026 Action Items</h2>
+            <div class="subtitle">Prioritised owner-by-owner</div>
+
+            <div class="action-item priority-high">
+                <h3>Priority 1: Funnel Labs Decision and Budget Confirmation</h3>
+                <p><strong>Owner:</strong> Tony and Emma  |  <strong>Due:</strong> Wednesday 6 May call</p>
+                <ul class="bullet-points">
+                    <li>Confirm Funnel Labs route or alternative speed quote</li>
+                    <li>Confirm May Google Ads budget shape (hold, lift, or cap at €5,000)</li>
+                    <li>Charles to update Kenny same day with the outcome</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <h3>Priority 2: Tyrian Reactivation Decision</h3>
+                <p><strong>Owner:</strong> Lisa  |  <strong>Due:</strong> 6 May call</p>
+                <ul class="bullet-points">
+                    <li>Confirm Tyrian status - reactivate or hold longer</li>
+                    <li>If reactivating, Charles to unpause and monitor first 48 hours</li>
+                    <li>If holding, document the reason for the tracker</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-high">
+                <h3>Priority 3: Hold the High Abs Top Lead</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> Throughout May</p>
+                <ul class="bullet-points">
+                    <li>Daily auction insights monitoring vs hihomes</li>
+                    <li>Targeted bid lifts on High ad groups losing position</li>
+                    <li>Particular focus on 219 Unelma (-31.8pp end April), 216 The Eagle (-25.5pp), 200 The Privilege (-22pp)</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h3>Priority 4: Medium Campaign Position Lift</h3>
+                <p><strong>Owner:</strong> Charles and Lisa  |  <strong>Due:</strong> Mid May</p>
+                <ul class="bullet-points">
+                    <li>Lisa to complete remaining Medium ad group callout work</li>
+                    <li>Charles to add structured snippets as completed batches arrive</li>
+                    <li>Apply targeted bid lifts on top-spend Medium ad groups (Nubay, Essence, Ayana)</li>
+                    <li>Mid-month QS check on completed Medium ad groups</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h3>Priority 5: New Ad Groups Live and Settled</h3>
+                <p><strong>Owner:</strong> Charles and Lisa  |  <strong>Due:</strong> Week 1 May</p>
+                <ul class="bullet-points">
+                    <li>Eagle Hills Estepona - live with images</li>
+                    <li>Amaris Villas Estepona - build, brief done</li>
+                    <li>Palm Residences - build, brief done</li>
+                    <li>Serenity Views - first full week monitoring</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-low">
+                <h3>Priority 6: Zero-Conversion Cull Review</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> End May</p>
+                <ul class="bullet-points">
+                    <li>30-day rolling review of ad groups with consistent zero conversions</li>
+                    <li>Mare Marbella formal review per Tony's flag</li>
+                    <li>Reallocate freed budget to top abs top performers</li>
+                    <li>Document decisions for May call recap</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-low">
+                <h3>Priority 7: Zenity Azure Deep Dive</h3>
+                <p><strong>Owner:</strong> Charles  |  <strong>Due:</strong> Mid May</p>
+                <ul class="bullet-points">
+                    <li>Position slipped despite April bid increase</li>
+                    <li>Check landing page relevance, ad relevance, quality score</li>
+                    <li>Decision: structural fix or pause</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Closing Summary -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo" class="logo">
+                <div class="slide-number">Summary</div>
+            </div>
+            <h2>April 2026 in Summary</h2>
+
+            <div class="success-box">
+                <h3>What April Proved</h3>
+                <div class="three-column">
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">+1.15pp</span>
+                        <span>High Abs Top vs hihomes</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">+8.3%</span>
+                        <span>Medium HM Lead Growth</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">5</span>
+                        <span>New Ad Groups Briefed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box">
+                <h3>What April Cost</h3>
+                <div class="three-column">
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">-29.3%</span>
+                        <span>HM Lead Form Volume</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">+€41</span>
+                        <span>Blended HM CPA Increase</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 2.2em; font-weight: bold; display: block;">-43%</span>
+                        <span>High Campaign Leads</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>The Through-Line</h3>
+                <p>April was a position-investment month, not a conversion month. We bought visibility in the auction across new and existing ad groups, achieved the long-running goal of overtaking hihomes on the High campaign, and saw the first signs that the Medium campaign optimisation work is feeding through. The cost of that investment is visible in the lead volume and CPA. May is the month where that position investment must convert into pipeline, supported by the first cull and consolidation pass, the structured snippets QS lift, and the website decision that has been deferred for almost a month.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>May 2026 Success Metrics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">85+</span>
+                        <div class="stat-label">HM Lead Form Submits</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">€85</span>
+                        <div class="stat-label">Target HM CPA</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50%+</span>
+                        <div class="stat-label">High Abs Top Held</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">40%+</span>
+                        <div class="stat-label">Medium Abs Top Lift</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(0,0,0,0.5); border-radius: 15px; border: 2px solid #e67e22;">
+                <h3 style="color: #ffd280; margin-bottom: 15px;">Thank You for Your Partnership</h3>
+                <p style="font-size: 1.1em; color: #ffffff;">Looking forward to the May 6 strategy call.</p>
+                <p style="color: #ffffff; margin-top: 15px; opacity: 0.9;">Next Strategy Call: Wednesday, 6 May 2026 at 12:00 CET</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
